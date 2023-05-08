@@ -1,0 +1,224 @@
+ /*---------------Color style----------------------------------------------*/
+/*------https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557-----*/
+/*------------------------------------------------------------------------*/
+/*------.main							----------*/
+/*------	.top						----------*/
+/*------		.name					----------*/
+/*------		.sum1					----------*/
+/*------	.body						----------*/
+/*------		.heading				----------*/
+/*------		.details				----------*/
+/*------			.heading			----------*/
+/*------			.details			----------*/
+/*------------------------------------------------------------------------*/
+
+
+/*---------------set html height to full page--------*/
+html,
+body 
+	{
+	width: 100%;
+	}
+/*---------------set html height to full page--------*/
+/*---------------Req---------------------------------*/
+* 
+	{
+	box-sizing: border-box;
+	}
+/*---------------Req---------------------------------*/
+/*---------------Style the body----------------------*/
+body 
+	{
+	font-family: Arial;
+	margin: 0;
+	}
+/*---------------Style the body----------------------*/
+/*---------------Style the links---------------------*/
+a
+	{
+	/*----color:black;---*/
+	text-decoration:none;
+	}
+/*---------------Style the links---------------------*/
+/*---------------style text--------------------------*/
+p		/*----------general font-------------*/
+	{
+	font-size:12px;
+	font-family: Calibri;
+	margin:0px;
+	line-height: 1.3;
+	}
+p12
+	{
+	display:flex;
+	font-size:12px;
+	font-family: Calibri;
+	background-color:silver;
+	width:145px;
+	height:20px;
+	align-items:center;
+	justify-content:center;
+	margin-top:5px;
+	}
+p12 a:hover
+	{
+	color:red;
+	font-weight:bold;
+	}
+p16
+	{
+	font-size:16px;
+	font-family: Calibri;
+	margin:0px;
+	}
+p14t
+	{
+	font-size:14px;
+	font-family: Calibri;
+	position:relative;
+	left:40px;
+
+	}
+p14
+	{
+	font-size:14px;
+	font-family: Calibri;
+	margin:0px;
+	}
+p14 a:link
+	{
+	text-decoration:underline;
+	color:blue;
+	}
+p16b
+	{
+	font-size:16px;
+	font-family: Calibri;
+	font-weight:bold;
+	color:gray;
+	margin:0px;
+	padding-left:40px;
+	}
+h1
+	{
+	font-size:80px;
+	letter-spacing:1px;
+	font-family:Arial;
+	margin:0px;
+	color:#606060;
+	}
+h2
+	{
+	font-family:Calibri;
+	font-size:20px;
+	font-weight:bold;
+	margin:0px;
+	}
+h3
+	{
+	font-family:Calibri;
+	font-size:18px;
+	font-weight:bold;
+	padding-left:40px;
+	margin:0px;
+	}
+ul
+	{
+	margin-top:5px;
+	}
+hr
+	{
+	margin-left:40px;
+	}
+
+/*---------------style text-------------------------*/
+/*---------------style main--------------------------*/
+.main
+	{
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	min-width:1000px;
+	margin:10px;
+	}
+/*---------------style main--------------------------*/
+/*---------------style top---------------------------*/
+.top
+	{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	width:1000px;
+	height:200px;
+	border-bottom:1px solid silver;
+	}
+/*---------------style top---------------------------*/
+/*---------------style name--------------------------*/
+.name
+	{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	background-color:white;
+	width:700px;
+	}
+
+/*---------------style name--------------------------*/
+/*---------------style sum1--------------------------*/
+.sum1
+	{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	background-color:white;
+	width:300px;
+	text-align:justify;
+	}
+
+.sum1 >div
+	{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-between;
+	}
+/*---------------style sum1--------------------------*/
+/*---------------style body--------------------------*/
+.body
+	{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	width:1000px;
+	}
+/*---------------style body--------------------------*/
+/*---------------style div---------------------------*/
+.body >div
+	{
+	border-bottom:1px solid silver;
+	}
+/*---------------style div---------------------------*/
+/*---------------style div skills--------------------*/
+.skills
+	{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+	}
+/*---------------style div skills--------------------*/
+/*---------------style misc div----------------------*/
+.misc
+	{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+	}
+
+.misc >div
+	{
+	display:flex;
+	flex-direction:column;
+	padding-top:5px;
+	}
+/*---------------style misc div----------------------*/
