@@ -18,7 +18,10 @@ html, body
 
 body
 	{
-	background-color:#404040;
+	/-webkit-background-image:url(./Assets/images/bokeh-wallpaper-4.jpg);
+	background-image:url(./Assets/images/bokeh-wallpaper-4.jpg);
+	background-size:cover;
+	background-position: center;
 	}
 /*---------------set html height to full page--------*/
 /*---------------Req---------------------------------*/
@@ -31,7 +34,7 @@ body
 a
 	{
 	text-decoration:none;
-	color:white;
+	color:black;
 	}
 /*---------------Style the links---------------------*/
 /*---------------style text--------------------------*/
@@ -41,7 +44,7 @@ p	/*--------name text---------*/
 	font-family: Verdana, sans-serif;
 	letter-spacing: 3px;
 	margin-bottom:10px;
-	color:white;
+	color:black;
 	}
 
 h1	/*--------heading---------*/
@@ -49,21 +52,21 @@ h1	/*--------heading---------*/
 	font-size:50px;
 	font-family: Verdana, sans-serif;
 	letter-spacing: 3px;
-	color:white;
+	color:black;
 	}
 
 h2	/*--------heading2---------*/
 	{
 	font-size:30px;
 	font-family: Verdana, sans-serif;
-	color:white;
+	color:black;
 	}
 
 h3	/*--------heading3---------*/
 	{
 	font-size:16px;
 	font-family: Verdana, sans-serif;
-	color:white;
+	color:black;
 	padding: 5px 0 5px 0;
 	}
 
@@ -75,19 +78,29 @@ h3	/*--------heading3---------*/
 	flex-direction:column;
 
 	width:100%;
-	height:95%;
+	height:100%;
+
+	background-color: rgb(0,0,0,);
+	background-color:rgba(0,0,0,0.2);
+
 	}
 
 /*---------------style heading-----------------------*/
 .heading
 	{
 	height:10%;	
-	min-height:50px;
+	min-height:70px;
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	background-color:silver;
+
+	background-color: rgb(255,255,255);
+	background-color:rgba(255,255,255,0.1);
+
+	backdrop-filter: blur(10px);
+
 	border-radius:10px;
+	border: 1px solid gray;
 	margin:30px;
 	}
 
@@ -116,7 +129,6 @@ h3	/*--------heading3---------*/
 	justify-content:space-between;
 	align-items:center;
 	text-align:center;
-	/*------background-color:gray;---*/
 	border-radius:10px;
 	padding:10px;
 	}
@@ -129,8 +141,15 @@ h3	/*--------heading3---------*/
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	background-color:silver;
+
+	background-color: rgb(255,255,255);
+	background-color:rgba(255,255,255,0.1);
+
+	backdrop-filter: blur(10px);
+
 	border-radius:10px;
+	border: 1px solid gray;
+
 	margin-bottom:10px;
 	}
 /*---------------style project heading---------------*/
@@ -153,12 +172,39 @@ h3	/*--------heading3---------*/
 	width:49%;
 
 	display:flex;
-	background-color:silver;
 	margin:5px 0 5px 0;
 
+	background-color: rgb(255,255,255);
+	background-color:rgba(255,255,255,0.1);
+
+	backdrop-filter: blur(10px);
+
 	border-radius:10px;
+	border: 1px solid gray;
 
 	justify-content: center;
 	align-items: center;
 	}
 /*---------------style projects----------------------*/
+
+/*---------------responsive---------------------------*/
+
+@media screen and (max-width: 480px)
+{
+
+h1	/*--------heading---------*/
+	{
+	font-size:35px;
+	}
+h2	/*--------heading---------*/
+	{
+	font-size:20px;
+	}
+
+
+h3	/*--------heading---------*/
+	{
+	font-size:12px;
+	}	
+	
+}
