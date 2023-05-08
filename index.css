@@ -18,9 +18,9 @@ html, body
 
 body
 	{
-	/-webkit-background-image:url(./Assets/images/bokeh-wallpaper-4.jpg);
-	background-image:url(./Assets/images/bokeh-wallpaper-4.jpg);
-	background-size:cover;
+	/-webkit-background-image:url(/Assets/images/bokeh-wallpaper-4.jpg);
+	background-image:url(/Assets/images/bokeh-wallpaper-4.jpg);
+			background-size:cover;
 	background-position: center;
 	}
 /*---------------set html height to full page--------*/
