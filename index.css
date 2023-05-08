@@ -1,0 +1,164 @@
+/*---------------Color style----------------------------------------------*/
+/*------https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557-----*/
+/*------------------------------------------------------------------------*/
+/*------.container						----------*/
+/*------	.heading					----------*/
+/*------	.projtypes					----------*/
+/*------		.resume					----------*/
+/*------		.misc					----------*/
+/*------------------------------------------------------------------------*/
+
+/*---------------set html height to full page--------*/
+html, body
+	{
+	width: 100%;
+	height:100%;
+	margin: 0;
+	}
+
+body
+	{
+	background-color:#404040;
+	}
+/*---------------set html height to full page--------*/
+/*---------------Req---------------------------------*/
+* 
+	{
+	box-sizing: border-box;
+	}
+/*---------------Req---------------------------------*/
+/*---------------Style the links---------------------*/
+a
+	{
+	text-decoration:none;
+	color:white;
+	}
+/*---------------Style the links---------------------*/
+/*---------------style text--------------------------*/
+p	/*--------name text---------*/
+	{
+	font-size:13px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+	color:white;
+	}
+
+h1	/*--------heading---------*/
+	{
+	font-size:50px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	color:white;
+	}
+
+h2	/*--------heading2---------*/
+	{
+	font-size:30px;
+	font-family: Verdana, sans-serif;
+	color:white;
+	}
+
+h3	/*--------heading3---------*/
+	{
+	font-size:16px;
+	font-family: Verdana, sans-serif;
+	color:white;
+	padding: 5px 0 5px 0;
+	}
+
+/*---------------style text--------------------------*/
+/*---------------style heading-----------------------*/
+.maincontainer
+	{
+	display:flex;
+	flex-direction:column;
+
+	width:100%;
+	height:95%;
+	}
+
+/*---------------style heading-----------------------*/
+.heading
+	{
+	height:10%;	
+	min-height:50px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:silver;
+	border-radius:10px;
+	margin:30px;
+	}
+
+/*---------------style heading-----------------------*/
+/*---------------style project container-------------*/
+.projcontainer
+	{
+	height:90%;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+	/*------background-color:silver;---*/
+	margin:0 20px 0 20px;
+	}
+/*---------------style project container-------------*/
+/*---------------style project types-----------------*/
+.projtypes
+	{
+	height:100%;
+	width:50%;
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:center;
+	text-align:center;
+	/*------background-color:gray;---*/
+	border-radius:10px;
+	padding:10px;
+	}
+/*---------------style project types-----------------*/
+/*---------------style project heading---------------*/
+.projheading
+	{
+	height:10%;
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:silver;
+	border-radius:10px;
+	margin-bottom:10px;
+	}
+/*---------------style project heading---------------*/
+
+/*---------------style projects----------------------*/
+.projects
+	{
+	height:85%;
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	/*------background-color:silver;---*/
+	align-content: stretch;
+	justify-content:space-between;	
+	}
+
+.projects >div
+	{
+	width:49%;
+
+	display:flex;
+	background-color:silver;
+	margin:5px 0 5px 0;
+
+	border-radius:10px;
+
+	justify-content: center;
+	align-items: center;
+	}
+/*---------------style projects----------------------*/
