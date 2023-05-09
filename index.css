@@ -12,7 +12,7 @@
 html, body
 	{
 	width: 100%;
-	height:100%;
+	height: 100%;
 	margin: 0;
 	}
 
@@ -22,6 +22,8 @@ body
 	background-image:url(./Assets/images/bokeh-wallpaper-4.jpg);
 			background-size:cover;
 	background-position: center;
+
+
 	}
 /*---------------set html height to full page--------*/
 /*---------------Req---------------------------------*/
@@ -78,11 +80,10 @@ h3	/*--------heading3---------*/
 	flex-direction:column;
 
 	width:100%;
-	height:100%;
-
+	height: 100%;
+	min-height:400px;
 	background-color: rgb(0,0,0,);
 	background-color:rgba(0,0,0,0.2);
-
 	}
 
 /*---------------style heading-----------------------*/
@@ -137,6 +138,7 @@ h3	/*--------heading3---------*/
 .projheading
 	{
 	height:10%;
+	min-height:30px;
 	width:100%;
 	display:flex;
 	justify-content:center;
@@ -150,7 +152,6 @@ h3	/*--------heading3---------*/
 	border-radius:10px;
 	border: 1px solid gray;
 
-	margin-bottom:10px;
 	}
 /*---------------style project heading---------------*/
 
@@ -200,13 +201,31 @@ h3	/*--------heading3---------*/
 /*---------------style projects----------------------*/
 
 /*---------------responsive---------------------------*/
+@media screen and (max-width: 700px)
+{
+.heading
+	{
+	margin-top:10px;
+	min-height: 70px;
+	}
+	
+}
+
 
 @media screen and (max-width: 480px)
 {
+.heading
+	{
+	margin:10px;
+	}
+.projcontainer
+	{
+	margin: 0;
+	}
 
 h1	/*--------heading---------*/
 	{
-	font-size:35px;
+	font-size:30px;
 	}
 h2	/*--------heading---------*/
 	{
@@ -218,5 +237,34 @@ h3	/*--------heading---------*/
 	{
 	font-size:12px;
 	}	
-	
+}
+
+@media screen and (max-height: 400px)
+{
+.heading
+	{
+	margin-top:5px;
+	margin-bottom:5px;
+	}
+
+h1	/*--------heading---------*/
+	{
+	font-size:25px;
+	}
+
+h2	/*--------heading---------*/
+	{
+	font-size:15px;
+	}
+
+h3	/*--------heading---------*/
+	{
+	font-size:10px;
+	padding:0;
+	}
+
+.projtypes
+	{
+	justify-content: unset;
+	}
 }
