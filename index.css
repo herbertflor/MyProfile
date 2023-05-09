@@ -193,7 +193,7 @@ h3	/*--------heading3---------*/
 	color:white;
 	}
 
-.projects >div h3 a:hover
+.projects >div a h3:hover
 	{
 	color:white;
 	}
