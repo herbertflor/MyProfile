@@ -1,0 +1,268 @@
+HerbertFlorPortfolio.css/*---------------Color style----------------------------------------------*/
+/*------https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557-----*/
+/*------------------------------------------------------------------------*/
+/*------.heading						----------*/
+/*------	.name						----------*/
+/*------	.links						----------*/
+/*------.middle							----------*/
+/*------	.imageslide					----------*/
+/*------	.namesummary					----------*/
+/*------.projlist						----------*/
+/*------	.projtypes					----------*/
+/*------	.projects					----------*/
+/*------		.div					----------*/
+/*------------------------------------------------------------------------*/
+
+
+/*---------------set html height to full page--------*/
+html, body
+	{
+	width: 100%;
+	margin: 0;
+	}
+/*---------------set html height to full page--------*/
+/*---------------Req---------------------------------*/
+* 
+	{
+	box-sizing: border-box;
+	}
+/*---------------Req---------------------------------*/
+/*---------------Style the links---------------------*/
+a
+	{
+	text-decoration:none;
+	}
+/*---------------Style the links---------------------*/
+/*---------------style text--------------------------*/
+p	/*--------name text---------*/
+	{
+	font-size:10px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+	color:white;
+	}
+
+p1	/*--------name text---------*/
+	{
+	font-size:17px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+	color:white;
+	}
+p2	/*--------links text---------*/
+	{
+	font-size:10px;
+	font-family: Verdana, sans-serif;
+	}
+p3	/*--------desciption text---------*/
+	{
+	font-size:10px;
+	font-family: Verdana, sans-serif;
+	color:gray;
+	}
+
+p4	/*--------desciption text---------*/
+	{
+	font-size:12px;
+	font-family: Verdana, sans-serif;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:55px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	margin:5px 0 5px 0;
+	color:white;
+	}
+
+h2	/*--------name text---------*/
+	{
+	font-size:15px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	margin:5px 0 5px 0;
+	color:gray;
+	}
+/*---------------style text--------------------------*/
+/*---------------style heading-----------------------*/
+.heading
+	{
+	display:flex;
+	flex-direction:row;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	height:200px;
+	background-color:#F8F8F8;
+	margin-left:auto;
+	margin-right:auto;
+
+	padding:10px;
+	}
+/*---------------style heading-----------------------*/
+/*---------------style heading name------------------*/
+.name
+	{
+	display:flex;
+	flex-direction:column;
+	width:70%;
+	min-width:450px;
+	background-color:#F0F0F0;
+	padding:10px;
+	}
+
+/*---------------style heading name------------------*/
+/*---------------style heading links-----------------*/
+.links
+	{
+	display:flex;
+	width:30%;
+	min-width:250px;
+	height:50px;
+	}
+
+.links>div
+	{
+	display:flex;
+	flex:20%;
+	min-width:40px;
+	background-color:#F0F0F0;
+	justify-content:center;
+	text-align:center;
+	align-items:center;
+	margin:0 2px 0 2px;
+	}
+.links>div a
+	{
+	padding:20px 0 20px 0;
+	color:black;
+	}
+
+.links>div a:hover
+	{
+	color:white;
+	}
+.links>div:hover
+	{
+	background-color:black;
+	}
+/*---------------style heading links-----------------*/
+/*---------------style middle------------------------*/
+.middle
+	{
+	display:flex;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	height:300px;
+	background-color:#E8E8E8;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	}
+/*---------------style middle------------------------*/
+/*---------------style middle imageslide-------------*/
+.imageslide
+	{
+	display:flex;
+	width:70%;
+	min-width:450px;
+	background-color:#F0F0F0;
+	}
+/*---------------style middle imageslide-------------*/
+/*---------------style middle namesummary------------*/
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:30%;
+	min-width:250px;
+	color:black;
+	background-color:#F5F5F5;
+	}
+/*---------------style middle namesummary------------*/
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	height:600px;
+	background-color:#F8F8F8;
+	margin-left:auto;
+	margin-right:auto;
+
+	padding:10px;
+	}
+
+/*---------------style projlist----------------------*/
+/*---------------style projlist projtypes------------*/
+.projtypes
+	{
+	display:flex;
+	width:100%;
+	height:70px;
+	flex-direction:row;
+	justify-content:space-between;
+	color:gray;
+	}
+
+.projtypes>div
+	{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	flex:20%;
+	min-width:80px;
+	height:60px;
+	background-color:#F0F0F0;
+	margin:5px;
+	}
+
+.projtypes>div :hover
+	{
+	color:black;
+	font-weight:bold;
+	}
+
+.projtypes>div:first-child
+	{
+	margin-left:0px;
+	}
+
+.projtypes>div:last-child
+	{
+	margin-right:0px;
+	}
+
+/*---------------style projlist projtypes------------*/
+/*---------------style projlist projects-------------*/
+.projects
+	{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	width:100%;
+	background-color:#DCDCDC;
+	}
+
+.projects>div
+	{
+	display:flex;
+	flex:25%;
+	min-width:230px;
+	height:150px;
+	background-color:#F0F0F0;
+	margin:5px;
+	}
+
+
+/*---------------style projlist projects-------------*/
