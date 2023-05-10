@@ -50,29 +50,115 @@ His skills also include manual and guidelines preparation, putting them together
 <!-----middle------>
 <!-----projects---->
 <div class="projlist">
-	<div class="projtypes">
-		<div><p4>	Master Plan			</p4></div>
-		<div><p4>	Urban Design			</p4></div>
-		<div><p4>	Visualization			</p4></div>
-		<div><p4>	Reports/ Manuals/ Guidelines	</p4></div>
-		<div><p4>	Presentations			</p4></div>
-		<div><p4>	Analysis			</p4></div>
-		<div><p4>	Hand Sketches			</p4></div>
+	<div class="projtypes" id="projtype">
+		<div onclick="showmaster()" style="background-color:black;" id="projmaster">
+			<p4><a href="#projtype"  style="color:white;" id="projmastertext">	Master Plan			</p4></div>
+		<div onclick="showurban()"  id="projurban">
+			<p4><a href="#projtype"  id="projurbantext">				Urban Design			</a></p4></div>
+		<div onclick="showvisual()"  id="projvisual">
+			<p4><a href="#projtype">			Visualization			</a></p4></div>
+		<div onclick="showreports()" id="projreport">
+			<p4><a href="#projtype">			Reports/ Manuals/ Guidelines	</a></p4></div>
+		<div onclick="showpres()" id="projpres">
+			<p4><a href="#projtype">			Presentations			</a></p4></div>
+		<div onclick="showanalysis()" id="projanalysis">
+			<p4><a href="#projtype">			Analysis			</a></p4></div>
+		<div onclick="showhand()" id="projsketch">
+			<p4><a href="#projtype">			Hand Sketches			</a></p4></div>
 	</div>
-	<div class="projects">
-		<div>a</div>
-		<div>b</div>
-		<div>c</div>
-		<div>d</div>
-		<div>e</div>
-		<div>f</div>
-		<div>g</div>
+<!-----masterplan projects---->
+	<div class="projects" id="masterplan">
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 1"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 2"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 3"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 4"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 5"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 6"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 7"></div>
 	</div>
+<!-----masterplan projects---->
+<!-----urban design projects---->
+	<div class="projects" id="urbandesign" style="display:none;">
+		<div><img src="../Assets/images/temp-image.jpg" style="filter: grayscale(100%);" alt="Masterplan 1"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 2"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 3"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 4"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 5"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 6"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 7"></div>
+	</div>
+<!-----urban design projects---->
 
 
 </div>
 
 <!-----projects---->
 
+
+<!-----script------>
+<script>
+	<!-----master----->
+	function showmaster()
+	{
+	var a = document.getElementById("masterplan");
+	var aa= document.getElementById("projmaster");
+	var aaa= document.getElementById("projmastertext");
+	var b = document.getElementById("urbandesign");
+	var ba= document.getElementById("projurban");
+	var baa= document.getElementById("projurbantext");
+
+	if(a.style.display === "none")
+		{
+		b.style.display = "none";
+		ba.style.backgroundColor = "white";
+		baa.style.color = "black";
+		a.style.display = "flex";
+		aa.style.backgroundColor = "black";
+		aaa.style.color = "white";
+		}
+	}
+
+	<!-----urban----->
+	function showurban()
+	{
+	var a = document.getElementById("masterplan");
+	var aa= document.getElementById("projmaster");
+	var aaa= document.getElementById("projmastertext");
+	var b = document.getElementById("urbandesign");
+	var ba= document.getElementById("projurban");
+	var baa= document.getElementById("projurbantext");
+
+	if(b.style.display === "none")
+		{
+		b.style.display = "flex";
+		ba.style.backgroundColor = "black";
+		baa.style.color = "white";
+		a.style.display = "none";
+		aa.style.backgroundColor = "white";
+		aaa.style.color = "black";
+		}
+	}
+	<!-----visual----->
+	function showvisual()
+	{
+	var a = document.getElementById("masterplan");
+	var aa= document.getElementById("projmaster");
+	var aaa= document.getElementById("projmastertext");
+	var b = document.getElementById("urbandesign");
+	var ba= document.getElementById("projurban");
+	var baa= document.getElementById("projurbantext");
+
+	if(b.style.display === "none")
+		{
+		b.style.display = "flex";
+		ba.style.backgroundColor = "black";
+		baa.style.color = "white";
+		a.style.display = "none";
+		aa.style.backgroundColor = "white";
+		aaa.style.color = "black";
+		}
+	}
+
+</script>
 </body>
 </html>
