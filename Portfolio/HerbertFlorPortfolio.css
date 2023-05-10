@@ -87,6 +87,15 @@ h2	/*--------name text---------*/
 	color:gray;
 	}
 /*---------------style text--------------------------*/
+/*---------------style images------------------------*/
+img
+	{
+	
+
+	}
+
+
+/*---------------style images------------------------*/
 /*---------------style heading-----------------------*/
 .heading
 	{
@@ -225,6 +234,12 @@ h2	/*--------name text---------*/
 	margin:5px;
 	}
 
+.projtypes>div a
+	{
+	color:black;
+	font-size:12px;
+	font-family: Verdana, sans-serif;
+	}
 .projtypes>div :hover
 	{
 	color:black;
@@ -264,5 +279,12 @@ h2	/*--------name text---------*/
 	margin:5px;
 	}
 
+
+
+.projects>div img
+	{
+	width:100%;
+	object-fit: cover;
+	}
 
 /*---------------style projlist projects-------------*/
