@@ -10,17 +10,50 @@
 <body>
 <!-----heading----->
 <div class="heading">
-	<div class="name">
+	<div class="name" style="visibility:hidden;">	<!-------------------------------->
 		<h1>Herbert Flor</h1>
-		<p1>Urban Planning + Design</p1>
+		<p1>	Urban Planning + Design	</p1>
+		<p4>	herbert.flor@yahoo.com	<br>
+			+971 56 433 6391
+		</p4>
 	</div>
 	<!-----links----->
 	<div class="links">
-		<div style="background-color:black;"><p2 style="color:white;">			home		</p2></div>
-		<div><a href="./portfolio/index.html"><p2>					portfolio	</p2></a></div>
-		<div><a href="./resume/index.html"><p2>						resume		</p2></a></div>
-		<div><a href="./cv/index.html"><p2 style="padding:20px 15px 20px 15px;">	cv  		</p2></a></div>
-		<div><a href="./contact/index.html"><p2> 					contact details	</p2></a></div>
+		<div style="background-color:#343A40;">
+			<a href="#">
+			<p2 style="color:white;">
+				home		
+			</p2>
+			</a>
+		</div>
+		<div>
+			<a href="./portfolio/index.html">
+			<p2>
+				portfolio	
+			</p2>
+			</a>
+		</div>
+		<div>
+			<a href="./resume/index.html">
+			<p2>
+				resume
+			</p2>
+			</a>
+		</div>
+		<div>
+			<a href="./cv/index.html">
+			<p2>
+				cv
+			</p2>
+			</a>
+		</div>
+		<div>
+			<a href="./contact/index.html">
+			<p2>
+				contact details
+			</p2>
+			</a>
+		</div>
 	</div>
 	<!-----links----->
 </div>
@@ -28,9 +61,11 @@
 <!-----middle------>
 <div class="middle">
 	<div class="imageslide">
-	
+
+
+
 	</div>
-	<div class="namesummary">
+	<div class="namesummary" style="visibility:hidden;">	<!-------------------------------->
 <h2>Herbert Flor</h2>
 <p3>
 Herbert has experience in every design stage, from concept development, creating quick hand drawn sketches to convey idea; to GIS based analysis and thematic mapping to create engaging and informative analyses; to urban design of public realm and master planning of large project sites.  He works collaboratively with a multi-disciplinary team to deliver detailed design packages.
@@ -50,24 +85,17 @@ His skills also include manual and guidelines preparation, putting them together
 <!-----middle------>
 <!-----projects---->
 <div class="projlist">
-	<div class="projtypes" id="projtype">
-		<div onclick="showmaster()" style="background-color:black;" id="projmaster">
-			<p4><a href="#projtype"  style="color:white;" id="projmastertext">	Master Plan			</p4></div>
-		<div onclick="showurban()"  id="projurban">
-			<p4><a href="#projtype"  id="projurbantext">				Urban Design			</a></p4></div>
-		<div onclick="showvisual()"  id="projvisual">
-			<p4><a href="#projtype">			Visualization			</a></p4></div>
-		<div onclick="showreports()" id="projreport">
-			<p4><a href="#projtype">			Reports/ Manuals/ Guidelines	</a></p4></div>
-		<div onclick="showpres()" id="projpres">
-			<p4><a href="#projtype">			Presentations			</a></p4></div>
-		<div onclick="showanalysis()" id="projanalysis">
-			<p4><a href="#projtype">			Analysis			</a></p4></div>
-		<div onclick="showhand()" id="projsketch">
-			<p4><a href="#projtype">			Hand Sketches			</a></p4></div>
+	<!-----tab links---->
+	<div class="tabs">
+		<button class="tablinks" onclick="openSkill(event, 'Design')" >		Design				</button>
+		<button class="tablinks" onclick="openSkill(event, 'Graphics')">	Graphics			</button>
+		<button class="tablinks" onclick="openSkill(event, '3D')">		3D Modelling and Rendering	</button>
+		<button class="tablinks" onclick="openSkill(event, 'Reports')">		Reports and Presentations	</button>
+		<button class="tablinks" onclick="openSkill(event, 'GIS')">		GIS Analysis			</button>
 	</div>
-<!-----masterplan projects---->
-	<div class="projects" id="masterplan">
+	<!-----tab links---->
+	<!-----tab content design---->
+	<div class="tabcontent" id="Design">
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 1"></div>
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 2"></div>
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 3"></div>
@@ -76,9 +104,10 @@ His skills also include manual and guidelines preparation, putting them together
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 6"></div>
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 7"></div>
 	</div>
-<!-----masterplan projects---->
-<!-----urban design projects---->
-	<div class="projects" id="urbandesign" style="display:none;">
+	<!-----tab content design---->
+
+	<!-----tab content graphics-->
+	<div class="tabcontent" id="Graphics">
 		<div><img src="../Assets/images/temp-image.jpg" style="filter: grayscale(100%);" alt="Masterplan 1"></div>
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 2"></div>
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 3"></div>
@@ -87,78 +116,81 @@ His skills also include manual and guidelines preparation, putting them together
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 6"></div>
 		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 7"></div>
 	</div>
-<!-----urban design projects---->
+	<!-----tab content graphics-->
 
+	<!-----tab content 3D-------->
+	<div class="tabcontent" id="3D">
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 1"></div>
+		<div><img src="../Assets/images/temp-image.jpg" style="filter: grayscale(100%);" alt="Masterplan 2"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 3"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 4"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 5"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 6"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 7"></div>
+	</div>
+	<!-----tab content 3D-------->
+
+	<!-----tab content reports--->
+	<div class="tabcontent" id="Reports">
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 1"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 2"></div>
+		<div><img src="../Assets/images/temp-image.jpg" style="filter: grayscale(100%);" alt="Masterplan 3"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 4"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 5"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 6"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 7"></div>
+	</div>
+	<!-----tab content reports--->
+
+	<!-----tab content GIS------->
+	<div class="tabcontent" id="GIS">
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 1"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 2"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 3"></div>
+		<div><img src="../Assets/images/temp-image.jpg" style="filter: grayscale(100%);" alt="Masterplan 4"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 5"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 6"></div>
+		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 7"></div>
+	</div>
+	<!-----tab content GIS------->
 
 </div>
-
 <!-----projects---->
-
 
 <!-----script------>
 <script>
-	<!-----master----->
-	function showmaster()
+
+// Set first tab as open by default
+document.getElementsByClassName('tablinks')[0].click()
+
+document.getElementsByClassName('homelink')[0].click()
+
+
+function openSkill(evt, skillName)	
+	// Declare all variables
 	{
-	var a = document.getElementById("masterplan");
-	var aa= document.getElementById("projmaster");
-	var aaa= document.getElementById("projmastertext");
-	var b = document.getElementById("urbandesign");
-	var ba= document.getElementById("projurban");
-	var baa= document.getElementById("projurbantext");
-
-	if(a.style.display === "none")
+		var i, tabcontent, tablinks;
+	
+		// Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) 
 		{
-		b.style.display = "none";
-		ba.style.backgroundColor = "white";
-		baa.style.color = "black";
-		a.style.display = "flex";
-		aa.style.backgroundColor = "black";
-		aaa.style.color = "white";
+			tabcontent[i].style.display = "none";
 		}
-	}
-
-	<!-----urban----->
-	function showurban()
-	{
-	var a = document.getElementById("masterplan");
-	var aa= document.getElementById("projmaster");
-	var aaa= document.getElementById("projmastertext");
-	var b = document.getElementById("urbandesign");
-	var ba= document.getElementById("projurban");
-	var baa= document.getElementById("projurbantext");
-
-	if(b.style.display === "none")
+		
+		// Get all elements with class="tablinks" and remove the class "active"
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) 
 		{
-		b.style.display = "flex";
-		ba.style.backgroundColor = "black";
-		baa.style.color = "white";
-		a.style.display = "none";
-		aa.style.backgroundColor = "white";
-		aaa.style.color = "black";
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
 		}
-	}
-	<!-----visual----->
-	function showvisual()
-	{
-	var a = document.getElementById("masterplan");
-	var aa= document.getElementById("projmaster");
-	var aaa= document.getElementById("projmastertext");
-	var b = document.getElementById("urbandesign");
-	var ba= document.getElementById("projurban");
-	var baa= document.getElementById("projurbantext");
-
-	if(b.style.display === "none")
-		{
-		b.style.display = "flex";
-		ba.style.backgroundColor = "black";
-		baa.style.color = "white";
-		a.style.display = "none";
-		aa.style.backgroundColor = "white";
-		aaa.style.color = "black";
-		}
+	
+		// Show the current tab, and add an "active" class to the button that opened the tab
+		document.getElementById(skillName).style.display = "flex";
+		evt.currentTarget.className += " active";
 	}
 
 </script>
+<!-----script------>
 </body>
 </html>
