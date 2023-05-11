@@ -1,4 +1,4 @@
-HerbertFlorPortfolio.css/*---------------Color style----------------------------------------------*/
+*---------------Color style----------------------------------------------*/
 /*------https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-----*/
 /*------------------------------------------------------------------------*/
 /*------.heading						----------*/
@@ -6,11 +6,17 @@ HerbertFlorPortfolio.css/*---------------Color style----------------------------
 /*------	.links						----------*/
 /*------.middle							----------*/
 /*------	.imageslide					----------*/
+/*------		.slides					----------*/
+/*------		.prev					----------*/
+/*------		.next					----------*/
+/*------		.dots					----------*/
 /*------	.namesummary					----------*/
 /*------.projlist						----------*/
 /*------	.projtabs					----------*/
-/*------	.tab-xx		(tab content)			----------*/
-/*------		.div					----------*/
+/*------	.tabs		(tab content)			----------*/
+/*------		.button					----------*/
+/*------		.tabcontent				----------*/
+
 /*------------------------------------------------------------------------*/
 
 
@@ -58,9 +64,9 @@ p2	/*--------links text---------*/
 	}
 p3	/*--------desciption text---------*/
 	{
-	font-size:10px;
+	font-size:13px;
 	font-family: Verdana, sans-serif;
-	color:gray;
+	color:#343A40;
 	}
 
 p4	/*--------desciption text---------*/
@@ -88,15 +94,7 @@ h2	/*--------name text---------*/
 	color:#495057;
 	}
 /*---------------style text--------------------------*/
-/*---------------style images------------------------*/
-img
-	{
-	
 
-	}
-
-
-/*---------------style images------------------------*/
 /*---------------style heading-----------------------*/
 .heading
 	{
@@ -188,7 +186,8 @@ img
 	width:90%;
 	max-width:1000px;
 	min-width:750px;
-	height:300px;
+	height:380px;
+	max-height:420px;
 	/*---background-color:#E9ECEF;---*/
 	margin-left:auto;
 	margin-right:auto;
@@ -198,15 +197,118 @@ img
 	}
 /*---------------style middle------------------------*/
 /*---------------style middle imageslide-------------*/
-.imageslide
+.imageslide	/*---container-----------------------*/
 	{
-	display:flex;
 	width:70%;
 	min-width:450px;
-	background-color:#F8F8F8;
+	background-color:#E9ECEF;
 	margin: 0 10px 0 0;
+	position:relative;
 	}
 /*---------------style middle imageslide-------------*/
+/*---------------style middle imageslide slide-------*/
+.mySlides
+	{
+	width:100%;
+	height:100%;
+	display:none;
+	}
+
+.mySlides img
+	{
+	width: 100%;
+	object-fit: cover;
+	}
+/*---------------style middle imageslide slide-------*/
+/*---------------style middle imageslide buttons-----*/
+.prev, .next 
+	{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 8px;
+	color: #F8F9FA;
+	font-weight: bold;
+	font-size: 15px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	}
+
+/* Position the "next button" to the right */
+.next 
+	{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+	}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover 
+	{
+	background-color:#343A40;
+	opacity:0.8;
+	}
+/*---------------style middle imageslide buttons-----*/
+/*---------------style middle imageslide captiontext-*/
+.text
+	{
+	color:black;
+	/*------color:#F8F9FA;	-*/
+	padding:0px;
+	position:absolute;
+	bottom:25px;
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	}
+/*---------------style middle imageslide captiontext-*/      
+/*---------------style middle imageslide dots--------*/  
+.dotrow
+	{
+	text-align:center;
+	}
+.dot
+	{
+	cursor:pointer;
+	height:10px;
+	width:10px;
+	border-radius:100%;
+	background-color:#ADB5BD;
+	display: inline-flex;
+	transition: background-color 0.6s ease;
+	position:relative;
+	bottom:20px;
+	margin:0 5px 0 5px;
+	}
+
+.active, .dot:hover
+	{
+	background-color:#495057;
+	}
+
+/*------fade animation---*/
+.fade	/*------class=fade---*/
+	{
+	animation-name:animfade;
+	animation-duration:1.5s;
+	}
+
+@keyframes animfade
+	{
+	from
+		{
+		opacity:0.4;
+		}
+	to
+		{
+		opacity:1;
+		}
+	}
+	
+
+/*---------------style middle imageslide dots--------*/   
 /*---------------style middle namesummary------------*/
 .namesummary
 	{
@@ -311,3 +413,15 @@ img
 	}
 
 /*---------------style projlist projects-------------*/
+/*---------------responsive--------------------------*/
+
+@media screen and (max-width: 1000px)
+{
+.middle
+	{
+	height:420px;
+	}
+
+
+
+}
