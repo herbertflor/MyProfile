@@ -1,30 +1,29 @@
-*---------------Color style----------------------------------------------*/
-/*------https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-----*/
+/*---------------Color style----------------------------------------------*/
+/*------https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557-----*/
 /*------------------------------------------------------------------------*/
-/*------.heading						----------*/
-/*------	.name						----------*/
-/*------	.links						----------*/
-/*------.middle							----------*/
-/*------	.imageslide					----------*/
-/*------		.slides					----------*/
-/*------		.prev					----------*/
-/*------		.next					----------*/
-/*------		.dots					----------*/
-/*------	.namesummary					----------*/
-/*------.projlist						----------*/
-/*------	.projtabs					----------*/
-/*------	.tabs		(tab content)			----------*/
-/*------		.button					----------*/
-/*------		.tabcontent				----------*/
-
+/*------.container						----------*/
+/*------	.heading					----------*/
+/*------	.projtypes					----------*/
+/*------		.resume					----------*/
+/*------		.misc					----------*/
 /*------------------------------------------------------------------------*/
-
 
 /*---------------set html height to full page--------*/
 html, body
 	{
 	width: 100%;
+	height:100%;
 	margin: 0;
+	}
+
+body
+	{
+	/-webkit-background-image:url(./Assets/images/bokeh-wallpaper-4.jpg);
+	background-image:url(./Assets/images/bokeh-wallpaper-4.jpg);
+	background-size:cover;
+	background-position: center;
+
+
 	}
 /*---------------set html height to full page--------*/
 /*---------------Req---------------------------------*/
@@ -36,395 +35,240 @@ html, body
 /*---------------Style the links---------------------*/
 a
 	{
-	text-underline-offset:5px;
-	text-decoration-style: dotted;
+	text-decoration:none;
+	color:black;
 	}
 /*---------------Style the links---------------------*/
 /*---------------style text--------------------------*/
 p	/*--------name text---------*/
 	{
-	font-size:10px;
-	font-family: Verdana, sans-serif;
-	letter-spacing: 3px;
-	margin-bottom:10px;
-	color:white;
-	}
-
-p1	/*--------name text---------*/
-	{
-	font-size:17px;
-	font-family: Verdana, sans-serif;
-	letter-spacing: 3px;
-	margin-bottom:10px;
-	color:#343A40;
-	}
-p2	/*--------links text---------*/
-	{
-	font-size:10px;
-	font-family: Verdana, sans-serif;
-	}
-p3	/*--------desciption text---------*/
-	{
 	font-size:13px;
 	font-family: Verdana, sans-serif;
-	color:#343A40;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+	color:black;
 	}
 
-p4	/*--------desciption text---------*/
+h1	/*--------heading---------*/
 	{
-	font-size:12px;
+	font-size:50px;
 	font-family: Verdana, sans-serif;
-	line-height:1.5;
+	letter-spacing: 3px;
+	color:black;
 	}
 
-h1	/*--------name text---------*/
+h2	/*--------heading2---------*/
 	{
-	font-size:80px;
-	font-family: Arial, sans-serif;
-
-	margin:5px 0 0 0;
-	color:#343A40;
-	}
-
-h2	/*--------name text---------*/
-	{
-	font-size:25px;
+	font-size:30px;
 	font-family: Verdana, sans-serif;
-	letter-spacing: 2px;
-	margin:0 0 5px 0;
-	color:#495057;
+	color:black;
 	}
+
+h3	/*--------heading3---------*/
+	{
+	font-size:16px;
+	font-family: Verdana, sans-serif;
+	color:black;
+	padding: 5px 0 5px 0;
+	}
+
 /*---------------style text--------------------------*/
+/*---------------style heading-----------------------*/
+.maincontainer
+	{
+	display:flex;
+	flex-direction:column;
+
+	width:100%;
+	height:100%;
+	height: -webkit-fill-available;
+	max-height:100%;
+	height: -webkit-fill-available;	
+	min-height:400px;
+	background-color: rgb(0,0,0,);
+	background-color:rgba(0,0,0,0.2);
+	
+	}
 
 /*---------------style heading-----------------------*/
 .heading
 	{
+	height:10%;	
+	min-height:70px;
 	display:flex;
-	flex-direction:row;
-	width:90%;
-	max-width:1000px;
-	min-width:750px;
-	height:200px;
-	/*---background-color:#F8F9FA;---*/
-	margin-left:auto;
-	margin-right:auto;
+	justify-content:center;
+	align-items:center;
 
-	padding:10px 0 10px 0;
-	
-	border-bottom:1px solid #DEE2E6;
+	background-color: rgb(255,255,255);
+	background-color:rgba(255,255,255,0.1);
+
+	backdrop-filter: blur(10px);
+
+	border-radius:10px;
+	border: 1px solid gray;
+	margin:30px;
 	}
+
 /*---------------style heading-----------------------*/
-/*---------------style heading name------------------*/
-.name
+/*---------------style project container-------------*/
+.projcontainer
 	{
+	height:90%;
 	display:flex;
-	flex-direction:column;
-	width:70%;
-	min-width:450px;
-	/*---background-color:#F0F0F0;---*/
-	padding:10px;
-	}
-
-/*---------------style heading name------------------*/
-/*---------------style heading links-----------------*/
-.links
-	{
-	display:flex;
-	width:30%;
-	min-width:250px;
-	height:50px;
-	}
-
-.links>div
-	{
-	display:flex;
-	flex:20%;
-	min-width:40px;
-	background-color:#E9ECEF;
-	justify-content:center;
-	text-align:center;
-	align-items:center;
-	margin:0 2px 0 2px;
-
-	border:none;
-	transition: 0.2s;
-	}
-
-.links>div:first-child
-	{
-	margin:0 2px 0 0;
-	}
-.links>div:last-child
-	{
-	margin:0 0 0 2px;
-	}
-
-.links>div a
-	{
-	height:50px;
-	width:100%;
-	color:black;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-
-	text-decoration:none;
-	}
-
-.links>div a:hover
-	{
-	color:white;
-	}
-
-
-.links>div:hover
-	{
-	background-color:#343A40;
-	}
-/*---------------style heading links-----------------*/
-/*---------------style middle------------------------*/
-.middle
-	{
-	display:flex;
-	width:90%;
-	max-width:1000px;
-	min-width:750px;
-	height:400px;
-	max-height:450px;
-	/*---background-color:#E9ECEF;---*/
-	margin-left:auto;
-	margin-right:auto;
-	padding:10px 0 10px 0;
-
-	border-bottom:1px solid #DEE2E6;
-	}
-/*---------------style middle------------------------*/
-/*---------------style middle imageslide-------------*/
-.imageslide	/*---container-----------------------*/
-	{
-	width:70%;
-	min-width:450px;
-	background-color:#E9ECEF;
-	margin: 0 10px 0 0;
-	position:relative;
-	}
-/*---------------style middle imageslide-------------*/
-/*---------------style middle imageslide slide-------*/
-.mySlides
-	{
-	width:100%;
-	height:100%;
-	display:none;
-	}
-
-.mySlides img
-	{
-	width: 100%;
-	object-fit: cover;
-	}
-/*---------------style middle imageslide slide-------*/
-/*---------------style middle imageslide buttons-----*/
-.prev, .next 
-	{
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	margin-top: -22px;
-	padding: 8px;
-	color: #F8F9FA;
-	font-weight: bold;
-	font-size: 15px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-	}
-
-/* Position the "next button" to the right */
-.next 
-	{
-	right: 0;
-	border-radius: 3px 0 0 3px;
-	}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover 
-	{
-	background-color:#343A40;
-	opacity:0.8;
-	}
-/*---------------style middle imageslide buttons-----*/
-/*---------------style middle imageslide captiontext-*/
-.text
-	{
-	color:black;
-	/*------color:#F8F9FA;	-*/
-	padding:0px;
-	position:absolute;
-	bottom:25px;
-	width:100%;
-	text-align:center;
-	font-weight:bold;
-	}
-/*---------------style middle imageslide captiontext-*/      
-/*---------------style middle imageslide dots--------*/  
-.dotrow
-	{
-	text-align:center;
-	}
-.dot
-	{
-	cursor:pointer;
-	height:10px;
-	width:10px;
-	border-radius:100%;
-	background-color:#ADB5BD;
-	display: inline-flex;
-	transition: background-color 0.6s ease;
-	position:relative;
-	bottom:20px;
-	margin:0 5px 0 5px;
-	}
-
-.active, .dot:hover
-	{
-	background-color:#495057;
-	}
-
-/*------fade animation---*/
-.fade	/*------class=fade---*/
-	{
-	animation-name:animfade;
-	animation-duration:1.5s;
-	}
-
-@keyframes animfade
-	{
-	from
-		{
-		opacity:0.4;
-		}
-	to
-		{
-		opacity:1;
-		}
-	}
-	
-
-/*---------------style middle imageslide dots--------*/   
-/*---------------style middle namesummary------------*/
-.namesummary
-	{
-	display:flex;
-	flex-direction:column;
-	width:30%;
-	min-width:250px;
-	color:black;
-	/*---background-color:silver;---*/
-	text-align:justify;
-	}
-/*---------------style middle namesummary------------*/
-/*---------------style projlist----------------------*/
-.projlist
-	{
-	display:flex;
-	flex-direction:column;
-	width:90%;
-	max-width:1000px;
-	min-width:750px;
-	height:600px;
-	/*---background-color:#F8F9FA;---*/
-	margin-left:auto;
-	margin-right:auto;
-	margin-top: 10px;
-	}
-/*---------------style projlist----------------------*/
-/*---------------style projlist tabs-----------------*/
-.tabs		/*-----container---------------------*/
-	{
-	display:flex;
-	width:100%;
-	height:70px;
-	flex-direction:row;
-	justify-content:space-between;
-	color:gray;
-	}
-
-.tabs button
-	{
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	text-align:center;
-	flex:20%;
-	min-width:80px;
-	height:60px;
-	margin:5px;
-
-	border:none;
-	background-color:#E9ECEF;
-	transition: 0.4s;
-	}
-
-.tabs button.tablinks:first-child
-	{
-	margin:5px 5px 5px 0;
-	}
-.tabs button.tablinks:last-child
-	{
-	margin:5px 0 5px 5px;
-	}
-
-.tabs button:hover
-	{
-	background-color:#343A40;
-	color:white;
-	}
-
-.tabs button.active
-	{
-	background-color:#343A40;
-	color:white;
-	}
-/*---------------style projlist tabs-----------------*/
-/*---------------style projlist projects-------------*/
-.tabcontent	/*-----container---------------------*/
-	{
-	display:none;
 	flex-direction:row;
 	flex-wrap:wrap;
-	justify-content: flex-start;
-	align-content: flex-start;
-	width:100%;
-	background-color:#F0F0F0;
+	justify-content:center;
+	align-items:center;
+	/*------background-color:silver;---*/
+	margin:0 20px 0 20px;
 	}
-
-.tabcontent>div
+/*---------------style project container-------------*/
+/*---------------style project types-----------------*/
+.projtypes
 	{
+	height:100%;
+	width:50%;
 	display:flex;
-	flex:25%;
-	min-width:230px;
-	height:150px;
-	background-color:#F0F0F0;
-	margin:5px;
+	flex-direction:column;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:center;
+	text-align:center;
+	border-radius:10px;
+	padding:10px;
 	}
-
-.tabcontent>div img
+/*---------------style project types-----------------*/
+/*---------------style project heading---------------*/
+.projheading
 	{
+	height:10%;
+	min-height:30px;
 	width:100%;
-	object-fit: cover;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+	background-color: rgb(255,255,255);
+	background-color:rgba(255,255,255,0.1);
+
+	backdrop-filter: blur(10px);
+
+	border-radius:10px;
+	border: 1px solid gray;
+
 	}
+/*---------------style project heading---------------*/
 
-/*---------------style projlist projects-------------*/
-/*---------------responsive--------------------------*/
-
-@media screen and (max-width: 1000px)
-{
-.middle
+/*---------------style projects----------------------*/
+.projects
 	{
-	height:450px;
+	height:85%;
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	/*------background-color:silver;---*/
+	align-content: stretch;
+	justify-content:space-between;	
+	}
+
+.projects >div
+	{
+	width:49%;
+
+	display:flex;
+	margin:5px 0 5px 0;
+
+	background-color: rgb(255,255,255);
+	background-color:rgba(255,255,255,0.1);
+
+	backdrop-filter: blur(10px);
+
+	border-radius:10px;
+	border: 1px solid gray;
+
+	justify-content: center;
+	align-items: center;
+	}
+
+.projects >div:hover
+	{
+	background-color:rgba(255,255,255,0.2);
+	border: 1px solid white;
+	color:white;
+	}
+
+.projects >div a h3:hover
+	{
+	color:white;
+	}
+/*---------------style projects----------------------*/
+
+/*---------------responsive---------------------------*/
+@media screen and (max-width: 700px)
+{
+.heading
+	{
+	margin-top:10px;
+	min-height: 70px;
+	}
+	
+}
+
+
+@media screen and (max-width: 480px)
+{
+.heading
+	{
+	margin:10px;
+	}
+.projcontainer
+	{
+	margin: 0;
+	}
+
+h1	/*--------heading---------*/
+	{
+	font-size:30px;
+	}
+h2	/*--------heading---------*/
+	{
+	font-size:20px;
 	}
 
 
+h3	/*--------heading---------*/
+	{
+	font-size:12px;
+	}	
+}
 
+@media screen and (max-height: 400px)
+{
+.heading
+	{
+	margin-top:5px;
+	margin-bottom:5px;
+	}
+
+h1	/*--------heading---------*/
+	{
+	font-size:25px;
+	}
+
+h2	/*--------heading---------*/
+	{
+	font-size:15px;
+	}
+
+h3	/*--------heading---------*/
+	{
+	font-size:10px;
+	padding:0;
+	}
+
+.projtypes
+	{
+	justify-content: unset;
+	}
 }
