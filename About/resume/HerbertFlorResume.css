@@ -72,6 +72,13 @@ p4	/*--------desciption text---------*/
 	line-height:1.5;
 	}
 
+p12	/*--------desciption text---------*/
+	{
+	font-size:12px;
+	font-family: Verdana, sans-serif;
+	line-height:1.5;
+	}
+
 p5	/*--------name text---------*/
 	{
 	font-size:13px;
