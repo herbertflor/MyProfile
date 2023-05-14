@@ -1,0 +1,349 @@
+*---------------Color style----------------------------------------------*/
+/*------https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-----*/
+/*------------------------------------------------------------------------*/
+/*------.heading						----------*/
+/*------	.name						----------*/
+/*------	.links						----------*/
+/*------.middle							----------*/
+/*------	.midleftcol					----------*/
+/*------		.skillsum				----------*/
+/*------		.skillcontainer				----------*/
+/*------			.skills >heading>head2>text	----------*/
+/*------	.midrightcol					----------*/
+/*------		.imageslide				----------*/
+/*------		.accordion				----------*/
+/*------------------------------------------------------------------------*/
+
+
+/*---------------set html height to full page--------*/
+html, body
+	{
+	width: 100%;
+	margin: 0;
+	}
+/*---------------set html height to full page--------*/
+/*---------------Req---------------------------------*/
+* 
+	{
+	box-sizing: border-box;
+	}
+/*---------------Req---------------------------------*/
+/*---------------Style the links---------------------*/
+a
+	{
+	text-underline-offset:0.3em;
+	text-decoration-style: dotted;
+	}
+/*---------------Style the links---------------------*/
+/*---------------style text--------------------------*/
+p	/*--------name text---------*/
+	{
+	font-size:14px;
+	font-family: Verdana, sans-serif;
+	margin:0 0 0 15px;
+	}
+
+p1	/*--------name text---------*/
+	{
+	font-size:17px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+	color:#343A40;
+	}
+p2	/*--------links text---------*/
+	{
+	font-size:10px;
+	font-family: Verdana, sans-serif;
+	}
+p3	/*--------desciption text---------*/
+	{
+	font-size:11px;
+	font-family: Verdana, sans-serif;
+	color:#343A40;
+	}
+
+p4	/*--------desciption text---------*/
+	{
+	font-size:13px;
+	font-family: Verdana, sans-serif;
+	line-height:1.5;
+	}
+
+p12	/*--------desciption text---------*/
+	{
+	font-size:12px;
+	font-family: Verdana, sans-serif;
+	line-height:1.5;
+	}
+
+p5	/*--------name text---------*/
+	{
+	font-size:13px;
+	font-style: italic;
+	font-weight:bold;
+	font-family: Verdana, sans-serif;
+	margin:0 0 5px 0;	
+	color:#6C757D;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:80px;
+	font-family: Arial, sans-serif;
+
+	margin:5px 0 0 0;
+	color:#343A40;
+	}
+h2	/*--------level 1 text------*/
+	{
+	font-size:20px;
+	font-family: Verdana, sans-serif;
+	/*---letter-spacing: 2px;---*/
+	color:#212529;
+	margin:10px 0 10px 0;
+	}
+h3	/*--------level 2 text------*/
+	{
+	font-size:16px;
+	font-family: Verdana, sans-serif;
+	color:#495057;
+	margin:10px 0 5px 0;
+	}
+
+h4	/*--------level 3 text------*/
+	{
+	font-size:14px;
+	font-family: Verdana, sans-serif;
+	color:#212529;
+	margin:10px 0 0px 0;
+	}
+
+ul
+	{
+	margin:5px 0 5px 0;
+	}
+
+/*---------------style text--------------------------*/
+
+/*---------------style heading-----------------------*/
+.heading
+	{
+	display:flex;
+	flex-direction:row;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	height:230px;
+	/*---background-color:#F8F9FA;---*/
+	margin-left:auto;
+	margin-right:auto;
+
+	padding:10px 0 10px 0;
+	
+	border-bottom:1px solid #DEE2E6;
+	}
+/*---------------style heading-----------------------*/
+/*---------------style heading name------------------*/
+.name
+	{
+	display:flex;
+	flex-direction:column;
+	width:70%;
+	min-width:450px;
+	/*---background-color:#F0F0F0;---*/
+	padding:10px;
+	}
+
+/*---------------style heading name------------------*/
+/*---------------style heading links-----------------*/
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:30%;
+	min-width:250px;
+	}
+
+.links
+	{
+	display:flex;
+	width:100%;
+	min-width:250px;
+	height:50px;
+	}
+
+.links>div
+	{
+	display:flex;
+	flex:20%;
+	min-width:40px;
+	background-color:#E9ECEF;
+	justify-content:center;
+	text-align:center;
+	align-items:center;
+	margin:0 2px 0 2px;
+	
+	border:none;
+	transition: 0.2s;
+	}
+
+.links>div:first-child
+	{
+	margin:0 2px 0 0;
+	}
+.links>div:last-child
+	{
+	margin:0 0 0 2px;
+	}
+
+.links>div a
+	{
+	height:50px;
+	width:100%;
+	color:black;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	}
+
+.links>div a:hover
+	{
+	color:white;
+	}
+
+
+.links>div:hover
+	{
+	background-color:#343A40;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:100%;
+	min-width:250px;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:10px;
+	font-family: Verdana, sans-serif;
+	text-align:justify;
+	}
+
+/*---------------style heading links-----------------*/
+/*---------------style middle------------------------*/
+.middle
+	{
+	display:flex;
+	flex-direction:column;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	/*---background-color:#E9ECEF;---*/
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px 0 10px 0;
+	}
+/*---------------style middle------------------------*/
+/*---------------style middle left skillsum----------*/
+.skillsum
+	{
+	display:flex;
+	flex-direction:column;
+	padding-bottom:20px;
+	border-bottom:1px solid #DEE2E6;
+	text-align:justify;
+	}
+/*---------------style middle left Skillsum----------*/
+/*---------------style middle left skillsum-2--------*/
+.skillsum2
+	{
+	display:flex;
+	flex-direction:column;
+	padding-bottom:20px;
+	border-bottom:1px solid #DEE2E6;
+	text-align:justify;
+	}
+
+.skills
+	{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	}
+
+.skills>div
+	{
+	display:flex;
+	flex-direction:column;
+	}
+
+.skills>div h3
+	{
+	font-size:14px;
+	margin-top:0;
+	}
+
+
+.skills>div p3 ul
+	{
+	padding-left:15px;
+	}
+		
+/*---------------style middle left Skillsum-2--------*/
+/*---------------style middle professional history---*/
+.profhist
+	{
+	display:flex;
+	flex-direction:column;
+	padding-bottom:20px;
+	border-bottom:1px solid #DEE2E6;
+	text-align:justify;
+	}
+.profhist>div
+	{
+	margin-left:20px;
+	display:flex;
+	flex-direction:column;
+
+	padding-bottom:20px;
+	border-bottom:1px solid #DEE2E6;
+	}
+
+.profhist>div:last-child
+	{
+	border-bottom:none;
+	}
+
+.profhist>div p5
+	{
+	font-size:12px;
+	color:#495057;
+	}
+
+.profhist>div p4 ul
+	{
+	padding-left:15px;
+	}
+
+.profhist>div p4 ul li
+	{
+	margin-bottom:10px;
+	}
+
+/*---------------style middle professional history---*/
+/*---------------responsive--------------------------*/
+@media screen and (max-width: 1000px)
+{
+.middle
+	{
+	height:420px;
+	}
+
+
+
+}
