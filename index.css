@@ -235,6 +235,6 @@ h2	/*--------heading2---------*/
 {
 p	/*--------name text---------*/
 	{
-	transform: rotate(-90deg);
+	transform: rotate(-90deg);	/*--- <--use this instead of rotate:-90deg;---*/
 	}
 }
