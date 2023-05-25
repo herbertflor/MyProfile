@@ -265,7 +265,7 @@ p	/*--------name text---------*/
 	}
 .projects a p
 	{
-	text-shadow: 0 0 5px black;
+	text-shadow: 0 0 10px gray;
 	}
 .projheading
 	{
