@@ -213,6 +213,11 @@ h2	/*--------heading2---------*/
 	}
 
 
+.projects a p
+	{
+	text-shadow: 0 0 5px white;
+	}
+
 /*---------------style projects----------------------*/
 /*---------------Responsive design-------------------*/
 /*---Laptop L (1024px and above)-----------------------*/
