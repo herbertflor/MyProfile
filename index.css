@@ -260,9 +260,9 @@ p	/*--------name text---------*/
 	and (-webkit-device-pixel-ratio: 2)
 {
 .projects a
-	{background-color:rgb(255,255,255);}
+	{background-color:rgba(255,255,255,0.5);}
 .projheading
-	{background-color:rgb(255,255,255);}
+	{background-color:rgba(255,255,255,0.5);}
 .heading
-	{background-color:rgba(255,255,255,0.8);}
+	{background-color:rgba(255,255,255,0.5);}
 }
