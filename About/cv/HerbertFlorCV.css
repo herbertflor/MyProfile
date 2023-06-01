@@ -134,7 +134,6 @@ ul
 	width:90%;
 	max-width:1000px;
 	min-width:750px;
-	height:230px;
 	/*---background-color:#F8F9FA;---*/
 	margin-left:auto;
 	margin-right:auto;
@@ -153,6 +152,7 @@ ul
 	min-width:450px;
 	/*---background-color:#F0F0F0;---*/
 	padding:10px;
+
 	}
 
 /*---------------style heading name------------------*/
@@ -235,6 +235,88 @@ ul
 	text-align:justify;
 	}
 
+
+/*---------------dropdown links--*/
+div#resume			/*---only for resume link---*/
+	{
+	display:block;
+	background-color:#E9ECEF;
+	padding:0;
+	height:inherit;
+	}
+
+div#resume:hover		/*---hover on resume link---*/
+	{
+	background-color:#343A40;
+	}
+
+div#resume a			/*---resume text style---*/
+	{
+	width:100%;
+	color:black;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	height:inherit;
+	}
+
+div#resume a:hover		/*---resume text color on hover---*/
+	{
+	color:white;
+	}
+
+div#resume a p2
+	{
+	display:block;
+	margin:auto;
+	}
+
+div#resume .dropdownlinks	/*---dropdown container---*/
+	{
+	display:none;
+	position:absolute;
+	z-index:1;
+	}
+
+div#resume .dropdownlinks a	
+	{
+	margin:5px 0 5px 0;
+	background-color:#DEE2E6;
+	color:black;
+
+	}
+
+div#resume .dropdownlinks a p2
+	{
+	display:flex;
+	align-items:center;
+	height:30px;
+	width:145px;
+	padding:5px;
+	text-align:left;
+	}
+
+div#resume .dropdownlinks a:hover
+	{
+	color:white;
+	background-color:#343A40;
+	}
+	
+div#resume:hover .dropdownlinks		/*---display dropdown links on hover @ resume---*/
+	{
+	display: block;
+	}
+
+div#resume:hover #resblock
+	{
+	color:white;
+	}
+
+#resblock
+	{
+	cursor:context-menu;
+	}
+
 /*---------------style heading links-----------------*/
 /*---------------style middle------------------------*/
 .middle
@@ -267,7 +349,7 @@ ul
 	flex-direction:column;
 	padding-bottom:20px;
 	border-bottom:1px solid #DEE2E6;
-	text-align:justify;
+	/*-----text-align:justify;---*/
 	}
 
 .skills
@@ -338,13 +420,552 @@ ul
 
 /*---------------style middle professional history---*/
 /*---------------responsive--------------------------*/
-@media screen and (max-width: 1000px)
+/*---tablet - landscape, 768px width---*/
+@media only screen and (max-width: 768px)
 {
-.middle
+html, body
 	{
-	height:420px;
+	min-width:700px;
+	padding:10px;
+	margin:0;
+	}
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+.heading 
+	{
+	width:700px;
+	max-width:unset;
+	min-width:700px;
+	}
+.middle 
+	{
+	width:700px;
+	max-width:700px;
+	min-width:unset;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 670px and down) */
+@media only screen and (max-width: 670px) 
+{
+html, body
+	{
+	min-width:640px;
+	/*--padding:10px;---*/
 	}
 
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:640px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:640px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:100%;
+	min-width:640px;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:13px;
+	line-height: 1.5;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	width:100%;
+	max-width:640px;
+	min-width:640px;
+	padding:10px 0 10px 0;
+	}
+.skills>div
+	{
+	display:flex;
+	flex-direction:column;
+	width:20%;
+	padding:5px;
+	border-right:1px solid #DEE2E6;
+	}
+.skills>div p3 ul
+	{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	line-height:1.5;
+	}
+
+.skills>div:first-child
+	{
+	margin:0 5px 0 0;
+	padding:5px 5px 5px 0;
+	}
+.skills>div:last-child
+	{
+	margin:0 0 0 5px;
+	border-right:none;
+	}
+ 
+.skills>div h3
+	{
+	font-size:11px;
+	height:30px;
+	text-align:center;
+	}
+.profhist>div p
+	{
+	text-align:left;
+	}
+}
 
 
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+html, body
+	{
+	min-width:500px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:500px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:500px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:100%;
+	min-width:500px;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:13px;
+	line-height: 1.5;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	width:100%;
+	max-width:500px;
+	min-width:500px;
+	padding:10px 0 10px 0;
+	}
+.skills>div
+	{
+	display:flex;
+	flex-direction:column;
+	width:20%;
+	padding:5px;
+	border-right:1px solid #DEE2E6;
+	}
+.skills>div p3 ul
+	{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	line-height:1.5;
+	}
+
+.skills>div:first-child
+	{
+	margin:0 5px 0 0;
+	padding:5px 5px 5px 0;
+	}
+.skills>div:last-child
+	{
+	margin:0 0 0 5px;
+	border-right:none;
+	}
+ 
+.skills>div h3
+	{
+	font-size:11px;
+	height:30px;
+	text-align:center;
+	}
+.profhist>div p
+	{
+	text-align:left;
+	}
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 480px - 375px----*/
+@media only screen and (max-width: 480px) 
+{
+html, body
+	{
+	min-width:320px;
+	/*--padding:10px;---*/
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:50px;
+	width:320px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:320px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	width:320px;
+	}
+.name p4
+	{
+	width:320px;
+	}
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:320px;
+	min-width:unset;
+	}
+.links
+	{
+	width:100%;
+	min-width:320px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:320px;
+	min-width:unset;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:13px;
+	line-height: 1.5;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	padding:10px 0 10px 0;
+	}
+.skills
+	{
+	display:flex;
+	/*---flex-direction:row;-----*/
+	flex-direction:column;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	}
+.skills>div
+	{
+	display:flex;
+	/*---flex-direction:column;-----*/
+	flex-direction:row;
+	width:unset;
+	margin:5px;
+	padding:5px;
+	border:none;
+
+	border-bottom: 1px solid #DEE2E6;
+	}
+.skills>div h3
+	{
+	width:100px;
+	text-align:left;
+	}
+.skills>div:first-child
+	{
+	margin:5px;
+	padding:5px;
+	}
+.skills>div:last-child
+	{
+	margin:5px;
+	border:none;
+	}
+.skills>div p3 ul
+	{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	line-height:1.5;
+	}
+.skills>div p3 ul li
+	{
+	text-align:left;
+	}
+/*---------------style middle professional history---*/
+.profhist div h4, p5
+	{
+	text-align:left;
+	}
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 325px and below----*/
+@media only screen and (max-width: 325px) 
+{
+html, body
+	{
+	min-width:290px;
+	padding:0;
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:40px;
+	width:290px;
+	}
+h2	
+	{
+	font-size: 15px;
+	}
+h3	
+	{
+	font-size: 13px;
+	}
+h4	
+	{
+	font-size: 13px;
+	}
+p5, p	
+	{
+	font-size: 12px;
+	}
+
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:290px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	font-size: 12px;
+	width:290px;
+	}
+.name p4
+	{
+	width:290px;
+	}
+
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:290px;
+	min-width:unset;
+	}
+.links
+	{
+	width:100%;
+	min-width:290px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:290px;
+	min-width:unset;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:13px;
+	line-height: 1.5;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	padding:10px 0 10px 0;
+	}
+.skills
+	{
+	display:flex;
+	/*---flex-direction:row;-----*/
+	flex-direction:column;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	}
+.skills>div
+	{
+	display:flex;
+	/*---flex-direction:column;-----*/
+	flex-direction:row;
+	width:unset;
+	margin:5px;
+	padding:5px;
+	border:none;
+
+	border-bottom: 1px solid #DEE2E6;
+	}
+.skills>div h3
+	{
+	width:100px;
+	text-align:left;
+	}
+.skills>div:first-child
+	{
+	margin:5px;
+	padding:5px;
+	}
+.skills>div:last-child
+	{
+	margin:5px;
+	border:none;
+	}
+.skills>div p3 ul
+	{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	line-height:1.5;
+	}
+.skills>div p3 ul li
+	{
+	text-align:left;
+	}
+/*---------------style middle professional history---*/
+.profhist div h4, p5
+	{
+	text-align:left;
+	}
 }
