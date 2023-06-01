@@ -3,6 +3,12 @@
 <head>
    <title>Herbert Flor Resume</title>
    <link rel="stylesheet" href="HerbertFlorResume.css">
+
+   <link rel="apple-touch-icon" sizes="180x180" href="../../Assets/images/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../../Assets/images/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../../Assets/images/favicon-16x16.png">
+   <link rel="manifest" href="../../Assets/images/site.webmanifest">
+
    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,8 +31,12 @@
 		<div><a href="../portfolio/HerbertFlorPortfolio.html">
 			<p2>						portfolio	</p2></a></div>
 
-		<div style="background-color:#343A40;"><a href="#">
-			<p2 style="color:white;">			resume		</p2></a></div>
+		<div  id="resume"><a><p2>			resume		</p2></a>
+			<div class="dropdownlinks">
+				<a href="HerbertFlorResumePrint.html">
+				<p2>					Printer-friendly	</p2></a>
+			</div>
+		</div>
 
 		<div><a href="../cv/HerbertFlorCV.html">
 			<p2>						cv		</p2></a></div>
@@ -189,42 +199,44 @@ Uses ArcGIS Pro modelbuilder to facilitate repetitive workflows.
 
 	<!-----middle right slideshow------>
 		<div class="imageslide">	<!-- Slideshow container -->
+			<a href="#" onclick="showlightbox();currentSlide(1)">
 
  	 		<!-- Full-width images with number and caption text -->
 		
 <!--image1-->		<div class="mySlides fade">							<!-- Slide container (class=slide + class=fade)	-->
-				<img src="../../Assets/images/resume_slideshow/Bawadi (1).jpg" style="width:100%">		<!-- Slide image	-->
+				<img src="../../Assets/images/resume_slideshow/01.jpg" style="width:100%">		<!-- Slide image	-->
 				<!-----<div class="text"><p4>3D Visualization</p4></div>------>				<!-- Slide caption	-->
 			</div>										<!-- Slide end		-->
 
 <!--image2-->		<div class="mySlides fade">
-				<img src="../../Assets/images/resume_slideshow/Lagoons (1).jpg" style="width:100%">
+				<img src="../../Assets/images/resume_slideshow/02.jpg" style="width:100%">
 				<!-----<div class="text"><p4>3D Visualization</p4></div>------>
 			</div>
 
 <!--image2-->		<div class="mySlides fade">							
-				<img src="../../Assets/images/resume_slideshow/Lagoons (3).jpg" style="width:100%">		
+				<img src="../../Assets/images/resume_slideshow/03.jpg" style="width:100%">		
 				<!-----<div class="text"><p4>Urban Design</p4></div>------>			
 			</div>										
 
 <!--image2-->		<div class="mySlides fade">
-				<img src="../../Assets/images/resume_slideshow/Lagoons (4).jpg" style="width:100%">
+				<img src="../../Assets/images/resume_slideshow/04.jpg" style="width:100%">
 				<!-----<div class="text"><p4>3D Visualization</p4></div>------>
 			</div>
 <!--image5-->		<div class="mySlides fade">
-				<img src="../../Assets/images/resume_slideshow/Qetaifan (1).jpg" style="width:100%">
+				<img src="../../Assets/images/resume_slideshow/05.jpg" style="width:100%">
 				<!-----<div class="text"><p4>3D Visualization</p4></div>------>
 			</div>
 <!--image6-->		<div class="mySlides fade">
-				<img src="../../Assets/images/resume_slideshow/Qetaifan (2).jpg" style="width:100%">
+				<img src="../../Assets/images/resume_slideshow/06.jpg" style="width:100%">
 				<!-----<div class="text"><p4>3D Visualization</p4></div>------>
 			</div>
 
 <!--image7-->		<div class="mySlides fade">
-				<img src="../../Assets/images/resume_slideshow/Reem.jpg" style="width:100%">
+				<img src="../../Assets/images/resume_slideshow/07.jpg" style="width:100%">
 				<!-----<div class="text"><p4>3D Visualization</p4></div>------>
 			</div>
-
+		</a>
+		
 	<!--uncomment if not using automatic slideshow-->
 	<!--
 	<!--		<!-- Next and previous buttons -->
@@ -324,9 +336,95 @@ Uses ArcGIS Pro modelbuilder to facilitate repetitive workflows.
 	<!-----middle right------>
 </div>
 <!-----middle------>
+<!-----LIGHTBOX------>
+<div class="lightcontainer" id="lightcontainer" style="display:none;">
+		<div class="topclose" >
+			<div>
+				<p>Featured Projects</p>
+				<a href=#><p onclick="closelightbox()">&#x2715;</p></a>
+			</div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+<!--img 1-->		<div class="lightslides" style="display:flex;">
+				<img src="../../Assets/images/resume_slideshow/01.jpg" style="width:100%">
+				<div class="overlay">
+					<h3>	Project description here	</h3>
+					<p12>	project details			</p12>
+				</div>
+			</div>
+<!--img 2-->		<div class="lightslides" style="display:none;">
+				<img src="../../Assets/images/resume_slideshow/02.jpg" style="width:100%">
+			</div>
+<!--img 3-->		<div class="lightslides" style="display:none;">
+				<img src="../../Assets/images/resume_slideshow/03.jpg" style="width:100%">
+			</div>
+<!--img 4-->		<div class="lightslides" style="display:none;">
+				<img src="../../Assets/images/resume_slideshow/04.jpg" style="width:100%">
+			</div>
+<!--img 5-->		<div class="lightslides" style="display:none;">
+				<img src="../../Assets/images/resume_slideshow/05.jpg" style="width:100%">
+			</div>
+<!--img 6-->		<div class="lightslides" style="display:none;">
+				<img src="../../Assets/images/resume_slideshow/06.jpg" style="width:100%">
+			</div>
+<!--img 7-->		<div class="lightslides" style="display:none;">
+				<img src="../../Assets/images/resume_slideshow/07.jpg" style="width:100%">
+			</div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<!-----LIGHTBOX text------------>
+
+
+		<!-----LIGHTBOX text------------>
+		<!-----LIGHTBOX thumbnail------->
+		<div class="thumbcontainer" id="thumbcontainer">
+				<div class="thumb">
+					<img class="thumbnail cursor" src="../../Assets/images/resume_slideshow/01.jpg"
+					style="width:100%"
+					onclick="currentSlide(1)">
+				</div>
+				<div class="thumb">
+					<img class="thumbnail cursor" src="../../Assets/images/resume_slideshow/02.jpg"
+					style="width:100%"
+					onclick="currentSlide(2)">
+				</div>
+				<div class="thumb">
+					<img class="thumbnail cursor" src="../../Assets/images/resume_slideshow/03.jpg"
+					style="width:100%"
+					onclick="currentSlide(3)">
+				</div>
+				<div class="thumb">
+					<img class="thumbnail cursor" src="../../Assets/images/resume_slideshow/04.jpg"
+					style="width:100%"
+					onclick="currentSlide(4)">
+				</div>
+				<div class="thumb">
+					<img class="thumbnail cursor" src="../../Assets/images/resume_slideshow/05.jpg"
+					style="width:100%"
+					onclick="currentSlide(5)">
+				</div>
+				<div class="thumb">
+					<img class="thumbnail cursor" src="../../Assets/images/resume_slideshow/06.jpg"
+					style="width:100%"
+					onclick="currentSlide(6)">
+				</div>
+				<div class="thumb">
+					<img class="thumbnail cursor" src="../../Assets/images/resume_slideshow/07.jpg"
+					style="width:100%"
+					onclick="currentSlide(7)">
+				</div>
+		</div>
+
+</div>
+
+<!-----LIGHTBOX------>
+
+
 
 <!-----script------>
 <script>
+
 
 
 //----------slideshow script------------//
@@ -423,6 +521,53 @@ var i;
 		}
 
 document.getElementsByClassName("accordion")[0].click()
+
+//----------Animated Accordion (Slide Down)---//
+
+//----------LIGHTBOX--------------------------//
+function showlightbox() 
+	{
+	document.getElementById("lightcontainer").style.display = "flex";
+	}
+
+function closelightbox() 
+	{
+	document.getElementById("lightcontainer").style.display = "none";
+	}	
+
+var lightIndex = 1;
+showLight(lightIndex);
+
+function currentSlide(n) 
+	{
+	showLight(lightIndex = n);
+	}
+
+function showLight(n) 
+	{
+	var L;
+	var lightslides = document.getElementsByClassName("lightslides");
+	var thumbnail = document.getElementsByClassName("thumbnail");
+
+		if (n > lightslides.length) 
+			{lightIndex = 1}
+		if (n < 1)
+			{lightIndex = lightslides.length}
+		for (L = 0; L < lightslides.length; L++) 
+			{
+			lightslides[L].style.display = "none";
+  			}
+
+		for (L = 0; L < thumbnail.length; L++)
+			{
+      			thumbnail[L].className = thumbnail[L].className.replace(" active", "");
+			}
+			lightslides[lightIndex-1].style.display = "flex";
+			thumbnail[lightIndex-1].className += " active";
+	}
+
+
+
 </script>
 <!-----script------>
 </body>
