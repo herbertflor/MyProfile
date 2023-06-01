@@ -171,6 +171,7 @@ h2	/*--------name text---------*/
 	text-decoration:none;
 	}
 
+
 .links>div a:hover
 	{
 	color:white;
@@ -180,6 +181,88 @@ h2	/*--------name text---------*/
 .links>div:hover
 	{
 	background-color:#343A40;
+	}
+
+
+/*---------------dropdown links--*/
+div#resume			/*---only for resume link---*/
+	{
+	display:block;
+	background-color:#E9ECEF;
+	padding:0;
+	height:inherit;
+	}
+
+div#resume:hover		/*---hover on resume link---*/
+	{
+	background-color:#343A40;
+	}
+
+div#resume a			/*---resume text style---*/
+	{
+	width:100%;
+	color:black;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	height:inherit;
+	}
+
+div#resume a:hover		/*---resume text color on hover---*/
+	{
+	color:white;
+	}
+
+div#resume a p2
+	{
+	display:block;
+	margin:auto;
+	}
+
+div#resume .dropdownlinks	/*---dropdown container---*/
+	{
+	display:none;
+	position:absolute;
+	z-index:1;
+	}
+
+div#resume .dropdownlinks a	
+	{
+	margin:5px 0 5px 0;
+	background-color:#DEE2E6;
+	color:black;
+
+	}
+
+div#resume .dropdownlinks a p2
+	{
+	display:flex;
+	align-items:center;
+	height:30px;
+	width:145px;
+	padding:5px;
+	text-align:left;
+	}
+
+div#resume .dropdownlinks a:hover
+	{
+	color:white;
+	background-color:#343A40;
+	}
+	
+div#resume:hover .dropdownlinks		/*---display dropdown links on hover @ resume---*/
+	{
+	display: block;
+	}
+
+div#resume:hover #resblock
+	{
+	color:white;
+	}
+
+#resblock
+	{
+	cursor:context-menu;
 	}
 /*---------------style heading links-----------------*/
 /*---------------style middle------------------------*/
@@ -204,6 +287,8 @@ h2	/*--------name text---------*/
 	{
 	width:70%;
 	min-width:450px;
+	max-height:400px;
+	min-height:280px;
 	background-color:#E9ECEF;
 	margin: 0 10px 0 0;
 	position:relative;
@@ -215,12 +300,14 @@ h2	/*--------name text---------*/
 	width:100%;
 	height:100%;
 	display:none;
+	aspect-ratio:16/9;
 	}
 
 .mySlides img
 	{
 	width: 100%;
 	object-fit: cover;
+	aspect-ratio:16/9;
 	}
 /*---------------style middle imageslide slide-------*/
 /*---------------style middle imageslide buttons-----*/
@@ -396,7 +483,7 @@ h2	/*--------name text---------*/
 	justify-content: flex-start;
 	align-content: flex-start;
 	width:100%;
-	background-color:#F0F0F0;
+	background-color:#E9ECEF;
 	}
 
 .tabcontent>div
@@ -404,7 +491,8 @@ h2	/*--------name text---------*/
 	display:flex;
 	flex:25%;
 	min-width:230px;
-	height:150px;
+	aspect-ratio:16/9;
+	/*-----height:150px;---*/
 	background-color:#F0F0F0;
 	margin:5px;
 	}
@@ -418,13 +506,478 @@ h2	/*--------name text---------*/
 /*---------------style projlist projects-------------*/
 /*---------------responsive--------------------------*/
 
-@media screen and (max-width: 1000px)
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---tablet - landscape, 768px width---*/
+@media only screen and (max-width: 768px) 
 {
+html, body
+	{
+	min-width:700px;
+	padding:10px;
+	margin:0;
+	}
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+.heading 
+	{
+	width:700px;
+	max-width:unset;
+	min-width:700px;
+	}
+
+.middle 
+	{
+	width: 700px;
+	max-width: 700px;
+	min-width: unset;
+	height: unset;
+	max-height: unset;
+	}
+.projlist 
+	{
+	width: 700px;
+	max-width: 700px;
+	min-width: unset;
+	height: unset;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 740px and down) measured to galaxy s8 landscape & surface duo*/
+@media only screen and (max-width: 740px) 
+{
+html, body
+	{
+	min-width:700px;
+	/*--padding:10px;---*/
+	margin:0;
+	}
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+.heading 
+	{
+	width:700;
+	max-width:unset;
+	min-width:700px;
+	}
+/*---------------style middle------------------------*/
 .middle
 	{
-	height:450px;
+	display:flex;
+	width:700px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:70%;
+	min-width:unset;
+	max-height:330px;
+	}
+
+.projlist
+	{
+	width:700px;
+	max-width:700px;
+	min-width:unset;
+	height:unset;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 670px and down) */
+@media only screen and (max-width: 670px) 
+{
+html, body
+	{
+	min-width:640px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:640px;
+	max-width:640px;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:640px;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	min-width:640px;
+	height:310px;
+	margin-bottom: 20px;
+	}
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:640px;
+	margin-bottom: 20px;
+	}
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	max-width:640px;
+	min-width:640px;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	
+	}
+.tabs button
+	{
+	min-width:unset;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+html, body
+	{
+	min-width:500px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:500px;
+	max-width:500px;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:500px;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	min-width:500px;
+	height:310px;
+	margin-bottom: 20px;
+	}
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:500px;
+	margin-bottom: 20px;
 	}
 
 
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	max-width:500px;
+	min-width:500px;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	
+	}
+.tabs button
+	{
+	min-width:unset;
+	}
+}
 
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 480px - 375px----*/
+@media only screen and (max-width: 480px) 
+{
+html, body
+	{
+	min-width:320px;
+	/*--padding:10px;---*/
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:50px;
+	width:340px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:320px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	width:320px;
+	}
+.name p4
+	{
+	width:320px;
+	}
+.links
+	{
+	width:100%;
+	min-width:320px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:320px;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	min-width:320px;
+	height:210px;
+	margin-bottom: 20px;
+	}
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:320px;
+	margin-bottom: 20px;
+	}
+
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	width:320px;
+	height:70px;
+	}
+.tabs button
+	{
+	font-size:8px;
+	min-width:unset;
+	margin:5px;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 325px and below----*/
+@media only screen and (max-width: 325px)
+{
+html, body
+	{
+	min-width:290px;
+	padding:0;
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:40px;
+	width:290px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:290px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	font-size: 12px;
+	width:290px;
+	}
+.name p4
+	{
+	width:290px;
+	}
+.links
+	{
+	width:100%;
+	min-width:290px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:290px;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	min-width:290px;
+	height:210px;
+	margin-bottom: 20px;
+	}
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:290px;
+	margin-bottom: 20px;
+	}
+
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	width:290px;
+	height:70px;
+	}
+.tabs button
+	{
+	font-size:8px;
+	min-width:unset;
+	margin:5px;
+	}
 }
