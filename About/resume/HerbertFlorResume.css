@@ -1,5 +1,5 @@
 *---------------Color style----------------------------------------------*/
-/*------https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-----*/
+/*-----https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-----*/
 /*------------------------------------------------------------------------*/
 /*------.heading						----------*/
 /*------	.name						----------*/
@@ -21,6 +21,8 @@ html, body
 	width: 100%;
 	margin: 0;
 	}
+
+
 /*---------------set html height to full page--------*/
 /*---------------Req---------------------------------*/
 * 
@@ -167,6 +169,8 @@ h3	/*--------name text---------*/
 	margin:0 2px 0 2px;
 	padding:5px;
 	
+
+
 	border:none;
 	transition: 0.2s;
 	}
@@ -200,6 +204,69 @@ h3	/*--------name text---------*/
 .links>div:hover
 	{
 	background-color:#343A40;
+	}
+
+/*---------------dropdown links--*/
+div#resume
+	{
+	display:block;
+	background-color:#343A40;
+	padding:0;
+	height:inherit;
+
+	cursor:context-menu;
+	}
+
+div#resume a
+	{
+	width:100%;
+	color:white;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	height:inherit;
+	}
+
+div#resume a p2
+	{
+	display:block;
+	margin:auto;
+	}
+
+div#resume .dropdownlinks
+	{
+	display:none;
+	position:absolute;
+	z-index:1;
+	}
+
+div#resume .dropdownlinks a
+	{
+	margin:5px 0 5px 0;
+	background-color:#DEE2E6;
+	color:black;
+
+	}
+
+div#resume .dropdownlinks a p2
+	{
+	display:flex;
+	align-items:center;
+	height:30px;
+	width:145px;
+	padding:5px;
+	text-align:left;
+	}
+
+div#resume .dropdownlinks a:hover
+	{
+	color:white;
+	background-color:#343A40;
+	}
+	
+div#resume:hover .dropdownlinks
+	{
+	display: block;
 	}
 
 
@@ -273,7 +340,6 @@ h3	/*--------name text---------*/
 .imageslide	/*---container-----------------------*/
 	{
 	width:100%;
-	height:150px;
 	background-color:black;	//#E9ECEF;//
 	margin: 0 10px 0 0;
 	position:relative;
@@ -285,11 +351,12 @@ h3	/*--------name text---------*/
 	width:100%;
 	height:100%;
 	display:none;
+	aspect-ratio:16/9;
 	}
 
 .mySlides img
 	{
-	width: 100%;
+	
 	object-fit: cover;
 	}
 /*---------------style middle imageslide slide-------*/
@@ -565,17 +632,275 @@ h3	/*--------name text---------*/
 	width:100%;
 	object-fit: cover;
 	}
-
 /*---------------style projlist projects-------------*/
+/*---------------LIGHTBOX----------------------------*/
+.lightcontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:80%;
+	max-width:800px;
+	background-color:black;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index:2;
+
+	max-height:100%;
+	}
+
+
+/*---------------LIGHTBOX----------------------------*/
+/*---------------LIGHTBOX - Style the x button-------*/
+.topclose
+	{
+	display:flex;
+	justify-content:center;
+	}
+.topclose>div
+	{
+	height:40px;
+	width:90%;
+	}
+
+.topclose>div a
+	{
+	float:right;
+	padding:0;
+	color:white;
+	text-decoration:none;
+	}
+
+.topclose>div p
+	{
+	float:left;
+	font-size:12px;
+	}
+.topclose>div a:hover
+	{
+	/*---white transparent background---*/
+	font-weight:bold;
+	text-shadow:0 0  10px white;
+	}
+
+/*---------------LIGHTBOX - Style the x button-------*/
+/*---------------LIGHTBOX - main image---------------*/
+.lightimage
+	{
+	display:flex;
+	width:90%;
+	align-self:center;
+	aspect-ratio:16/9;
+	background-color:silver;
+	position:relative;
+	margin-bottom:10px;
+	}
+.lightslides
+	{
+	display:none;
+	}
+
+.overlay
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	color:white;
+	position:absolute;
+	bottom:0;
+	background: rgb(0, 0, 0);
+	background:rgba(0, 0, 0, 0.5);
+	transition:.5s;
+	opacity:0;
+	text-align:center;
+	align-items:center;
+	justify-content:center;
+	padding-bottom:10px;
+	}
+
+.overlay h3
+	{
+	color:white;
+	}
+
+.lightslides:hover .overlay
+	{
+	opacity:1;
+	}
+
+
+/*---------------LIGHTBOX - main image---------------*/
+/*---------------LIGHTBOX - thumbnail----------------*/
+.thumbcontainer
+	{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	
+	max-height:10%;
+	width:90%;
+	align-self:center;
+	margin-bottom:10px;
+	}
+
+.thumbcontainer >div
+	{
+		padding: 5px;
+	aspect-ratio:16/9;
+	}
+
+.thumbcontainer >div:first-child
+	{
+	padding:5px 5px 5px 0;
+	}
+
+.thumbcontainer >div:last-child
+	{
+	padding:5px 0 5px 5px;
+	}
+
+.thumbnail
+	{
+	opacity: 0.6;
+	cursor:pointer;
+	}
+
+.active,
+.thumbnail:hover 
+	{
+	opacity: 1;
+	}
+
+
+
+/*---------------LIGHTBOX - thumbnail----------------*/
+
 /*---------------responsive--------------------------*/
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---tablet - landscape, 768px width---*/
+@media only screen and (max-width: 768px)
+{
+html, body
+	{
+	min-width:700px;
+	padding:10px;
+	margin:0;
+	}
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+.heading 
+	{
+	width:700px;
+	max-width:unset;
+	min-width:700px;
+	}
+.middle 
+	{
+	width:700px;
+	max-width:700px;
+	min-width:unset;
+	}
+
+
+
+
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 670px and down) */
+@media only screen and (max-width: 670px) 
+{
+html, body
+	{
+	min-width:640px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:640px;
+	max-width:640px;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:640px;
+	min-width:640px;
+	}
+.midleftcol
+	{
+	width:100%;
+	min-width:640px;
+	margin-bottom:20px;
+	padding-right:0;
+	border-bottom:1px solid #DEE2E6;
+	}
+.midrightcol
+	{
+	width:100%;
+	min-width:640px;
+	height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	height:310px;
+	}
+
+.lightcontainer
+	{
+	width:80%;
+	min-width:525px;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) 
 {
-body
+html, body
 	{
-	padding:10px;
-	margin:0;
+	min-width:500px;
+	/*--padding:10px;---*/
 	}
 
 h1	/*--------name text---------*/
@@ -637,26 +962,42 @@ h1	/*--------name text---------*/
 	}
 
 }
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
-/* Extra small devices (phones, 375px and down) */
-@media only screen and (max-width: 375px) 
+/*---mobile - portrait, 550px and below----*/
+@media only screen and (max-width: 550px) 
 {
-body
+.lightcontainer
 	{
-	padding:10px;
+	min-width:100%;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 480px - 375px----*/
+@media only screen and (max-width: 480px) 
+{
+html, body
+	{
+	min-width:320px;
+	/*--padding:10px;---*/
 	margin:0;
 	}
 
 h1	/*--------name text---------*/
 	{
 	font-size:50px;
-	width:340px;
+	width:320px;
 	}
 /*---------------style heading-----------------------*/
 .heading 
 	{
 	flex-direction:column;
-	width:340px;
+	width:320px;
 	max-width:unset;
 	min-width:unset;
 	height:241px;
@@ -664,23 +1005,23 @@ h1	/*--------name text---------*/
 .name
 	{
 	flex-direction:column;
-	width:340px;
+	width:320px;
 	min-width:unset;
 	text-align:center;
 	padding:30px 0 30px 0;
 	}
 .name p1
 	{
-	width:340px;
+	width:320px;
 	}
 .name p4
 	{
-	width:340px;
+	width:320px;
 	}
 .links
 	{
 	width:100%;
-	min-width:340px;
+	min-width:320px;
 	height:30px;
 	}
 
@@ -692,7 +1033,7 @@ h1	/*--------name text---------*/
 .middle
 	{
 	flex-direction:column;
-	width:340px;
+	width:320px;
 	max-width:unset;
 	min-width:unset;
 	height:unset;
@@ -700,7 +1041,7 @@ h1	/*--------name text---------*/
 .midleftcol
 	{
 	width:100%;
-	min-width:340px;
+	min-width:320px;
 	margin-bottom:20px;
 	padding-right:0;
 	border-bottom:1px solid #DEE2E6;
@@ -708,7 +1049,7 @@ h1	/*--------name text---------*/
 .midrightcol
 	{
 	width:100%;
-	min-width:340px;
+	min-width:320px;
 	}
 .skillsum h2
 	{
@@ -716,13 +1057,137 @@ h1	/*--------name text---------*/
 	}
 .imageslide	/*---container-----------------------*/
 	{
-	width:340;
+	width:320;
 	height:210px;
 	}
+}
 
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
+/*---mobile - portrait, 325px and below----*/
+@media only screen and (max-width: 325px) 
+{
+html, body
+	{
+	min-width:290px;
+	padding:0;
+	margin:0;
+	}
 
+h1	/*--------name text---------*/
+	{
+	font-size:40px;
+	width:290px;
+	}
+h2	
+	{
+	font-size: 15px;
+	}
+h3	
+	{
+	font-size: 13px;
+	}
+p5	
+	{
+	font-size: 12px;
+	}
 
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:290px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	font-size: 12px;
+	width:290px;
+	}
+.name p4
+	{
+	width:290px;
+	}
+.links
+	{
+	width:100%;
+	min-width:290px;
+	height:30px;
+	}
 
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.midleftcol
+	{
+	width:100%;
+	min-width:290px;
+	margin-bottom:20px;
+	padding-right:0;
+	border-bottom:1px solid #DEE2E6;
+	}
+.midrightcol
+	{
+	width:100%;
+	min-width:290px;
+	}
+.skillsum h2
+	{
+	text-align:left;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:290;
+	height:210px;
+	}
+}
 
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - landscape ---------------*/
+@media only screen	and (max-width: 1024px)
+			and (orientation: landscape)
+{
+.lightcontainer
+	{
+	width:100%;
+	max-width:unset;
+	position: fixed;
+	top: 0;
+	left: unset;
+	transform: unset;
+	z-index:2;
+	height:100vmin;
+	}
+
+.lightimage
+	{
+	width:unset;
+	max-width:90%;
+	max-height:70%;
+	}
 }
