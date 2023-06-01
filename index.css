@@ -1,22 +1,31 @@
-/*---------------Color style----------------------------------------------*/
-/*------https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557-----*/
+*---------------Color style----------------------------------------------*/
+/*------https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-----*/
 /*------------------------------------------------------------------------*/
-/*------.container						----------*/
-/*------	.heading					----------*/
-/*------	.projtypes					----------*/
-/*------		.resume					----------*/
-/*------		.misc					----------*/
+/*------.heading						----------*/
+/*------	.name						----------*/
+/*------	.links						----------*/
+/*------.middle							----------*/
+/*------	.imageslide					----------*/
+/*------		.slides					----------*/
+/*------		.prev					----------*/
+/*------		.next					----------*/
+/*------		.dots					----------*/
+/*------	.namesummary					----------*/
+/*------.projlist						----------*/
+/*------	.projtabs					----------*/
+/*------	.tabs		(tab content)			----------*/
+/*------		.button					----------*/
+/*------		.tabcontent				----------*/
+
 /*------------------------------------------------------------------------*/
+
 
 /*---------------set html height to full page--------*/
 html, body
 	{
 	width: 100%;
-	height:100%;
 	margin: 0;
-	overflow:hidden;
 	}
-
 /*---------------set html height to full page--------*/
 /*---------------Req---------------------------------*/
 * 
@@ -27,252 +36,946 @@ html, body
 /*---------------Style the links---------------------*/
 a
 	{
-	text-decoration:none;
-	color:black;
+	text-underline-offset:5px;
+	text-decoration-style: dotted;
 	}
 /*---------------Style the links---------------------*/
 /*---------------style text--------------------------*/
 p	/*--------name text---------*/
 	{
-	font-size:13px;
+	font-size:10px;
 	font-family: Verdana, sans-serif;
 	letter-spacing: 3px;
-	color:black;
+	margin-bottom:10px;
+	color:white;
 	}
 
-h1	/*--------heading---------*/
+p1	/*--------name text---------*/
 	{
-	font-size:40px;
-	font-family: Trebuchet MS, sans-serif;
+	font-size:17px;
+	font-family: Verdana, sans-serif;
 	letter-spacing: 3px;
-	color:black;
-	text-align:center;
+	margin-bottom:10px;
+	color:#343A40;
 	}
-
-h2	/*--------heading2---------*/
+p2	/*--------links text---------*/
 	{
-	font-size:20px;
-	font-family: Trebuchet MS, sans-serif;
-	color:black;
+	font-size:10px;
+	font-family: Verdana, sans-serif;
+	}
+p3	/*--------desciption text---------*/
+	{
+	font-size:13px;
+	font-family: Verdana, sans-serif;
+	color:#343A40;
 	}
 
+p4	/*--------desciption text---------*/
+	{
+	font-size:12px;
+	font-family: Verdana, sans-serif;
+	line-height:1.5;
+	}
 
+h1	/*--------name text---------*/
+	{
+	font-size:80px;
+	font-family: Arial, sans-serif;
 
+	margin:5px 0 0 0;
+	color:#343A40;
+	}
+
+h2	/*--------name text---------*/
+	{
+	font-size:25px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 2px;
+	margin:0 0 5px 0;
+	color:#495057;
+	}
 /*---------------style text--------------------------*/
-/*---------------style background--------------------*/
-.background
-	{
-	width:100%;
-	height:100%;
-	/-webkit-background-image:url(./Assets/images/webprojects-bg.jpg);
-	background-image:url(./Assets/images/webprojects-bg.jpg);
-	background-size: cover;
-	background-position:0% 0%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	
-	animation-name:scroll;
-	animation-duration:60s;
-	animation-direction: alternate;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	}
-
-@keyframes scroll
-	{
-	from	{background-position:0% 0%;	}
-	to	{background-position:100% 0%;	}
-	}
-	
-
-/*---------------style background--------------------*/
-/*---------------style heading-----------------------*/
-.maincontainer
-	{
-	display:flex;
-	flex-direction:column;
-
-	width:100%;
-	height:100%;
-	height: -webkit-fill-available;
-	min-height:300px;
-	height: -webkit-fill-available;	
-	/*---background-color: rgb(0,0,0,);	---*/
-	/*---background-color:rgba(0,0,0,0.2);	---*/
-	
-	position: absolute;
-	top: 0;
-	overflow:hidden;
-	}
 
 /*---------------style heading-----------------------*/
 .heading
 	{
-	height:10%;	
-	min-height:70px;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-
-	background-color: rgb(255,255,255);
-	background-color:rgba(255,255,255,0.1);
-
-	backdrop-filter: blur(10px);
-
-	border-radius:10px;
-	border: 1px solid gray;
-	margin:30px;
-	}
-
-/*---------------style heading-----------------------*/
-/*---------------style project container-------------*/
-.projcontainer
-	{
-	height:90%;
 	display:flex;
 	flex-direction:row;
-	flex-wrap:wrap;
-	justify-content:center;
-	align-items:center;
-	/*------background-color:silver;---*/
-	margin:0 20px 0 20px;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	height:200px;
+	/*---background-color:#F8F9FA;---*/
+	margin-left:auto;
+	margin-right:auto;
+
+	padding:10px 0 10px 0;
+	
+	border-bottom:1px solid #DEE2E6;
 	}
-/*---------------style project container-------------*/
-/*---------------style project types-----------------*/
-.projtypes
+/*---------------style heading-----------------------*/
+/*---------------style heading name------------------*/
+.name
 	{
-	height:100%;
-	width:50%;
 	display:flex;
 	flex-direction:column;
-	justify-content:space-between;
-	align-items:center;
-	text-align:center;
-	border-radius:10px;
-	padding:0 10px 0 10px;
+	width:70%;
+	min-width:450px;
+	/*---background-color:#F0F0F0;---*/
+	padding:10px;
 	}
-/*---------------style project types-----------------*/
-/*---------------style project heading---------------*/
-.projheading
+
+/*---------------style heading name------------------*/
+/*---------------style heading links-----------------*/
+.links
 	{
-	height:10%;
-	min-height:36px;
-	width:100%;
 	display:flex;
+	width:30%;
+	min-width:250px;
+	height:50px;
+	}
+
+.links>div
+	{
+	display:flex;
+	flex:20%;
+	min-width:40px;
+	background-color:#E9ECEF;
 	justify-content:center;
+	text-align:center;
 	align-items:center;
+	margin:0 2px 0 2px;
 
-	background-color: rgb(255,255,255);
-	background-color:rgba(255,255,255,0.1);
-
-	backdrop-filter: blur(10px);
-
-	border-radius:10px;
-	border: 1px solid gray;
+	border:none;
+	transition: 0.2s;
 	}
-/*---------------style project heading---------------*/
 
-/*---------------style projects----------------------*/
-.projects
+.links>div:first-child
 	{
-	height:90%;
+	margin:0 2px 0 0;
+	}
+.links>div:last-child
+	{
+	margin:0 0 0 2px;
+	}
+
+.links>div a
+	{
+	height:50px;
 	width:100%;
+	color:black;
 	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	/*------background-color:silver;---*/
-	align-content: stretch;
-	justify-content:space-between;	
-	padding:5px 0 5px 0;
+	align-items:center;
+	justify-content:center;
+
+	text-decoration:none;
 	}
 
-.projects a
+
+.links>div a:hover
 	{
-	width:49%;
-	min-height:15px;
-	display:flex;
-	margin:5px 0 5px 0;
-
-	background-color: rgb(255,255,255);
-	background-color:rgba(255,255,255,0.1);
-
-	backdrop-filter: blur(10px);
-
-	border-radius:10px;
-	border: 1px solid gray;
-
-	justify-content: center;
-	align-items: center;
-	}
-
-.projects a:hover
-	{
-	background-color:rgba(255,255,255,0.2);
-	border: 3px solid white;
 	color:white;
 	}
 
 
-.projects a p
+.links>div:hover
 	{
-	text-shadow: 0 0 5px white;
+	background-color:#343A40;
 	}
 
-/*---------------style projects----------------------*/
-/*---------------Responsive design-------------------*/
-/*---Laptop L (1024px and above)-----------------------*/
-@media only screen and (min-width: 1024px)
-{
-body
+
+/*---------------dropdown links--*/
+div#resume			/*---only for resume link---*/
+	{
+	display:block;
+	background-color:#E9ECEF;
+	padding:0;
+	height:inherit;
+	}
+
+div#resume:hover		/*---hover on resume link---*/
+	{
+	background-color:#343A40;
+	}
+
+div#resume a			/*---resume text style---*/
+	{
+	width:100%;
+	color:black;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	height:inherit;
+	}
+
+div#resume a:hover		/*---resume text color on hover---*/
+	{
+	color:white;
+	}
+
+div#resume a p2
+	{
+	display:block;
+	margin:auto;
+	}
+
+div#resume .dropdownlinks	/*---dropdown container---*/
+	{
+	display:none;
+	position:absolute;
+	z-index:1;
+	}
+
+div#resume .dropdownlinks a	
+	{
+	margin:5px 0 5px 0;
+	background-color:#DEE2E6;
+	color:black;
+
+	}
+
+div#resume .dropdownlinks a p2
+	{
+	display:flex;
+	align-items:center;
+	height:30px;
+	width:145px;
+	padding:5px;
+	text-align:left;
+	}
+
+div#resume .dropdownlinks a:hover
+	{
+	color:white;
+	background-color:#343A40;
+	}
+	
+div#resume:hover .dropdownlinks		/*---display dropdown links on hover @ resume---*/
+	{
+	display: block;
+	}
+
+div#resume:hover #resblock
+	{
+	color:white;
+	}
+
+#resblock
+	{
+	cursor:context-menu;
+	}
+/*---------------style heading links-----------------*/
+/*---------------style middle------------------------*/
+.middle
+	{
+	display:flex;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	height:400px;
+	max-height:450px;
+	/*---background-color:#E9ECEF;---*/
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px 0 10px 0;
+
+	border-bottom:1px solid #DEE2E6;
+	}
+/*---------------style middle------------------------*/
+/*---------------style middle imageslide-------------*/
+.imageslide	/*---container-----------------------*/
+	{
+	width:70%;
+	min-width:450px;
+	max-height:400px;
+	min-height:280px;
+	background-color:#E9ECEF;
+	margin: 0 10px 0 0;
+	position:relative;
+	}
+/*---------------style middle imageslide-------------*/
+/*---------------style middle imageslide slide-------*/
+.mySlides
+	{
+	width:100%;
+	height:100%;
+	display:none;
+	aspect-ratio:16/9;
+	}
+
+.mySlides img
+	{
+	width: 100%;
+	object-fit: cover;
+	aspect-ratio:16/9;
+	}
+/*---------------style middle imageslide slide-------*/
+/*---------------style middle imageslide buttons-----*/
+.prev, .next 
+	{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 8px;
+	color: #F8F9FA;
+	font-weight: bold;
+	font-size: 15px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	}
+
+/* Position the "next button" to the right */
+.next 
+	{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+	}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover 
+	{
+	background-color:#343A40;
+	opacity:0.8;
+	}
+/*---------------style middle imageslide buttons-----*/
+/*---------------style middle imageslide captiontext-*/
+.text
+	{
+	color:black;
+	/*------color:#F8F9FA;	-*/
+	padding:0px;
+	position:absolute;
+	bottom:25px;
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	}
+/*---------------style middle imageslide captiontext-*/      
+/*---------------style middle imageslide dots--------*/  
+.dotrow
+	{
+	text-align:center;
+	}
+.dot
+	{
+	cursor:pointer;
+	height:10px;
+	width:10px;
+	border-radius:100%;
+	background-color:#ADB5BD;
+	display: inline-flex;
+	transition: background-color 0.6s ease;
+	position:relative;
+	bottom:20px;
+	margin:0 5px 0 5px;
+	}
+
+.active, .dot:hover
+	{
+	background-color:#495057;
+	}
+
+/*------fade animation---*/
+.fade	/*------class=fade---*/
+	{
+	animation-name:animfade;
+	animation-duration:1.5s;
+	}
+
+@keyframes animfade
+	{
+	from
+		{
+		opacity:0.4;
+		}
+	to
+		{
+		opacity:1;
+		}
+	}
+	
+
+/*---------------style middle imageslide dots--------*/   
+/*---------------style middle namesummary------------*/
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:30%;
+	min-width:250px;
+	color:black;
+	/*---background-color:silver;---*/
+	text-align:justify;
+	}
+/*---------------style middle namesummary------------*/
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	height:600px;
+	/*---background-color:#F8F9FA;---*/
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+	}
+/*---------------style projlist----------------------*/
+/*---------------style projlist tabs-----------------*/
+.tabs		/*-----container---------------------*/
+	{
+	display:flex;
+	width:100%;
+	height:70px;
+	flex-direction:row;
+	justify-content:space-between;
+	color:gray;
+	}
+
+.tabs button
 	{
 	display:flex;
 	justify-content:center;
+	align-items:center;
+	text-align:center;
+	flex:20%;
+	min-width:80px;
+	height:60px;
+	margin:5px;
+
+	border:none;
+	background-color:#E9ECEF;
+	transition: 0.4s;
 	}
 
-.maincontainer
+.tabs button.tablinks:first-child
 	{
-	width:1000px;
+	margin:5px 5px 5px 0;
+	}
+.tabs button.tablinks:last-child
+	{
+	margin:5px 0 5px 5px;
 	}
 
-}
-/*---Mobile L (425px and down)-----------------------*/
-@media only screen and (max-width: 425px) 
+.tabs button:hover
+	{
+	background-color:#343A40;
+	color:white;
+	}
+
+.tabs button.active
+	{
+	background-color:#343A40;
+	color:white;
+	}
+/*---------------style projlist tabs-----------------*/
+/*---------------style projlist projects-------------*/
+.tabcontent	/*-----container---------------------*/
+	{
+	display:none;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	width:100%;
+	background-color:#E9ECEF;
+	}
+
+.tabcontent>div
+	{
+	display:flex;
+	flex:25%;
+	min-width:230px;
+	aspect-ratio:16/9;
+	/*-----height:150px;---*/
+	background-color:#F0F0F0;
+	margin:5px;
+	}
+
+.tabcontent>div img
+	{
+	width:100%;
+	object-fit: cover;
+	}
+
+/*---------------style projlist projects-------------*/
+/*---------------responsive--------------------------*/
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---tablet - landscape, 768px width---*/
+@media only screen and (max-width: 768px) 
 {
-h1	/*--------heading---------*/
+html, body
 	{
-	font-size:30px;		/*-10 px--*/
+	min-width:700px;
+	padding:10px;
+	margin:0;
 	}
-h2	/*--------heading2---------*/
+h1	/*--------name text---------*/
 	{
-	font-size:16px;		/*-4 px--*/
+	font-size:70px;
+	}
+.heading 
+	{
+	width:700px;
+	max-width:unset;
+	min-width:700px;
+	}
+
+.middle 
+	{
+	width: 700px;
+	max-width: 700px;
+	min-width: unset;
+	height: unset;
+	max-height: unset;
+	}
+.projlist 
+	{
+	width: 700px;
+	max-width: 700px;
+	min-width: unset;
+	height: unset;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 740px and down) measured to galaxy s8 landscape & surface duo*/
+@media only screen and (max-width: 740px) 
+{
+html, body
+	{
+	min-width:700px;
+	/*--padding:10px;---*/
+	margin:0;
+	}
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+.heading 
+	{
+	width:700;
+	max-width:unset;
+	min-width:700px;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	display:flex;
+	width:700px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:70%;
+	min-width:unset;
+	max-height:330px;
+	}
+
+.projlist
+	{
+	width:700px;
+	max-width:700px;
+	min-width:unset;
+	height:unset;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 670px and down) */
+@media only screen and (max-width: 670px) 
+{
+html, body
+	{
+	min-width:640px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:640px;
+	max-width:640px;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:640px;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	min-width:640px;
+	height:310px;
+	margin-bottom: 20px;
+	}
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:640px;
+	margin-bottom: 20px;
+	}
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	max-width:640px;
+	min-width:640px;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	
+	}
+.tabs button
+	{
+	min-width:unset;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+html, body
+	{
+	min-width:500px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:500px;
+	max-width:500px;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:500px;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	min-width:500px;
+	height:310px;
+	margin-bottom: 20px;
+	}
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:500px;
+	margin-bottom: 20px;
+	}
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	max-width:500px;
+	min-width:500px;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	
+	}
+.tabs button
+	{
+	min-width:unset;
 	}
 }
 
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
-/*---Mobile M (375px and down)-----------------------*/
-@media only screen and (max-width: 480px)
-	and (-webkit-device-pixel-ratio: 2)
+/*---mobile - portrait, 480px - 375px----*/
+@media only screen and (max-width: 480px) 
 {
-p	/*--------name text---------*/
+html, body
 	{
-	font-size:15px;
-	transform: rotate(-90deg);	/*--- <--use this instead of rotate:-90deg;---*/
+	min-width:320px;
+	/*--padding:10px;---*/
+	margin:0;
 	}
-.projects a
+
+h1	/*--------name text---------*/
 	{
-	background-color:rgba(255,255,255,0.5);
-	backdrop-filter: blur(10px);
+	font-size:50px;
+	width:340px;
 	}
-.projects a p
+/*---------------style heading-----------------------*/
+.heading 
 	{
-	text-shadow: 0 0 10px gray;
+	flex-direction:column;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
 	}
-.projheading
+.name
 	{
-	background-color:rgba(255,255,255,0.5);
+	flex-direction:column;
+	width:320px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
 	}
-.heading
+.name p1
 	{
-	background-color:rgba(255,255,255,0.5);
+	width:320px;
+	}
+.name p4
+	{
+	width:320px;
+	}
+.links
+	{
+	width:100%;
+	min-width:320px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:320px;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	min-width:320px;
+	height:210px;
+	margin-bottom: 20px;
+	}
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:320px;
+	margin-bottom: 20px;
+	}
+
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	width:320px;
+	height:70px;
+	}
+.tabs button
+	{
+	font-size:8px;
+	min-width:unset;
+	margin:5px;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 325px and below----*/
+@media only screen and (max-width: 325px)
+{
+html, body
+	{
+	min-width:290px;
+	padding:0;
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:40px;
+	width:290px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:290px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	font-size: 12px;
+	width:290px;
+	}
+.name p4
+	{
+	width:290px;
+	}
+.links
+	{
+	width:100%;
+	min-width:290px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:290px;
+	min-width:unset;
+	height:unset;
+	max-height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	min-width:290px;
+	height:210px;
+	margin-bottom: 20px;
+	}
+.namesummary
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:290px;
+	margin-bottom: 20px;
+	}
+
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	width:290px;
+	height:70px;
+	}
+.tabs button
+	{
+	font-size:8px;
+	min-width:unset;
+	margin:5px;
 	}
 }
