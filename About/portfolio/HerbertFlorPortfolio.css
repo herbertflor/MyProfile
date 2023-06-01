@@ -198,149 +198,91 @@ h2	/*--------name text---------*/
 	font-family: Verdana, sans-serif;
 	text-align:justify;
 	}
-/*---------------style heading links-----------------*/
-/*---------------style middle------------------------*/
-.middle
-	{
-	display:flex;
-	width:90%;
-	max-width:1000px;
-	min-width:750px;
-	height:400px;
-	max-height:450px;
-	/*---background-color:#E9ECEF;---*/
-	margin-left:auto;
-	margin-right:auto;
-	padding:10px 0 10px 0;
 
-	border-bottom:1px solid #DEE2E6;
-	}
-/*---------------style middle------------------------*/
-/*---------------style middle imageslide-------------*/
-.imageslide	/*---container-----------------------*/
+
+/*---------------dropdown links--*/
+div#resume			/*---only for resume link---*/
 	{
-	width:70%;
-	min-width:450px;
+	display:block;
 	background-color:#E9ECEF;
-	margin: 0 10px 0 0;
-	position:relative;
-	}
-/*---------------style middle imageslide-------------*/
-/*---------------style middle imageslide slide-------*/
-.mySlides
-	{
-	width:100%;
-	height:100%;
-	display:none;
+	padding:0;
+	height:inherit;
 	}
 
-.mySlides img
-	{
-	width: 100%;
-	object-fit: cover;
-	}
-/*---------------style middle imageslide slide-------*/
-/*---------------style middle imageslide buttons-----*/
-.prev, .next 
-	{
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	margin-top: -22px;
-	padding: 8px;
-	color: #F8F9FA;
-	font-weight: bold;
-	font-size: 15px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-	}
-
-/* Position the "next button" to the right */
-.next 
-	{
-	right: 0;
-	border-radius: 3px 0 0 3px;
-	}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover 
+div#resume:hover		/*---hover on resume link---*/
 	{
 	background-color:#343A40;
-	opacity:0.8;
 	}
-/*---------------style middle imageslide buttons-----*/
-/*---------------style middle imageslide captiontext-*/
-.text
+
+div#resume a			/*---resume text style---*/
 	{
-	color:black;
-	/*------color:#F8F9FA;	-*/
-	padding:0px;
-	position:absolute;
-	bottom:25px;
 	width:100%;
-	text-align:center;
-	font-weight:bold;
-	}
-/*---------------style middle imageslide captiontext-*/      
-/*---------------style middle imageslide dots--------*/  
-.dotrow
-	{
-	text-align:center;
-	}
-.dot
-	{
-	cursor:pointer;
-	height:10px;
-	width:10px;
-	border-radius:100%;
-	background-color:#ADB5BD;
-	display: inline-flex;
-	transition: background-color 0.6s ease;
-	position:relative;
-	bottom:20px;
-	margin:0 5px 0 5px;
+	color:black;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	height:inherit;
 	}
 
-.active, .dot:hover
+div#resume a:hover		/*---resume text color on hover---*/
 	{
-	background-color:#495057;
+	color:white;
 	}
 
-/*------fade animation---*/
-.fade	/*------class=fade---*/
+div#resume a p2
 	{
-	animation-name:animfade;
-	animation-duration:1.5s;
+	display:block;
+	margin:auto;
 	}
 
-@keyframes animfade
+div#resume .dropdownlinks	/*---dropdown container---*/
 	{
-	from
-		{
-		opacity:0.4;
-		}
-	to
-		{
-		opacity:1;
-		}
+	display:none;
+	position:absolute;
+	z-index:1;
 	}
-	
 
-/*---------------style middle imageslide dots--------*/   
-/*---------------style middle namesummary------------*/
-.namesummary
+div#resume .dropdownlinks a	
+	{
+	margin:5px 0 5px 0;
+	background-color:#DEE2E6;
+	color:black;
+
+	}
+
+div#resume .dropdownlinks a p2
 	{
 	display:flex;
-	flex-direction:column;
-	width:30%;
-	min-width:250px;
-	color:black;
-	/*---background-color:silver;---*/
-	text-align:justify;
+	align-items:center;
+	height:30px;
+	width:145px;
+	padding:5px;
+	text-align:left;
 	}
-/*---------------style middle namesummary------------*/
+
+div#resume .dropdownlinks a:hover
+	{
+	color:white;
+	background-color:#343A40;
+	}
+	
+div#resume:hover .dropdownlinks		/*---display dropdown links on hover @ resume---*/
+	{
+	display: block;
+	}
+
+div#resume:hover #resblock
+	{
+	color:white;
+	}
+
+#resblock
+	{
+	cursor:context-menu;
+	}
+
+/*---------------style heading links-----------------*/
+
 /*---------------style projlist----------------------*/
 .projlist
 	{
@@ -421,9 +363,9 @@ h2	/*--------name text---------*/
 	display:flex;
 	flex:25%;
 	min-width:230px;
-	height:150px;
 	background-color:#F0F0F0;
 	margin:5px;
+	aspect-ratio:16/9;
 	}
 
 .tabcontent>div img
@@ -435,13 +377,410 @@ h2	/*--------name text---------*/
 /*---------------style projlist projects-------------*/
 /*---------------responsive--------------------------*/
 
-@media screen and (max-width: 1000px)
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---tablet - landscape, 768px width---*/
+@media only screen and (max-width: 768px) 
 {
-.middle
+html, body
 	{
-	height:450px;
+	min-width:700px;
+	padding:10px;
+	margin:0;
+	}
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+.heading 
+	{
+	width:700px;
+	max-width:unset;
+	min-width:700px;
+	}
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	width:700px;
+	max-width:700px;
+	min-width:unset;
 	}
 
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
 
+/* Extra small devices (phones, 670px and down) */
+@media only screen and (max-width: 670px) 
+{
+html, body
+	{
+	min-width:640px;
+	/*--padding:10px;---*/
+	}
 
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:640px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:640px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:100%;
+	min-width:640px;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:13px;
+	line-height: 1.5;
+	}
+
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	max-width:640px;
+	min-width:640px;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	
+	}
+.tabs button
+	{
+	min-width:unset;
+	}
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+html, body
+	{
+	min-width:500px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:500px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	min-width:500px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:100%;
+	min-width:500px;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:13px;
+	line-height: 1.5;
+	}
+
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	max-width:500px;
+	min-width:500px;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	
+	}
+.tabs button
+	{
+	min-width:unset;
+	}
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 480px - 375px----*/
+@media only screen and (max-width: 480px) 
+{
+html, body
+	{
+	min-width:320px;
+	/*--padding:10px;---*/
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:50px;
+	width:320px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:320px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	width:320px;
+	}
+.name p4
+	{
+	width:320px;
+	}
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:320px;
+	min-width:unset;
+	}
+.links
+	{
+	width:100%;
+	min-width:320px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:320px;
+	min-width:unset;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:13px;
+	line-height: 1.5;
+	}
+
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	width:320px;
+	height:70px;
+	}
+.tabs button
+	{
+	font-size:8px;
+	min-width:unset;
+	margin:5px;
+	}
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 325px and below----*/
+@media only screen and (max-width: 325px) 
+{
+html, body
+	{
+	min-width:290px;
+	padding:0;
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:40px;
+	width:290px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:290px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	font-size: 12px;
+	width:290px;
+	}
+.name p4
+	{
+	width:290px;
+	}
+.linkscontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:290px;
+	min-width:unset;
+	}
+.links
+	{
+	width:100%;
+	min-width:290px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+
+.linkstext
+	{
+	display:flex;
+	width:290px;
+	min-width:unset;
+	margin-top:10px;
+	}
+
+.linkstext p2
+	{
+	font-size:13px;
+	line-height: 1.5;
+	}
+
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.tabs		/*-----container---------------------*/
+	{
+	width:290px;
+	height:70px;
+	}
+.tabs button
+	{
+	font-size:8px;
+	min-width:unset;
+	margin:5px;
+	}
 }
