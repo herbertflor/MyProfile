@@ -343,6 +343,7 @@ div#resume:hover .dropdownlinks
 	background-color:black;	//#E9ECEF;//
 	margin: 0 10px 0 0;
 	position:relative;
+	box-shadow:5px 5px 10px #6C757D;
 	}
 /*---------------style middle right imageslide-------*/
 /*---------------style middle imageslide slide-------*/
