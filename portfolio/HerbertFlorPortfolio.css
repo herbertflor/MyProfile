@@ -51,6 +51,12 @@ p1	/*--------name text---------*/
 	margin-bottom:10px;
 	color:#343A40;
 	}
+p12	/*--------desciption text---------*/
+	{
+	font-size:12px;
+	font-family: Verdana, sans-serif;
+	line-height:1.5;
+	}
 p2	/*--------links text---------*/
 	{
 	font-size:10px;
@@ -323,6 +329,7 @@ div#resume:hover #resblock
 	border:none;
 	background-color:#E9ECEF;
 	transition: 0.4s;
+	cursor:pointer;
 	}
 
 .tabs button.tablinks:first-child
@@ -355,7 +362,7 @@ div#resume:hover #resblock
 	justify-content: flex-start;
 	align-content: flex-start;
 	width:100%;
-	background-color:#E9ECEF;
+	background-color:#212529;	/*--#E9ECEF;--*/
 	}
 
 .tabcontent>div
@@ -363,16 +370,119 @@ div#resume:hover #resblock
 	display:flex;
 	flex:25%;
 	min-width:230px;
-	background-color:#F0F0F0;
+	background-color:#212529;
 	margin:5px;
-	aspect-ratio:16/9;
+	aspect-ratio:1.4142/1;
+	justify-content:center;
 	}
 
 .tabcontent>div img
 	{
 	width:100%;
 	object-fit: cover;
+
+	cursor:pointer;
 	}
+
+/*---------------LIGHTBOX----------------------------*/
+.lightcontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:80%;
+	max-width:850px;
+	background-color:black;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index:2;
+
+	max-height:100%;
+	}
+
+
+/*---------------LIGHTBOX----------------------------*/
+/*---------------LIGHTBOX - Style the x button-------*/
+.topclose
+	{
+	display:flex;
+	justify-content:center;
+	}
+.topclose>div
+	{
+	height:40px;
+	width:90%;
+	}
+
+.topclose>div a
+	{
+	float:right;
+	padding:0;
+	color:white;
+	text-decoration:none;
+	}
+
+.topclose>div p
+	{
+	float:left;
+	font-size:12px;
+	}
+.topclose>div a:hover
+	{
+	/*---white transparent background---*/
+	font-weight:bold;
+	text-shadow:0 0  10px white;
+	}
+
+/*---------------LIGHTBOX - Style the x button-------*/
+/*---------------LIGHTBOX - main image---------------*/
+.lightimage
+	{
+	display:flex;
+	width:90%;
+	align-self:center;
+	aspect-ratio:16/9;
+	background-color:silver;
+	position:relative;
+	margin-bottom:30px;
+	}
+.lightslides
+	{
+	display:none;
+	}
+
+.overlay
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	color:white;
+	position:absolute;
+	bottom:0;
+	background: rgb(0, 0, 0);
+	background:rgba(0, 0, 0, 0.5);
+	transition:.5s;
+	opacity:0;
+	text-align:center;
+	align-items:center;
+	justify-content:center;
+	padding-bottom:10px;
+	}
+
+.overlay h3
+	{
+	color:white;
+	}
+
+.lightslides:hover .overlay
+	{
+	opacity:1;
+	}
+
+
+/*---------------LIGHTBOX - main image---------------*/
 
 /*---------------style projlist projects-------------*/
 /*---------------responsive--------------------------*/
