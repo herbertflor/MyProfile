@@ -482,6 +482,12 @@ div#resume:hover #resblock
 	}
 
 
+@keyframes G10
+	{
+	from	{background-position:0% 0%;	}
+	to	{background-position:100% 0%;	}
+	}
+
 /*---------------LIGHTBOX - main image---------------*/
 
 /*---------------style projlist projects-------------*/

@@ -16,7 +16,7 @@
 <body>
 <!-----heading----->
 <div class="heading">
-	<div class="name">
+	<div class="name" style="visibility:hidden;">
 		<h1>Herbert Flor</h1>
 		<p1>	Urban Planning + Design	</p1>
 		<p4>	herbert.flor@yahoo.com	<br>
@@ -24,7 +24,7 @@
 		</p4>
 	</div>
 	<!-----links----->
-	<div class="linkscontainer">
+	<div class="linkscontainer" style="visibility:hidden;">
 		<div class="links">
 			<div><a href="../index.html">
 				<p2>						home		</p2></a></div>
@@ -107,22 +107,25 @@ Throughout my career, I have faced many challenging tasks that required me to le
 	<!-----tab content graphics-->
 	<div class="tabcontent" id="Graphics">
 		<div	onclick="show_G1()"
-			><img src="../Assets/images/graphics/	01.png"		alt="Masterplan 14"></div>
+			><img src="../Assets/images/graphics/	01.png"		alt="Graphics 1"></div>
 		<div	onclick="show_G2()"
-			><img src="../Assets/images/graphics/	02.jpg"		alt="Masterplan 14"></div>
+			><img src="../Assets/images/graphics/	02.jpg"		alt="Graphics 2"></div>
 		<div	onclick="show_G3()"
-			><img src="../Assets/images/graphics/	03.png"		alt="Masterplan 14"></div>
+			><img src="../Assets/images/graphics/	03.jpg"		alt="Graphics 3"></div>
 		<div	onclick="show_G4()"
-			><img src="../Assets/images/graphics/	04.jpg"		alt="Masterplan 14"></div>
+			><img src="../Assets/images/graphics/	04.jpg"		alt="Graphics 4"></div>
 		<div	onclick="show_G5()"
-			><img src="../Assets/images/graphics/	05.png"		alt="Masterplan 14"></div>
+			><img src="../Assets/images/graphics/	05.png"		alt="Graphics 5"></div>
 		<div	onclick="show_G6()"
-			><img src="../Assets/images/graphics/	06.jpg"		alt="Masterplan 14"></div>
+			><img src="../Assets/images/graphics/	06.jpg"		alt="Graphics 6"></div>
 		<div	onclick="show_G7()"
-			><img src="../Assets/images/graphics/	07.jpg"		alt="Masterplan 14"></div>
-
-
-
+			><img src="../Assets/images/graphics/	07.jpg"		alt="Graphics 7"></div>
+		<div	onclick="show_G8()"
+			><img src="../Assets/images/graphics/	08.jpg"		alt="Graphics 8"></div>
+		<div	onclick="show_G9()"
+			><img src="../Assets/images/graphics/	09.jpg"		alt="Graphics 9"></div>
+		<div	onclick="show_G10()"
+			><img src="../Assets/images/graphics/	10.jpg"		alt="Graphics 10"></div>
 	</div>
 	<!-----tab content graphics-->
 
@@ -192,18 +195,21 @@ Throughout my career, I have faced many challenging tasks that required me to le
 
 	<!-----tab content GIS------->
 	<div class="tabcontent" id="GIS">
-		<div><img src="../Assets/images/GIS/	01.png"		alt="GIS 1"></div>
-		<div><img src="../Assets/images/GIS/	01.png"		alt="GIS 1"></div>
+		<div	onclick="show_GIS1()"
+			><img src="../Assets/images/GIS/	01.png"		alt="GIS 1"></div>
+		<div	onclick="show_GIS2()"
+			><img src="../Assets/images/GIS/	02.jpg"		alt="GIS 2"></div>
+		<div	onclick="show_GIS3()"
+			><img src="../Assets/images/GIS/	03.jpg"		alt="GIS 3"></div>
+		<div	onclick="show_GIS4()"
+			><img src="../Assets/images/GIS/	04.png"		alt="GIS 4"></div>
+		<div	onclick="show_GIS5()"
+			><img src="../Assets/images/GIS/	05.png"		alt="GIS 5"></div>
+		<div	onclick="show_GIS6()"
+			><img src="../Assets/images/GIS/	06.png"		alt="GIS 6"></div>
+		<div	onclick="show_GIS7()"
+			><img src="../Assets/images/GIS/	07.png"		alt="GIS 7"></div>
 
-
-
-		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 1"></div>
-		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 2"></div>
-		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 3"></div>
-		<div><img src="../Assets/images/temp-image.jpg" style="filter: grayscale(100%);" alt="Masterplan 4"></div>
-		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 5"></div>
-		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 6"></div>
-		<div><img src="../Assets/images/temp-image.jpg" alt="Masterplan 7"></div>
 	</div>
 	<!-----tab content GIS------->
 
@@ -409,8 +415,152 @@ Developed concept structure plan for a 180 ha project site.
 </div>
 <!-----LIGHTBOX-D14----->
 
-
-
+<!-----LIGHTBOX-G1----->
+<div class="lightcontainer" id="g1" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/01.png" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G1----->
+<!-----LIGHTBOX-G2----->
+<div class="lightcontainer" id="g2" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/02.jpg" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G2----->
+<!-----LIGHTBOX-G3----->
+<div class="lightcontainer" id="g3" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/03.jpg" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G3----->
+<!-----LIGHTBOX-G4----->
+<div class="lightcontainer" id="g4" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/04.jpg" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G4----->
+<!-----LIGHTBOX-G5----->
+<div class="lightcontainer" id="g5" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/05.png" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G5----->
+<!-----LIGHTBOX-G6----->
+<div class="lightcontainer" id="g6" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/06.jpg" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G6----->
+<!-----LIGHTBOX-G7----->
+<div class="lightcontainer" id="g7" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/07.jpg" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G7----->
+<!-----LIGHTBOX-G8----->
+<div class="lightcontainer" id="g8" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/08.jpg" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G8----->
+<!-----LIGHTBOX-G9----->
+<div class="lightcontainer" id="g9" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/09.jpg"style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G9----->
+<!-----LIGHTBOX-G10----->
+<div class="lightcontainer" id="g10" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/graphics/10.jpg" 
+					style="	height:10%;
+						animation-name:G10;
+						animation-duration:10s;
+						animation-direction: alternate;
+						animation-timing-function: ease-in-out;
+						animation-iteration-count: infinite;">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-G10----->
 
 <!-----LIGHTBOX-3D1----->
 <div class="lightcontainer" id="3d1" style="display:none;">
@@ -637,6 +787,109 @@ Developed concept structure plan for a 180 ha project site.
 </div>
 <!-----LIGHTBOX-3D16----->
 
+
+
+<!-----LIGHTBOX-GIS1----->
+<div class="lightcontainer" id="gis1" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/GIS/01_1.gif" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-GIS1----->
+<!-----LIGHTBOX-GIS2----->
+<div class="lightcontainer" id="gis2" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/GIS/02_1.gif" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-GIS2----->
+<!-----LIGHTBOX-GIS3----->
+<div class="lightcontainer" id="gis3" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/GIS/03.jpg" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-GIS3----->
+<!-----LIGHTBOX-GIS4----->
+<div class="lightcontainer" id="gis4" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/GIS/04_1.gif" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-GIS4----->
+<!-----LIGHTBOX-GIS5----->
+<div class="lightcontainer" id="gis5" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/GIS/05.png" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-GIS5----->
+<!-----LIGHTBOX-GIS6----->
+<div class="lightcontainer" id="gis6" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/GIS/06.png" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-GIS6----->
+<!-----LIGHTBOX-GIS7----->
+<div class="lightcontainer" id="gis7" style="display:none;">
+		<div class="topclose" >
+			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+		</div>
+		<!-----LIGHTBOX main image------>
+		<div class="lightimage">
+			<div class="lightslides" style="display:flex;">
+				<img src="../Assets/images/GIS/07_1.gif" style="width:100%">
+				<div class="overlay"><p12>
+					project details
+				</p12></div></div></div>
+</div>
+<!-----LIGHTBOX-GIS7----->
+
+
+
 <!-----LIGHTBOX------>
 <!-----script------>
 <script>
@@ -781,6 +1034,46 @@ function show_d14()
 	document.getElementById("d14").style.display = "flex";
 	}
 
+function show_G1() 
+	{
+	document.getElementById("g1").style.display = "flex";
+	}
+function show_G2() 
+	{
+	document.getElementById("g2").style.display = "flex";
+	}
+function show_G3() 
+	{
+	document.getElementById("g3").style.display = "flex";
+	}
+function show_G4() 
+	{
+	document.getElementById("g4").style.display = "flex";
+	}
+function show_G5() 
+	{
+	document.getElementById("g5").style.display = "flex";
+	}
+function show_G6() 
+	{
+	document.getElementById("g6").style.display = "flex";
+	}
+function show_G7() 
+	{
+	document.getElementById("g7").style.display = "flex";
+	}
+function show_G8() 
+	{
+	document.getElementById("g8").style.display = "flex";
+	}
+function show_G9() 
+	{
+	document.getElementById("g9").style.display = "flex";
+	}
+function show_G10() 
+	{
+	document.getElementById("g10").style.display = "flex";
+	}
 
 
 function show_3d1() 
@@ -847,6 +1140,37 @@ function show_3d16()
 	{
 	document.getElementById("3d16").style.display = "flex";
 	}
+
+
+function show_GIS1() 
+	{
+	document.getElementById("gis1").style.display = "flex";
+	}
+function show_GIS2() 
+	{
+	document.getElementById("gis2").style.display = "flex";
+	}
+function show_GIS3() 
+	{
+	document.getElementById("gis3").style.display = "flex";
+	}
+function show_GIS4() 
+	{
+	document.getElementById("gis4").style.display = "flex";
+	}
+function show_GIS5() 
+	{
+	document.getElementById("gis5").style.display = "flex";
+	}
+function show_GIS6() 
+	{
+	document.getElementById("gis6").style.display = "flex";
+	}
+function show_GIS7() 
+	{
+	document.getElementById("gis7").style.display = "flex";
+	}
+	
 </script>
 <!-----script------>
 </body>
