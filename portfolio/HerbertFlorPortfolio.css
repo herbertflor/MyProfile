@@ -93,6 +93,12 @@ h2	/*--------name text---------*/
 	margin:0 0 5px 0;
 	color:#495057;
 	}
+h3	/*--------name text---------*/
+	{
+	font-size:16px;
+	font-family: Verdana, sans-serif;
+	color:#495057;
+	}
 /*---------------style text--------------------------*/
 
 /*---------------style heading-----------------------*/
@@ -156,6 +162,8 @@ h2	/*--------name text---------*/
 
 	border:none;
 	transition: 0.2s;
+	-moz-transition: 0.2s;
+	-webkit-transition: 0.2s;
 	}
 
 .links>div:first-child
@@ -328,7 +336,11 @@ div#resume:hover #resblock
 
 	border:none;
 	background-color:#E9ECEF;
+
 	transition: 0.4s;
+	-moz-transition: 0.4s;
+	-webkit-transition: 0.4s;
+
 	cursor:pointer;
 	}
 
@@ -374,14 +386,23 @@ div#resume:hover #resblock
 	margin:5px;
 	aspect-ratio:1.4142/1;
 	justify-content:center;
+	
+	overflow:hidden;
 	}
 
 .tabcontent>div img
 	{
 	width:100%;
 	object-fit: cover;
-
 	cursor:pointer;
+	}
+
+.tabcontent>div:hover img
+	{
+	transform:scale(1.1);
+	transition:2s;
+	-moz-transition:2s;
+	-webkit-transition:2s;
 	}
 
 /*---------------LIGHTBOX----------------------------*/
@@ -443,7 +464,7 @@ div#resume:hover #resblock
 	display:flex;
 	width:90%;
 	align-self:center;
-	aspect-ratio:16/9;
+	/*-----aspect-ratio:16/9;----*/
 	background-color:silver;
 	position:relative;
 	margin-bottom:30px;
@@ -463,17 +484,20 @@ div#resume:hover #resblock
 	bottom:0;
 	background: rgb(0, 0, 0);
 	background:rgba(0, 0, 0, 0.5);
-	transition:.5s;
+
+	transition:0.5s;
+	-moz-transition:0.5s;
+	-webkit-transition:0.5s;
+
 	opacity:0;
-	text-align:center;
-	align-items:center;
-	justify-content:center;
-	padding-bottom:10px;
+	text-align:justify;
+	padding:5px 15px 15px 15px;
 	}
 
 .overlay h3
 	{
 	color:white;
+	text-align:left;
 	}
 
 .lightslides:hover .overlay
@@ -481,12 +505,31 @@ div#resume:hover #resblock
 	opacity:1;
 	}
 
+	/*---style and animation for G10---*/
+.lightslides#lightslideG10
+	{
+	display:flex;
+	overflow:hidden;
+	}
+
+.lightslides#lightslideG10 img
+	{
+	width:400%; 
+	position:relative;
+	right:100%;
+	animation-name:G10;
+	animation-duration:20s;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	}
 
 @keyframes G10
 	{
-	from	{background-position:0% 0%;	}
-	to	{background-position:100% 0%;	}
+	from	{right:0%;	}
+	to	{right:100%;	}
 	}
+	/*---style and animation for G10---*/
 
 /*---------------LIGHTBOX - main image---------------*/
 
