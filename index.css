@@ -292,7 +292,18 @@ div#resume:hover #resblock
 	background-color:#E9ECEF;
 	margin: 0 10px 0 0;
 	position:relative;
+
+	/-webkit-background-image:url(./Assets/images/heroImage/hero01.jpg);
+	background-image:url(./Assets/images/heroImage/hero01.jpg);
+	background-size:cover;
+	background-position:0% 100%;
 	}
+
+.imageslide img
+	{
+	background-cover:
+	}
+
 /*---------------style middle imageslide-------------*/
 /*---------------style middle imageslide slide-------*/
 .mySlides
@@ -583,7 +594,7 @@ h1	/*--------name text---------*/
 	{
 	width:70%;
 	min-width:unset;
-	max-height:330px;
+
 	}
 
 .projlist
@@ -655,6 +666,7 @@ h1	/*--------name text---------*/
 	height:310px;
 	margin-bottom: 20px;
 	}
+
 .namesummary
 	{
 	display:flex;
@@ -742,6 +754,7 @@ h1	/*--------name text---------*/
 	height:310px;
 	margin-bottom: 20px;
 	}
+
 .namesummary
 	{
 	display:flex;
@@ -948,6 +961,7 @@ h1	/*--------name text---------*/
 	min-width:290px;
 	height:210px;
 	margin-bottom: 20px;
+	overflow:clip;
 	}
 .namesummary
 	{
