@@ -13,14 +13,22 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <script>
-document.addEventListener('keydown', function(event) 
-	{
-  	if (event.key === 'Escape') 
+	document.addEventListener('keydown', function(event) 
 		{
-    		document.querySelectorAll('.lightcontainer').
-		forEach(div => div.style.display = 'none');
-  		}
-	});
+  		if (event.key === 'Escape') 
+			{
+    			document.querySelectorAll('.lightcontainer').
+			forEach(div => div.style.display = 'none');
+  			}
+		});
+
+	document.addEventListener("contextmenu", function(e)
+		{
+		if (e.target.nodeName === "IMG")
+			{e.preventDefault();}
+ 		},false);
+
+
    </script>
 
 </head>
@@ -196,7 +204,7 @@ Throughout my career, I have faced many challenging tasks that required me to le
 		<div	onclick="show_R8()"
 			><img src="../Assets/images/reports/	08.png"		alt="Reports 8"></div>
 		<div	onclick="show_R9()"
-			><img src="../Assets/images/reports/	09.png"		alt="Reports 9"></div>
+			><img src="../Assets/images/reports/	09.jpg"		alt="Reports 9"></div>
 		<div	onclick="show_R10()"
 			><img src="../Assets/images/reports/	10.png"		alt="Reports 10"></div>
 
@@ -611,7 +619,7 @@ Cross-sections can be rendered either as 2D orthographic view or a 3D perspectiv
 				<div class="overlay">
 				<h3>3D Photo Composite</h3>
 				<p12>
-Abililty to perform 3D photo composites that combine site photos with 3D model creating a most photo-realistic representation of proposed projects possible.<br><br>
+Ability to perform 3D photo composites that combine site photos with 3D model creating a most photo-realistic representation of proposed projects possible.<br><br>
 
 This skill which creates  a hybrid composition effectively merges the real and the computer-generated, providing a unique, visually-stunning perspective of urban environment.
 				</p12></div></div></div>
@@ -873,9 +881,9 @@ Camera placement, together with the arrangement of landscape elements are carefu
 			<div class="lightslides" style="display:flex;">
 				<img src="../Assets/images/3D/14.jpg" style="width:100%">
 				<div class="overlay">
-				<h3>xxxxxxxxxxxxxx</h3>
+				<h3>Teamwork</h3>
 				<p12>
-For certain areas withxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Proven ability to work with a team to bring together a complete product.  For this project, worked closely with landscape team for the streetscape and combined work with another team doing the building massing.
 				</p12></div></div></div>
 </div>
 <!-----LIGHTBOX-3D14----->
@@ -907,9 +915,11 @@ The finished 3D model was inserted to the site model and rendered in 3ds max wit
 			<div class="lightslides" style="display:flex;">
 				<img src="../Assets/images/3D/16.jpg" style="width:100%">
 				<div class="overlay">
-				<h3>Collaborative work</h3>
+				<h3>3D Photo Composite</h3>
 				<p12>
-Skilled in 3D photo composite.
+Ability to perform 3D photo composites that combine site photos with 3D model creating a most photo-realistic representation of proposed projects possible.
+
+This skill which creates a hybrid composition effectively merges the real and the computer-generated, providing a unique, visually-stunning perspective of urban environment.
 				</p12></div></div></div>
 </div>
 <!-----LIGHTBOX-3D16----->
@@ -923,8 +933,12 @@ Skilled in 3D photo composite.
 		<div class="lightimage">
 			<div class="lightslides" style="display:flex;">
 				<img src="../Assets/images/reports/01.jpg" style="width:100%">
-				<div class="overlay"><p12>
-					project details
+				<div class="overlay">
+				<h3>Addressing Manual</h3>
+				<p12>
+Authored the Addressing Manual that established the unified addressing system for Ras Al Khaimah.<br><br>
+
+The Addressing Manual is a valuable and concrete contribution to the enhancement of living and working standards in Ras Al Khaimah.  The project is progressing well and physical signages are being installed.
 				</p12></div></div></div>
 </div>
 <!-----LIGHTBOX-R1----->
@@ -937,7 +951,9 @@ Skilled in 3D photo composite.
 		<div class="lightimage">
 			<div class="lightslides" style="display:flex;">
 				<img src="../Assets/images/reports/02.jpg" style="width:100%">
-				<div class="overlay"><p12>
+				<div class="overlay">
+				<h3>Glossary of Terms</h3>
+				<p12>
 					project details
 				</p12></div></div></div>
 </div>
@@ -951,7 +967,9 @@ Skilled in 3D photo composite.
 		<div class="lightimage">
 			<div class="lightslides" style="display:flex;">
 				<img src="../Assets/images/reports/03.jpg" style="width:100%">
-				<div class="overlay"><p12>
+				<div class="overlay">
+				<h3>Neighborhood Planning Guidelines</h3>
+				<p12>
 					project details
 				</p12></div></div></div>
 </div>
@@ -965,7 +983,9 @@ Skilled in 3D photo composite.
 		<div class="lightimage">
 			<div class="lightslides" style="display:flex;">
 				<img src="../Assets/images/reports/04.jpg" style="width:100%">
-				<div class="overlay"><p12>
+				<div class="overlay">
+				<h3>Urban Design Guidelines</h3>
+				<p12>
 					project details
 				</p12></div></div></div>
 </div>
@@ -979,7 +999,9 @@ Skilled in 3D photo composite.
 		<div class="lightimage">
 			<div class="lightslides" style="display:flex;">
 				<img src="../Assets/images/reports/05.jpg" style="width:100%">
-				<div class="overlay"><p12>
+				<div class="overlay">
+				<h3>Street Design Guidelines</h3>
+				<p12>
 					project details
 				</p12></div></div></div>
 </div>
@@ -993,7 +1015,9 @@ Skilled in 3D photo composite.
 		<div class="lightimage">
 			<div class="lightslides" style="display:flex;">
 				<img src="../Assets/images/reports/06.png" style="width:100%">
-				<div class="overlay"><p12>
+				<div class="overlay">
+				<h3>Master Plan Reports</h3>
+				<p12>
 					project details
 				</p12></div></div></div>
 </div>
@@ -1034,7 +1058,7 @@ Skilled in 3D photo composite.
 		<!-----LIGHTBOX main image------>
 		<div class="lightimage">
 			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/09.png" style="width:100%">
+				<img src="../Assets/images/reports/09.jpg" style="width:100%">
 				<div class="overlay"><p12>
 					project details
 				</p12></div></div></div>
@@ -1497,7 +1521,7 @@ function show_GIS8()
 	document.getElementById("gis8").style.display = "flex";
 	}
 
-	
+
 </script>
 <!-----script------>
 </body>

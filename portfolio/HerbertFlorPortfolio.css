@@ -99,6 +99,11 @@ h3	/*--------name text---------*/
 	font-family: Verdana, sans-serif;
 	color:#495057;
 	}
+
+img
+	{
+	loading="lazy";
+	}
 /*---------------style text--------------------------*/
 
 /*---------------style heading-----------------------*/
@@ -411,7 +416,7 @@ div#resume:hover #resblock
 	display:flex;
 	flex-direction:column;
 	width:80%;
-	max-width:850px;
+	max-width:900px;	/*--850px---*/
 	background-color:black;
 
 	position: fixed;
@@ -465,14 +470,17 @@ div#resume:hover #resblock
 	width:90%;
 	align-self:center;
 	/*-----aspect-ratio:16/9;----*/
-	background-color:silver;
+	background-color:black;
 	position:relative;
 	margin-bottom:30px;
+	overflow:hidden;	/*----------*/
 	}
+
 .lightslides
 	{
 	display:none;
 	}
+
 
 .overlay
 	{
@@ -526,7 +534,7 @@ div#resume:hover #resblock
 
 @keyframes G10
 	{
-	from	{right:0%;	}
+	from	{right:10%;	}
 	to	{right:100%;	}
 	}
 	/*---style and animation for G10---*/
