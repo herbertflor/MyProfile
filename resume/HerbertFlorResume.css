@@ -715,13 +715,18 @@ div#resume:hover .dropdownlinks
 	background:rgba(0, 0, 0, 0.5);
 	transition:.5s;
 	opacity:0;
-	text-align:center;
+	text-align:left;
 	align-items:center;
 	justify-content:center;
 	padding-bottom:10px;
 	}
 
 .overlay h3
+	{
+	color:white;
+	}
+
+.overlay p12
 	{
 	color:white;
 	}
@@ -748,7 +753,7 @@ div#resume:hover .dropdownlinks
 
 .thumbcontainer >div
 	{
-		padding: 5px;
+	padding: 5px;
 	aspect-ratio:16/9;
 	}
 
