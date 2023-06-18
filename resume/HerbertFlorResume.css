@@ -755,6 +755,7 @@ div#resume:hover .dropdownlinks
 	{
 	padding: 5px;
 	aspect-ratio:16/9;
+	height:100%;
 	}
 
 .thumbcontainer >div:first-child
