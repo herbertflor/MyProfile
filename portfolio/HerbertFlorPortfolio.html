@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
    <title>Herbert Flor Portfolio</title>
-   <link rel="stylesheet" href="HerbertFlorPortfolio.css">
 
    <link rel="apple-touch-icon" sizes="180x180" href="../Assets/images/apple-touch-icon.png">
    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/images/favicon-32x32.png">
@@ -12,34 +12,69 @@
    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <script>
-	document.addEventListener('keydown', function(event) 
-		{
-  		if (event.key === 'Escape') 
-			{
-    			document.querySelectorAll('.lightcontainer').
-			forEach(div => div.style.display = 'none');
-  			}
-		});
+	<link rel="stylesheet" type="text/css" href="fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link rel="stylesheet" type="text/css" href="HerbertFlorPortfolio.css" />
+<style>
+	/* Style for our header texts
+	* --------------------------------------- */
+	.intro p
+	{	color: #fff;	}
 
-	document.addEventListener("contextmenu", function(e)
-		{
-		if (e.target.nodeName === "IMG")
-			{e.preventDefault();}
- 		},false);
+#fp-nav ul li .fp-tooltip 
+	{	color:blue;	}
 
-
-   </script>
-
+	/* Fixed header and footer.
+	* --------------------------------------- */
+	#footer
+	{
+	position:fixed;
+	height: 0;
+	bottom:0px;
+	}
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu {
+		bottom: 80px;
+	}
+	#infoMenu li a {
+		color: #fff;
+		z-index: 999;
+	}
+	</style>
 </head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // fullPage.js scrolling container
+    const fpContainer = document.querySelector("#fullpage");
+
+    // detect scroll inside the page
+    document.addEventListener("scroll", function () {
+
+        const header = document.getElementById("header");
+
+        // detect vertical scroll
+        if (window.pageYOffset > 0) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+
+    }, true);
+
+});
+</script>
 <body>
-<!-----heading----->
+<!---------------Header---------------------------!>
+<div id="header">
 <div class="heading">
 	<div class="name">
-		<h1>Herbert Flor</h1>
-		<p1>	Urban Planning + Design	</p1>
+		<hf>Herbert Flor</hf>
+		<p1 style="margin-bottom:0;">
+			Master Planning & Urban Design	</p1>
 		<p4>	herbert.flor@yahoo.com	<br>
-			+971 -- --- ----
+			+971 56 433 6391
 		</p4>
 	</div>
 	<!-----links----->
@@ -68,1517 +103,1295 @@
 			<div><a href="HerbertFlorPortfolio.pdf">
 				<p2>						Open PDF	</p2></a></div>
 		</div>
-		<div class="linkstext">
-			<p2>
-Throughout my career, I have faced many challenging tasks that required me to learn new skills and knowledge.  I always embraced these opportunities and used them to grow professionally and personally.  I am a fast learner, and I have acquired a diverse set of skills, experiences and problem-solving approach that demonstrate my adaptability, creativity and competence.  Here are some examples of what I have learned and achieved.
-			</p2>
-		</div>
 	</div>
 	<!-----links----->
 </div>
-<!-----heading----->
+</div>
+<!---------------END Header-----------------------!>
+<!---------------Footer---------------------------!>
+<div id="footer">Footer
 
-<!-----projects---->
-<div class="projlist">
-	<!-----tab links---->
-	<div class="tabs">
-		<button class="tablinks" onclick="openSkill(event, 'Design')" >		Design				</button>
-		<button class="tablinks" onclick="openSkill(event, 'Graphics')">	Graphics			</button>
-		<button class="tablinks" onclick="openSkill(event, '3D')">		3D Modeling and Rendering	</button>
-		<button class="tablinks" onclick="openSkill(event, 'Reports')">		Reports and Presentations	</button>
-		<button class="tablinks" onclick="openSkill(event, 'GIS')">		GIS Analysis			</button>
+</div>
+<!---------------ENDFooter------------------------!>
+<div id="fullpage">
+<!---------------Section 0------------------------!>
+	<div class="section " id="section0">
+		<!------intro-------------!>
+		<div class="projlist">
+			<div class="profile">
+					<h1_5>Master Planning & Design Experience</h1_5>
+					<p15>
+Throughout my career, I have led complex planning challenges that required continuously expanding my technical and strategic expertise. Working across large-scale master-planned developments, I have developed governance frameworks, managed land-use controls, and delivered solutions that balance regulatory compliance with project performance. The following examples highlight key areas of learning and impact.
+	<br><br>
+					</p15>
+			</div>
+			<!------links-------------!>
+				<div class="tabs">
+					<button class="tablinks"
+						onclick="window.location.href='#3rdPage';" >
+						Design
+					</button>
+					<button class="tablinks"
+						onclick="window.location.href='#Graphics';" >
+						Graphics
+					</button>
+					<button class="tablinks" 
+						onclick="window.location.href='#x3D';" >
+						3D Modeling and Rendering	
+					</button>
+					<button class="tablinks"
+						onclick="window.location.href='#Reports';" >
+						Reports
+					</button>
+					<button class="tablinks"
+						onclick="window.location.href='#GIS';" >
+						GIS Analysis
+					</button>
+				</div>
+			<!------END links---------!>
+		</div>
+		<!------END intro---------!>
 	</div>
-	<!-----tab links---->
-	<!-----tab content design---->
-	<div class="tabcontent" id="Design">
-		<div	onclick="show_d1()"
-			><img src="../Assets/images/design/	01.jpg" 	alt="Masterplan 1"></div>
-		<div	onclick="show_d2()"
-			><img src="../Assets/images/design/	02.jpg" 	alt="Masterplan 2"></div>
-		<div	onclick="show_d3()"
-			><img src="../Assets/images/design/	03.jpg" 	alt="Masterplan 3"></div>
-		<div	onclick="show_d4()"
-			><img src="../Assets/images/design/	04.jpg"		alt="Masterplan 4"></div>
-		<div	onclick="show_d5()"
-			><img src="../Assets/images/design/	05.jpg"		alt="Masterplan 5"></div>
-		<div	onclick="show_d6()"
-			><img src="../Assets/images/design/	06.jpg"		alt="Masterplan 6"></div>
-		<div	onclick="show_d7()"
-			><img src="../Assets/images/design/	07.jpg"		alt="Masterplan 7"></div>
-		<div	onclick="show_d8()"
-			><img src="../Assets/images/design/	08.jpg"		alt="Masterplan 8"></div>
-		<div	onclick="show_d9()"
-			><img src="../Assets/images/design/	09.jpg"		alt="Masterplan 9"></div>
-		<div	onclick="show_d10()"
-			><img src="../Assets/images/design/	10.jpg"		alt="Masterplan 10"></div>
-		<div	onclick="show_d11()"
-			><img src="../Assets/images/design/	11.jpg"		alt="Masterplan 11"></div>
-		<div	onclick="show_d12()"
-		<	><img src="../Assets/images/design/	12.jpg"		alt="Masterplan 12"></div>
-		<div	onclick="show_d13()"
-			><img src="../Assets/images/design/	13.jpg"		alt="Masterplan 13"></div>
-		<div	onclick="show_d14()"
-			><img src="../Assets/images/design/	14.jpg"		alt="Masterplan 14"></div>
-
+<!---------------END Section 0--------------------!>
+<!---------------Section 1------------------------!>
+	<!-------Section 1 Slide1-----------------!>
+	<div class="section" id="section1">
+		<div class="slide" id="slide1">
+			<!------intro-------------!>
+			<div class="projlist">
+				<div class="profile">
+					<h1_5>Featured Projects</h1_5>
+	<br><br>
+				<!------links-------------!>
+					<div class="tabs2">
+						<button						
+							onclick="window.location.href='#secondPage/1';">
+							Addressing Manual
+						</button>
+						<button
+							onclick="window.location.href='#secondPage/2';">
+							Awafi Sustainable District
+						</button>
+						<button
+							onclick="window.location.href='#secondPage/4';">
+							Vision Master Plan Presentation	
+						</button>
+						<button
+							onclick="window.location.href='#secondPage/5';">
+							Manuals and Guidelines
+						</button>
+						<button
+							onclick="window.location.href='#secondPage/6';">	
+							Confidential Project – Ras Al Khaimah Municipality
+						</button>
+					</div>
+				<!------END links---------!>
+	<br><br>
+				<!------END intro---------!>
+				<!------links-------------!>
+					<div class="tabs">
+						<button class="tablinks"
+						onclick="window.location.href='#3rdPage';" >
+						Design
+						</button>
+						<button class="tablinks"
+						onclick="window.location.href='#Graphics';" >	
+						Graphics
+						</button>
+						<button class="tablinks" 
+						onclick="window.location.href='#x3D';" >
+						3D Modeling and Rendering	
+						</button>
+						<button class="tablinks"
+						onclick="window.location.href='#Reports';" >
+						Reports
+						</button>
+						<button class="tablinks"
+						onclick="window.location.href='#GIS';" >
+						GIS Analysis
+						</button>
+					</div>
+			<!------END links---------!>
+				</div>
+			</div>
+		</div>
+	<!-------END Section 1 Slide1--------------------------------------------------------------!>
+	<!-------Section 1 Slide2------------------------------------------------------------------!>
+		<div class="slide" data-anchor="slide2">
+			<div class="projlistFeatured">
+				<h1_5 style="text-align:center;">		Addressing Manual	</h1_5>
+				<div>
+					<img src="../Assets/images/resume_slideshow/01.jpg" class="img"
+					style="margin:0 auto;">
+				</div>
+				<p12>
+Developed the Addressing Manual for Ras Al Khaimah, establishing standardized guidelines for street naming and plot numbering that formed the foundation of the emirate-wide Addressing System launched in 2021. The manual was structured to support long-term urban growth, incorporating adaptable provisions for future master plan updates, phased development, and city expansion.
+				</p12>
+			</div>
+		</div>
+	<!-------END Section 1 Slide2--------------------------------------------------------------!>
+	<!-------Section 1 Slide3------------------------------------------------------------------!>
+		<div class="slide" data-anchor="slide3">
+			<div class="projlistFeatured">
+				<h1_5 style="text-align:center;">		Awafi Sustainable District	</h1_5>
+				<video loop muted controls="false" data-autoplay>
+					<source src="../Assets/images/video/Awafi_1.mp4" type="video/mp4">
+				</video>
+				<p12>
+Developed visualization and presentation materials for the Awafi Sustainable District, including master plan illustrations, rendered visuals, and communication graphics supporting stakeholder engagement and project marketing initiatives. The project was officially launched in November 2023.
+				</p12>
+			</div>
+		</div>
+	<!-------END Section 1 Slide3--------------------------------------------------------------!>
+	<!-------Section 1 Slide4------------------------------------------------------------------!>
+		<div class="slide" data-anchor="slide4">
+			<div class="projlistFeatured">
+				<h1_5>		Awafi Sustainable District	</h1_5>
+				<div>
+					<div class="imgContainer">
+						<img src="../Assets/images/reports/06--.png" class="img3">
+						<img src="../Assets/images/3D/01.jpg" class="img2">					
+						<img src="../Assets/images/3D/10.jpg" class="img2">
+					</div>
+					<div class="imgContainer">
+						<img src="../Assets/images/graphics/101.png" class="img3">
+						<img src="../Assets/images/3D/101.jpg" class="img2">					
+						<img src="../Assets/images/3D/102.jpg" class="img2">
+					</div>
+					<div class="imgContainer">
+						<div class="img3" style="aspect-ratio:unset; box-shadow:unset;">
+							2014 Concept Master Plan Report
+						</div>
+						<div class="img3" style="aspect-ratio:unset; box-shadow:unset;">
+							2020 Revised Master Plan
+						</div>
+						<div class="img3" style="aspect-ratio:unset; box-shadow:unset;">
+							2021 Launch Marketing Material
+						</div>
+					</div>
+				</div>
+				<p12 style="width:100%; margin:0 auto;">
+Developed the concept master plan for Awafi, a 400 ha residential community, and later supervised subsequent plan revisions and refinements to support evolving project requirements. Produced high-quality 3D models, rendered perspectives, and animated visualizations to support stakeholder presentations, project communication, and development marketing initiatives.
+				</p12>
+			</div>
+		</div>
+	<!-------END Section 1 Slide4--------------------------------------------------------------!>
+	<!-------Section 1 Slide4------------------------------------------------------------------!>
+		<div class="slide" data-anchor="slide4">
+			<div class="projlistFeatured">
+				<h1_5 style="text-align:center;">	Vision Master Plan Presentation	</h1_5>
+				<video loop muted controls="false" data-autoplay>
+					<source src="../Assets/images/video/Vision_2.mp4" type="video/mp4">
+				</video>
+				<p12>
+Developed presentation and animated video materials for the Vision 2030 project, supporting strategic presentations to Ras Al Khaimah Municipality and key stakeholder groups. Translated complex planning concepts, development strategies, and long-term vision objectives into clear and engaging visual communication materials for stakeholder engagement and decision-making.
+				</p12>
+			</div>
+		</div>
+	<!-------END Section 1 Slide4--------------------------------------------------------------!>
+	<!-------Section 1 Slide5------------------------------------------------------------------!>
+		<div class="slide" data-anchor="slide5">
+			<div class="projlistFeatured">
+				<h1_5>		Guidelines	</h1_5>
+				<div>
+					<div class="imgContainer">
+						<img src="../Assets/images/reports/03.jpg" class="img3">
+						<img src="../Assets/images/reports/04.jpg" class="img3">
+						<img src="../Assets/images/reports/05.jpg" class="img3">
+					</div>
+					<div class="imgContainer">
+						<img src="../Assets/images/reports/103.png" class="img3">
+						<img src="../Assets/images/reports/102.png" class="img3">
+						<img src="../Assets/images/reports/05-01.jpg" class="img3">
+					</div>
+				</div>
+				<p12 style="width:100%; margin:0 auto;">
+Contributed to the development of Ras Al Khaimah’s first Neighborhood Design Guidelines Vol. 1: Emirati Residential Neighborhood, and Public Realm Design Guidelines, helping shape foundational standards for community planning and public realm quality. Scope included research and international benchmarking, preparation of the initial framework, graphic production, and report design and layout using Adobe InDesign.
+				</p12>
+			</div>
+		</div>
+	<!-------END Section 1 Slide5--------------------------------------------------------------!>
+	<!-------Section 1 Slide5------------------------------------------------------------------!>
+		<div class="slide" data-anchor="slide6">
+			<div class="projlistFeatured">
+				<h1_5>		Confidential Project		</h1_5>
+				<div class="imgContainer">
+					<div class="left">
+						<img src="../Assets/images/design/102.png" class="img">
+						<img src="../Assets/images/design/103.png" class="img">
+					</div>
+					<div class="right">
+						<img src="../Assets/images/design/101.png" class="img"
+							style="aspect-ratio:unset; width:90%; margin-top:0;">
+					</div>
+				</div>
+						<p12 style="width:100%; margin:0 auto;">
+Developed a concept structure plan for an 18,000 ha greenfield site based on a polycentric development model, integrating residential-commercial centers, hospitality and recreation districts, and a business park to support long-term urban growth and connectivity.
+						</p12>
+			</div>
+		</div>
+	<!-------END Section 1 Slide5--------------------------------------------------------------!>
 	</div>
-	<!-----tab content design---->
-
-	<!-----tab content graphics-->
-	<div class="tabcontent" id="Graphics">
-		<div	onclick="show_G1()"
-			><img src="../Assets/images/graphics/	01.png"		alt="Graphics 1"></div>
-		<div	onclick="show_G2()"
-			><img src="../Assets/images/graphics/	02.jpg"		alt="Graphics 2"></div>
-		<div	onclick="show_G3()"
-			><img src="../Assets/images/graphics/	03.jpg"		alt="Graphics 3"></div>
-		<div	onclick="show_G4()"
-			><img src="../Assets/images/graphics/	04.jpg"		alt="Graphics 4"></div>
-		<div	onclick="show_G5()"
-			><img src="../Assets/images/graphics/	05.png"		alt="Graphics 5"></div>
-		<div	onclick="show_G6()"
-			><img src="../Assets/images/graphics/	06.jpg"		alt="Graphics 6"></div>
-		<div	onclick="show_G7()"
-			><img src="../Assets/images/graphics/	07.jpg"		alt="Graphics 7"></div>
-		<div	onclick="show_G8()"
-			><img src="../Assets/images/graphics/	08.jpg"		alt="Graphics 8"></div>
-		<div	onclick="show_G9()"
-			><img src="../Assets/images/graphics/	09.jpg"		alt="Graphics 9"></div>
-		<div	onclick="show_G10()"
-			><img src="../Assets/images/graphics/	10_2.jpg"		alt="Graphics 10"></div>
+<!---------------END Section 1---------------------------------------------------------------------!>
+<!---------------Section 2--3rdpage-----------------------------------------------------------------------!>
+	<div class="section" id="section2">
+		<div class="projlist" style="padding:0;">
+			<div class="profile">
+				<h1_5>	Design	</h1_5>
+				<div class="designSamples">
+					<a href="#4thpage"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/design/01.jpg');">
+						Julfar Heritage Corridor
+					</a>
+					<a href="#5thpage"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/design/04.jpg');">
+						Confidential Project 01 <br> RAK Municipality
+					</a>
+					<a href="#6thpage"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/design/05.jpg');">
+						Confidential Project 02 <br> RAK Municipality
+					</a>
+					<a href="#7thpage"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/design/06.jpg');">
+						Confidential Project 03 <br> RAK Municipality
+					</a>
+					<a href="#8thpage"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/design/10.jpg');">
+						Confidential Project 04 <br> RAK Municipality
+					</a>
+					<a href="#9thpage"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/design/12.jpg');">
+						RAK Academic City
+					</a>
+					<a href="#10thpage"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/design/13.jpg');">
+						Public Realm Studies 01
+					</a>
+					<a href="#11thpage"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/design/128.jpg');">
+						Public Realm Studies 02
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-----tab content graphics-->
-
-	<!-----tab content 3D-------->
-	<div class="tabcontent" id="3D">
-		<div	onclick="show_3d1()"
-			><img src="../Assets/images/3D/	01.jpg" 	alt="3D 1"></div>
-		<div	onclick="show_3d2()"
-			><img src="../Assets/images/3D/	02.jpg" 	alt="3D 2"></div>
-		<div	onclick="show_3d3()"
-			><img src="../Assets/images/3D/	03.jpg" 	alt="3D 3"></div>
-		<div	onclick="show_3d4()"
-			><img src="../Assets/images/3D/	04.jpg" 	alt="3D 4"></div>
-		<div	onclick="show_3d5()"
-			><img src="../Assets/images/3D/	05.jpg" 	alt="3D 5"></div>
-		<div	onclick="show_3d6()"
-			><img src="../Assets/images/3D/	06.jpg" 	alt="3D 6"></div>
-		<div	onclick="show_3d7()"
-			><img src="../Assets/images/3D/	07.jpg" 	alt="3D 7"></div>
-		<div	onclick="show_3d8()"
-			><img src="../Assets/images/3D/	08.jpg" 	alt="3D 8"></div>
-		<div	onclick="show_3d9()"
-			><img src="../Assets/images/3D/	09.jpg" 	alt="3D 9"></div>
-		<div	onclick="show_3d10()"
-			><img src="../Assets/images/3D/	10.jpg" 	alt="3D 10"></div>
-		<div	onclick="show_3d11()"
-			><img src="../Assets/images/3D/	11.jpg" 	alt="3D 11"></div>
-		<div	onclick="show_3d12()"
-			><img src="../Assets/images/3D/	12.jpg" 	alt="3D 12"></div>
-		<div	onclick="show_3d13()"
-			><img src="../Assets/images/3D/	13.jpg" 	alt="3D 13"></div>
-		<div	onclick="show_3d14()"
-			><img src="../Assets/images/3D/	14.jpg" 	alt="3D 14"></div>
-		<div	onclick="show_3d15()"
-			><img src="../Assets/images/3D/	15.jpg" 	alt="3D 15"></div>
-		<div	onclick="show_3d16()"
-			><img src="../Assets/images/3D/	16.jpg" 	alt="3D 16"></div>
+<!---------------END Section 2--3rdpage------------------------------------------------------------!>
+<!---------------Section 3--4thpage----------------------------------------------------------------!>
+	<div class="section" id="section3">
+		<div class="proj">
+			<h1_5>		Julfar Heritage Corridor		</h1_5>
+			<div class="imgContainer">
+				<div class="left">
+					<img src="../Assets/images/design/02.jpg" class="img">
+					<img src="../Assets/images/graphics/05.png" class="img">
+				</div>
+				<div class="right">
+					<img src="../Assets/images/design/01.jpg" class="img"
+					style="aspect-ratio:unset; width:90%; margin-top:0;">
+				</div>
+			</div>
+			<p12 style="width:100%; margin:0 auto;">
+Part of a multi-agency working group comprising private developers, the Department of Antiquities, RAK Tourism Development Authority, and Ras Al Khaimah Municipality to develop the Julfar Heritage Corridor, aimed at enhancing cultural tourism in Ras Al Khaimah. Contributed to the revitalization of Old Ras Al Khaimah as a tourism destination through the proposal of a heritage loop linking key historic sites and attractions, supported by public realm improvement strategies; and prepared design concepts for archaeological heritage sites.
+	<br><br>
+			</p12>
+		</div>
 	</div>
-	<!-----tab content 3D-------->
-
-	<!-----tab content reports--->
-	<div class="tabcontent" id="Reports">
-		<div	onclick="show_R1()"
-			><img src="../Assets/images/reports/	01.jpg"		alt="Reports 1"></div>
-		<div	onclick="show_R2()"
-			><img src="../Assets/images/reports/	02.jpg"		alt="Reports 2"></div>
-		<div	onclick="show_R3()"
-			><img src="../Assets/images/reports/	03.jpg"		alt="Reports 3"></div>
-		<div	onclick="show_R4()"
-			><img src="../Assets/images/reports/	04.jpg"		alt="Reports 4"></div>
-		<div	onclick="show_R5()"
-			><img src="../Assets/images/reports/	05.jpg"		alt="Reports 5"></div>
-		<div	onclick="show_R6()"
-			><img src="../Assets/images/reports/	06.png"		alt="Reports 6"></div>
-		<div	onclick="show_R7()"
-			><img src="../Assets/images/reports/	07.png"		alt="Reports 7"></div>
-		<div	onclick="show_R8()"
-			><img src="../Assets/images/reports/	08.png"		alt="Reports 8"></div>
-		<div	onclick="show_R9()"
-			><img src="../Assets/images/reports/	09.jpg"		alt="Reports 9"></div>
-		<div	onclick="show_R10()"
-			><img src="../Assets/images/reports/	10.png"		alt="Reports 10"></div>
-
-
+<!---------------END Section 3--4thpage------------------------------------------------------------!>
+<!---------------Section 4--5thpage----------------------------------------------------------------!>
+	<div class="section" id="section4">
+		<div class="proj">
+			<h1_5>		Confidential Project 01		</h1_5>
+			<div class="imgContainer">
+				<div class="left">
+					<img src="../Assets/images/design/104.png" class="img">
+					<img src="../Assets/images/design/105.png" class="img">
+				</div>
+				<div class="right">
+					<img src="../Assets/images/design/04.jpg" class="img">
+				</div>
+			</div>
+			<p12 style="width:100%; margin:0 auto;">
+Prepared the concept design for a waterfront residential neighborhood through the transformation of former agricultural plots into a planned residential community. Coordinated closely with the hydrology team to integrate flood mitigation strategies, including channeling and management of floodwater flows to protect the development site.
+	<br><br>
+			</p12>
+		</div>
 	</div>
-	<!-----tab content reports--->
-
-	<!-----tab content GIS------->
-	<div class="tabcontent" id="GIS">
-		<div	onclick="show_GIS1()"
-			><img src="../Assets/images/GIS/	01.png"		alt="GIS 1"></div>
-		<div	onclick="show_GIS2()"
-			><img src="../Assets/images/GIS/	02.jpg"		alt="GIS 2"></div>
-		<div	onclick="show_GIS3()"
-			><img src="../Assets/images/GIS/	03.jpg"		alt="GIS 3"></div>
-		<div	onclick="show_GIS4()"
-			><img src="../Assets/images/GIS/	04.png"		alt="GIS 4"></div>
-		<div	onclick="show_GIS5()"
-			><img src="../Assets/images/GIS/	05.png"		alt="GIS 5"></div>
-		<div	onclick="show_GIS6()"
-			><img src="../Assets/images/GIS/	06.jpg"		alt="GIS 6"></div>
-		<div	onclick="show_GIS7()"
-			><img src="../Assets/images/GIS/	07.png"		alt="GIS 7"></div>
-		<div	onclick="show_GIS8()"
-			><img src="../Assets/images/GIS/	08.png"		alt="GIS 8"></div>
-
-
+<!---------------END Section 4--5thpage------------------------------------------------------------!>
+<!---------------Section 5--6thpage----------------------------------------------------------------!>
+	<div class="section" id="section5">
+		<div class="proj">
+			<h1_5>		Confidential Project 02		</h1_5>
+			<div class="imgContainer">
+				<div class="left">
+					<img src="../Assets/images/design/106.png" class="img">
+					<img src="../Assets/images/design/107.png" class="img">
+				</div>
+				<div class="right">
+					<img src="../Assets/images/design/05.jpg" class="img">
+				</div>
+			</div>
+			<p12 style="width:100%; margin:0 auto;">
+Developed the concept master plan for the conversion of underutilized agricultural land into residential communities, coordinating closely with hydrology engineers to integrate proposed drainage channels and flood management requirements into the planning framework. Applied GIS-based spatial and topographic analysis to identify suitable development areas within sloping terrain, supporting site-responsive planning, infrastructure coordination, and efficient land utilization.
+			</p12>
+		</div>
 	</div>
-	<!-----tab content GIS------->
-
-</div>
-<!-----projects---->
-
-<!-----LIGHTBOX-D1----->
-<div class="lightcontainer" id="d1" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+<!---------------END Section 5--6thpage------------------------------------------------------------!>
+<!---------------Section 6--7thpage----------------------------------------------------------------!>
+	<div class="section" id="section6">
+		<div class="proj">
+			<h1_5>		Confidential Project 03		</h1_5>
+			<div class="imgContainer">
+				<div class="left">
+					<img src="../Assets/images/design/108.png" class="img">
+					<img src="../Assets/images/design/109.png" class="img">
+				</div>
+				<div class="right">
+					<img src="../Assets/images/design/06.jpg" class="img">
+				</div>
+			</div>
+			<p12 style="width:100%; margin:0 auto;">
+Prepared the concept master plan for an infill residential development utilizing newly available land created between a proposed hydrology channel and an existing neighborhood. The planning approach focused on integrating the new community with surrounding development while responding to site constraints, infrastructure coordination, and flood management requirements.
+			</p12>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/01.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Julfar Heritage Corridor</h3>
-				<p12>
-Member of a working group composed of a private developer,  Department of Antiquities, RAK Tourism Department and RAK Municipality planning team, working on developing "Julfar Heritage Corridor" to develope and improve cultural tourism in Ras Al Khaimah.<br><br>
-
-One of the projects is developing the area of Old RAK into a tourism destination. Proposed a heritage loop that connects major destinations and attractions in Old RAK.  Public realm improvements proposed along the heritage loop.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D1----->
-<!-----LIGHTBOX-D2----->
-<div class="lightcontainer" id="d2" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 6--7thpage------------------------------------------------------------!>
+<!---------------Section 7--8thpage----------------------------------------------------------------!>
+	<div class="section" id="section7">
+		<div class="proj">
+			<h1_5>		Confidential Project 04		</h1_5>
+			<div class="imgContainer">
+				<div class="left" style="width:35%">
+					<img src="../Assets/images/design/110.png" class="img">
+				</div>
+				<div class="right">
+					<img src="../Assets/images/design/10.jpg" class="img">
+				</div>
+			</div>
+			<p12 style="width:100%; margin:0 auto;">
+Produced master plan for a residential community adjacent to protected mangrove areas, integrating proposed drainage channels as landscape and open space features within the overall community structure. The plan incorporated a continuous sikka network to enhance pedestrian connectivity across the site while preserving key view corridors toward the mangrove landscape, supporting environmentally responsive and community-oriented urban design.
+			</p12>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/02.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Julfar Heritage Corridor</h3>
-				<p12>
-Concept sketch showing upgrade of pedestrian connection along the heritage loop, connecting adjacent areas to other destinations.
-
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D2----->
-<!-----LIGHTBOX-D3----->
-<div class="lightcontainer" id="d3" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 7--8thpage------------------------------------------------------------!>
+<!---------------Section 8--9thpage----------------------------------------------------------------!>
+	<div class="section" id="section8">
+		<div class="proj">
+			<h1_5>		RAK Academic City		</h1_5>
+			<div class="imgContainer">
+				<div class="left" style="width:27%; padding-left:10px;">
+					<img src="../Assets/images/design/116.png" class="img">
+					<img src="../Assets/images/design/112.jpg" class="img">
+				</div>
+				<div class="left" style="width:27%; padding-left:10px;">
+					<img src="../Assets/images/design/119.png" class="img">
+					<img src="../Assets/images/design/120.png" class="img">
+					<img src="../Assets/images/design/114.jpg" class="img">
+				</div>
+				<div class="right" style="width:45%; gap:10px; padding-left:20px;">
+					<img src="../Assets/images/design/115.jpg" class="img">
+					<img src="../Assets/images/design/117.png" class="img">
+				</div>
+			</div>
+			<p12 style="width:100%; margin:0 auto;">
+Prepared the concept master plan for a proposed Academic City, coordinating closely with RAKEZ as the property owner through multiple presentation and review stages to refine the overall development vision. The master plan organized academic facilities, student and staff residential clusters, and mixed-use activity nodes within walkable distances, promoting a connected and pedestrian-oriented campus environment. A green pedestrian network linked key destinations across the site, with landscaped activity nodes positioned at major intersections to encourage social interaction and enhance the public realm.
+			</p12>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/03.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Zone G</h3>
-				<p12>
-Concept structure plan for an 18,000 ha site. The site is next to Etihad Rail Dry Port Terminal and proposed Passenger Terminal.<br><br>
-
-The master plan approach is to capitalize on these proposed developments and create a polycentric gateway city comprising of a business park, a residential center and a hospitality and recreation center.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D3----->
-<!-----LIGHTBOX-D4----->
-<div class="lightcontainer" id="d4" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 8--9thpage------------------------------------------------------------!>
+<!---------------Section 9--10thpage----------------------------------------------------------------!>
+	<div class="section" id="section9">
+		<div class="proj">
+			<h1_5>		Public Realm Studies 01		</h1_5>
+			<div class="imgContainer">
+				<div class="left">
+					<img src="../Assets/images/design/126.jpg" class="img">
+					<img src="../Assets/images/design/127.jpg" class="img">
+				</div>
+				<div class="right">
+					<img src="../Assets/images/design/125.jpg" class="img">
+				</div>
+			</div>
+			<p12 style="width:100%; margin:0 auto;">
+Prepared a public realm and access study for an existing unplanned settlement, aimed at improving connectivity and ensuring vehicular access to all plots within the community. Developed a shared pedestrian street network integrated with landscaped nodes and small public plazas where space permitted, enhancing walkability, accessibility, and overall public realm quality within the constrained urban fabric.
+			</p12>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/04.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Shaam</h3>
-				<p12>
-Conversion of existing farms and properties into residential neighborhood comprising of villas and residential commercial buildings, cluster and neighborhood facilities, and a wide boulevard leading to the waterfront promenade. Project area is 151 ha., with a yield of over 900 residential units. Project currently under detailed design stage.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D4----->
-<!-----LIGHTBOX-D5----->
-<div class="lightcontainer" id="d5" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 9--10thpage------------------------------------------------------------!>
+<!---------------Section 10--11thpage---------------------------------------------------------------!>
+	<div class="section" id="section10">
+		<div class="proj">
+			<h1_5>		Public Realm Studies 02		</h1_5>
+			<div class="imgContainer">
+				<div class="left">
+					<img src="../Assets/images/design/128.jpg" class="img">
+					<img src="../Assets/images/design/129.jpg" class="img">
+				</div>
+				<div class="left">
+					<img src="../Assets/images/design/123.jpg" class="img">
+					<img src="../Assets/images/design/130.jpg" class="img">
+				</div>
+				<div class="left">
+					<img src="../Assets/images/design/131.jpg" class="img">
+					<img src="../Assets/images/design/132.jpg" class="img">
+				</div>
+			</div>
+			<p12 style="width:100%; margin:0 auto;">
+Explored a series of public realm studies focused on improving urban livability, pedestrian connectivity, and spatial hierarchy.
+			</p12>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/05.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Wadi Shaam</h3>
-				<p12>
-Master plan of 100 ha site next to mountain area. Used GIS capabilities to determine buildable areas up to 5% slope and not in conflict with built and owned parcels of land. Worked closely with hydrology engineers to determine best location of hydrology channels and detention ponds. Community facility analysis covered not only proposed master plan but the wider region of the existing area including Shaam project. Project currently under detailed design stage.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D5----->
-<!-----LIGHTBOX-D6----->
-<div class="lightcontainer" id="d6" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 10--11thpage------------------------------------------------------------!>
+<!---------------Section 11--12thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section11">
+		<div class="projlist" style="padding:0;">
+			<div class="profile">
+				<h1_5>	Graphics	</h1_5>
+				<div class="graphicSamples">
+					<a href="#G1"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/graphics/103.jpg');">
+						Illustrated Plans
+					</a>
+					<a href="#G2"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/graphics/113.jpg');">
+						Concept Diagrams
+					</a>
+					<a href="#G3"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/graphics/119.jpg');">
+						Urban Design Graphics
+					</a>
+				</div>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/06.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Wadi Ghalilah</h3>
-				<p12>
-Replanning of an area due to new proposed hydrology channel. Planning includes community facility assessment of existing and proposed areas. Site covers an area of 50 ha. Project currently under detailed design stage.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D6----->
-<!-----LIGHTBOX-D7----->
-<div class="lightcontainer" id="d7" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 11--12thpage------------------------------------------------------------!>
+<!---------------Section 12--13thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section12">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Illustrated Plans	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/graphics/106.jpg');">
+						Emirates Investment Park, Dubai	<br><br>
+					</a>
+					<a	style="background-image:url('../Assets/images/graphics/107.jpg');">
+						Emirates Tourism Village, Dubai	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/105.jpg');">
+						Awafi Cluster Center, RAK	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/103.jpg');">
+						Awafi Cluster Center, RAK	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/104.png');">
+						Archaelogical Site Visitor Center, RAK	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/102.jpg');">
+						Ajman Rose, Ajman	<br><br>
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/07.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Dubailand Equestrian Development</h3>
-				<p12>
-At the concept stage of the project, presented to client options for development of an equestrian center with stables, riding academy, resort, residential district, etc.  Image shown is the client prefered option.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D7----->
-<!-----LIGHTBOX-D8----->
-<div class="lightcontainer" id="d8" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 12--13thpage------------------------------------------------------------!>
+<!---------------Section 14--15thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section14">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Illustrated Plans	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/graphics/03.jpg');
+						height:350px;width:45%;">
+						Awafi, RAK	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/02.jpg');
+						height:350px;width:45%;">
+						Al Bawadi MP, Dubai	<br><br>
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/08.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Awafi Neighborhood</h3>
-				<p12>
-Master plan of a greenfield site with an area of 400 ha. Task includes preparation of concept master plan report.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D8----->
-<!-----LIGHTBOX-D9----->
-<div class="lightcontainer" id="d9" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 14--15thpage------------------------------------------------------------!>
+<!---------------Section 15--16thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section15">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Concept Diagrams	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/graphics/101.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/108.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/117.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/120.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/112.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/113.jpg');
+						background-position: top;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/09.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Awafi Neighborhood</h3>
-				<p12>
-The master plan comprises of residential villas next to existing Al Dhait residential area, and  mixed use and commercial plots next to Emirates Road south of the site.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D9----->
-<!-----LIGHTBOX-D10----->
-<div class="lightcontainer" id="d10" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 15--16thpage------------------------------------------------------------!>
+<!---------------Section 16--17thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section16">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Concept Diagrams	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/graphics/114.jpg');
+						height:350px;width:45%;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/116.jpg');
+						height:350px;width:45%;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/10.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Al Hulailah</h3>
-				<p12>
-Master plan of a site next to a protected mangrove area.  The concept is to create a connected neighborhood by means of a connected sikka network traversing the site longitudinally, and orienting all streets toward the sea and mangrove area to preserve the view and for better legibility.<br><br>
-
-Plan includes parks and recreational areas designed around water channels. 
-
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D10----->
-<!-----LIGHTBOX-D11----->
-<div class="lightcontainer" id="d11" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 16--17thpage------------------------------------------------------------!>
+<!---------------Section 17--18thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section17">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Urban Design Graphics	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/graphics/121.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/122.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/123.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/124.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/125.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/126.png');
+						background-position: top;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/11.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Academic City</h3>
-				<p12>
-Sketch study of one of the activity nodes that are distributed throughout the site.  
-For the Academic City, the accommodation area is the social center and the Green Pedestrian Web connect it to the rest of the development. The Activity Nodes serve as destinations along the pedestrian web.  They are a break from the monotony of the linear quality of the paths. These nodes are activity generators, they punctuate the network and become a dominant urban space.
+	</div>
+<!---------------END Section 17--18thpage------------------------------------------------------------!>
+<!---------------Section 18--19thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section18">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Urban Design Graphics 	</h1_5>
+				<div class="graphic01">
 
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D11----->
-<!-----LIGHTBOX-D12----->
-<div class="lightcontainer" id="d12" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+					<a
+						style="background-image:url('../Assets/images/graphics/118.jpg');
+						height:200px;width:100%;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/graphics/119.jpg');
+						height:200px;width100%;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/12.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Academic City</h3>
-				<p12>
-The Academic City’s major land use component are the educational plots covering almost 60% of the site.<br><br>
-
-Students and staff accommodations in the form of multi-storey buildings, villas and townhouses, take up about 10% of the total site area. This creates a more balanced environment that responds to one of the development principles of creating an integrated learning and living environment.<br><br>
-
-The support facilities take up about 14%. These include the various activity nodes, the university core areas, pedestrian web, open spaces and utility plots.<br><br>
-
-The road network was efficiently laid out, taking less than 20% of the site. This is supported by a pedestrian web that ensures safe and efficient pedestrian movement throughout the site.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D12----->
-<!-----LIGHTBOX-D13----->
-<div class="lightcontainer" id="d13" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 18--19thpage------------------------------------------------------------!>
+<!---------------Section 19--20thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section19">
+		<div class="projlist" style="padding:0;">
+			<div class="profile">
+				<h1_5>	3D Modeling and Rendering	</h1_5>
+				<div class="graphicSamples">
+					<a href="#xD1"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/3D/03.jpg');">
+						Rendered Visualizations
+					</a>
+					<a href="#xD2"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/3D/08.jpg')">
+						Animation and Fly-through
+					</a>
+					<a href="#xD3"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/3D/09.jpg');">
+						Aerial Perspectives
+					</a>
+					<a href="#xD4"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/3D/128.png');">
+						Photo Composite Rendering
+					</a>
+				</div>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/13.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Al Maireed Old Area Concept</h3>
-				<p12>
-Sketch study for public real enahancement on unplanned area of Al Maireed. Solutions include creating one-way streets where space allows, or shared streets for narrower areas.  Plaza or mini-parks were also proposed for wider areas or intersections, thereby creating a "breathing space among the tightly-woven urban fabric.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D13----->
-<!-----LIGHTBOX-D14----->
-<div class="lightcontainer" id="d14" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 19--20thpage------------------------------------------------------------!>
+<!---------------Section 20--21thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section20">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Rendered Visualizations	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/03.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/04.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/05.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/06.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/07.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/08.jpg');
+						background-position: top;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/design/14.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Master Plan</h3>
-				<p12>
-Diagram showing settlement hierarchy for a 700 ha. master plan proposal. The page is taken from the master plan report prepared for the project.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-D14----->
-
-<!-----LIGHTBOX-G1----->
-<div class="lightcontainer" id="g1" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 20--21thpage------------------------------------------------------------!>
+<!---------------Section 21--22thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section21">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Rendered Visualizations	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/11.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/12.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/13.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/14.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/119.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/103.jpg');
+						background-position: top;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/01.png" style="width:100%">
-				<div class="overlay">
-				<h3>Site Analysis</h3>
-				<p12>
-Used Adobe Illustrator to develop site analysis diagrams.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G1----->
-<!-----LIGHTBOX-G2----->
-<div class="lightcontainer" id="g2" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 21--22thpage------------------------------------------------------------!>
+<!---------------Section 22--23thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section22">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Rendered Visualizations	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/105.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/106.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/107.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/108.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/109.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/110.jpg');
+						background-position: top;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/02.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Illustrative Plan</h3>
-				<p12>
-Used Adobe Photoshop to create an illustrative plan indicating the configuration of land uses and building across site.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G2----->
-<!-----LIGHTBOX-G3----->
-<div class="lightcontainer" id="g3" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 22--23thpage------------------------------------------------------------!>
+<!---------------Section 23--24thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section23">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Rendered Visualizations	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/111.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/112.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/113.png');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/114.jpg');
+						background-position: bottom;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/116.jpg');
+						background-position: top;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/118.jpg');
+						background-position: bottom;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/03.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Illustrative Plan</h3>
-				<p12>
-Used Adobe Photoshop to create an illustrative plan depicting the vision for the eventual development and transformation of the site.
-					project details
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G3----->
-<!-----LIGHTBOX-G4----->
-<div class="lightcontainer" id="g4" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 23--24thpage------------------------------------------------------------!>
+<!---------------Section 24--25thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section24">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Animation and Fly-through	</h1_5>
+				<video loop muted controls="false" data-autoplay style="width:600px; margin:auto;">
+					<source src="../Assets/images/video/Awafi_1.mp4" type="video/mp4">
+				</video>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/04.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Diagrams and illustrations</h3>
-				<p12>
-Various diagrams and illustrations prepared for a master plan project using Adobe Illustrator. 
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G4----->
-<!-----LIGHTBOX-G5----->
-<div class="lightcontainer" id="g5" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 24--25thpage------------------------------------------------------------!>
+<!---------------Section 25--26thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section25">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Animation and Fly-through	</h1_5>
+				<video loop muted controls="false" data-autoplay style="width:600px; margin:auto;">
+					<source src="../Assets/images/video/Vision_2.mp4" type="video/mp4">
+				</video>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/05.png" style="width:100%">
-				<div class="overlay">
-				<h3>Concept Diagram</h3>
-				<p12>
-Illustrative concept diagram created with the combination of Photoshop and Illustrator.  
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G5----->
-<!-----LIGHTBOX-G6----->
-<div class="lightcontainer" i  d="g6" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 25--26thpage------------------------------------------------------------!>
+<!---------------Section 26--27thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section26">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Aerial Perspectives	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/01.jpg');
+						background-position: center; height:unset;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/02.jpg');
+						background-position: center; height:unset;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/06.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Master Plan Diagrams</h3>
-				<p12>
-Diagrams created in Adobe Illustrator showing consistent presentation style, to explain the various components of the master plan.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G6----->
-<!-----LIGHTBOX-G7----->
-<div class="lightcontainer" id="g7" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 26--27thpage------------------------------------------------------------!>
+<!---------------Section 27--28thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section27">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Aerial Perspectives	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/120.jpg');
+						background-position: center; height:unset; aspect-ratio:4/3;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/121.jpg');
+						background-position: center; height:unset; aspect-ratio:4/3;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/07.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>A New Dimension in Cross Sections</h3>
-				<p12>
-3D illustrative road cross-sections adds a new depth and attractiveness to an otherwise engineering-looking cross-sections.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G7----->
-<!-----LIGHTBOX-G8----->
-<div class="lightcontainer" id="g8" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 27--28thpage------------------------------------------------------------!>
+<!---------------Section 28--29thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section28">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Aerial Perspectives	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/09.jpg');
+						background-position: center; height:unset;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/10.jpg');
+						background-position: center; height:unset;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/08.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>A New Dimension in Cross Sections</h3>
-				<p12>
-Cross-sections can be rendered either as 2D orthographic view or a 3D perspective, and brought into Adobe Illustrator for additional texts and annotations.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G8----->
-<!-----LIGHTBOX-G9----->
-<div class="lightcontainer" id="g9" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 28--29thpage------------------------------------------------------------!>
+<!---------------Section 29--30thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section29">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Aerial Perspectives	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/15.jpg');
+						background-position: center; height:unset;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/123.jpg');
+						background-position: top; height:unset;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/graphics/09.jpg"style="width:100%">
-				<div class="overlay">
-				<h3>3D Photo Composite</h3>
-				<p12>
-Ability to perform 3D photo composites that combine site photos with 3D model creating a most photo-realistic representation of proposed projects possible.<br><br>
-
-This skill which creates  a hybrid composition effectively merges the real and the computer-generated, providing a unique, visually-stunning perspective of urban environment.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G9----->
-<!-----LIGHTBOX-G10----->
-<div class="lightcontainer" id="g10" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 29--30thpage------------------------------------------------------------!>
+<!---------------Section 30--31thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section30">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Aerial Perspectives	</h1_5>
+				<div class="graphic01">
+					<a
+						style="background-image:url('../Assets/images/3D/124.jpg');
+						background-position: center; height:unset; aspect-ratio:4/3;">
+					</a>
+					<a
+						style="background-image:url('../Assets/images/3D/125.jpg');
+						background-position: center; height:unset; aspect-ratio:4/3;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" id= "lightslideG10">
-				<img src="../Assets/images/graphics/10_1.jpg">
-				<div class="overlay">
-				<h3>Site Section</h3>
-				<p12>
-Detailed site section done in Adobe Photoshop shows the changes in elevation, paths, open spaces and building layout, and how they interact with each space.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-G10----->
-
-<!-----LIGHTBOX-3D1----->
-<div class="lightcontainer" id="3d1" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 30--31thpage------------------------------------------------------------!>
+<!---------------Section 31--32thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section31">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Photo Composite Rendering	</h1_5>
+				<div class="graphic02" style="height:350px;">
+					<a style="box-shadow:unset; height:350px; width:auto; flex-grow:unset">
+						<img src="../Assets/images/3D/126.png"
+						style="max-height:350px;width:auto; height:auto;">
+					</a>
+					<a style="box-shadow:unset;">
+						<img src="../Assets/images/3D/127.png"
+						style="align-self:center; height:auto; width:100%;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/01.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Full 3D model of a 400 ha project site</h3>
-				<p12>
-Task included design and model of:
-<ul><li>
-Villas (3 design variations, each variation in 3 color schemes)
-</li><li>
-Mall
-</li><li>
-Mosque (juma and local mosques)
-</li><li>
-Retail shops (4 variesties that may be combined side by side to form 1 large building)
-</li><li>
-Parks (individually designed for each cluster and each neighborhood park)
-</li><li>
-Schools and other community facility buildings
-</li><li>
-Streetscape (sidewalk, landscape, streetlights, etc.)
-</li></ul>
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D1----->
-<!-----LIGHTBOX-3D2----->
-<div class="lightcontainer" id="3d2" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 31--32thpage------------------------------------------------------------!>
+<!---------------Section 32--33thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section32">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Photo Composite Rendering	</h1_5>
+				<div class="graphic02" style="height:350px;">
+					<a style="box-shadow:unset; height:350px;width:350px; flex-grow:unset">
+						<img src="../Assets/images/3D/129.png"
+						style="max-height:unset;width:350px; height:auto;">
+					</a>
+					<a style="box-shadow:unset;">
+						<img src="../Assets/images/3D/128.png"
+						style="align-self:center; height:auto; width:100%;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/02.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Full 3D model of a 400 ha project site</h3>
-				<p12>
-All buildings modeled in SketchUp, then brought to 3ds max for texturing. Each model is then exported as a V-Ray mesh to reduce file size and increase rendering time.<br><br>
-
-Used AutoCAD to place the building blocks, street light and landscape elements in correct location, then brought to 3ds max and replaced with the V-Ray textured mesh.<br><br>
-
-Rendering was done using V-Ray plugin.  Large scenes were rendered to .vrimg file then brought to Photoshop for post processing and exporting to jpeg file.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D2----->
-<!-----LIGHTBOX-3D3----->
-<div class="lightcontainer" id="3d3" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 32--33thpage------------------------------------------------------------!>
+<!---------------Section 33--34thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section33">
+		<div class="projlist" style="padding:0;">
+			<div class="profile">
+				<h1_5>	Reports	</h1_5>
+				<div class="graphicSamples">
+					<a href="#R1"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/reports/104.png');">
+						Planning Reports
+					</a>
+					<a href="#R2"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/reports/108.png');">
+						Guidelines & Manuals
+					</a>
+					<a href="#R3"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/reports/105.png');">
+						Technical Documentation
+					</a>
+				</div>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/03.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Waterfront Promenade</h3>
-				<p12>
-Task included public realm design and 3D model of the canal edge and promenade, and design of buildings.  Building height and ground floor use were dictated by plot design guidelines.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D3----->
-<!-----LIGHTBOX-3D4----->
-<div class="lightcontainer" id="3d4" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 33--34thpage------------------------------------------------------------!>
+<!---------------Section 34--35thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section34">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Planning Reports	</h1_5>
+				<div class="reports">
+					<a>
+						<img src="../Assets/images/reports/104.png"
+						style="height:200px;">
+					</a>
+				</div>
+				<br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/04.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Waterfront Promenade</h3>
-				<p12>
-The project involved the public realm design as well as 3D model of the canal edge and promenade, as well as the design of buildings along the waterfront. The buildings had to comply with the plot design guidelines, which specified the building height and ground floor use. The public realm design aimed to create a vibrant and attractive environment for pedestrians.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D4----->
-<!-----LIGHTBOX-3D5----->
-<div class="lightcontainer" id="3d5" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 34--35thpage------------------------------------------------------------!>
+<!---------------Section 35--36thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section35">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Guidelines & Manuals	</h1_5>
+				<div class="reports">
+					<a>
+						<img src="../Assets/images/reports/107.png"
+						style="height:200px;">
+					</a>
+					<a>
+						<img src="../Assets/images/reports/108.png"
+						style="height:200px;">
+					</a>
+				</div>
+				<br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/05.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Waterfront Promenade</h3>
-				<p12>
-The project involved not only 3D modeling but also landscape and architectural concepts for the canal edge and the promenade, as well as the design of the buildings on the site, with a focus on enhancing the public realm and the vistor experience.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D5----->
-<!-----LIGHTBOX-3D6----->
-<div class="lightcontainer" id="3d6" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 35--36thpage------------------------------------------------------------!>
+<!---------------Section 36--37thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section36">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Guidelines & Manuals	</h1_5>
+				<div class="reports">
+					<a>
+						<img src="../Assets/images/reports/106.png"
+						style="height:300px;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/06.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Lights and Reflections</h3>
-				<p12>
-Night view along a promenade was achieved using HDRI sky image used as background and to illuminate the scene.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D6----->
-<!-----LIGHTBOX-3D7----->
-<div class="lightcontainer" id="3d7" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 36--37thpage------------------------------------------------------------!>
+<!---------------Section 37--38thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section37">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Technical Documentation	</h1_5>
+				<div class="reports">
+					<a>
+						<img src="../Assets/images/reports/105.png"
+						style="height:300px;">
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/07.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Daylight</h3>
-				<p12>
-The same scene rendered using 3ds max and V-Ray.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D7----->
-<!-----LIGHTBOX-3D8----->
-<div class="lightcontainer" id="3d8" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 37--38thpage------------------------------------------------------------!>
+<!---------------Section 38--39thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section38">
+		<div class="projlist" style="padding:0;">
+			<div class="profile">
+				<h1_5>	GIS Analysis	</h1_5>
+				<div class="graphicSamples">
+					<a href="#GIS1"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/GIS/100.jpg');">
+						Thematic Mapping Analysis
+					</a>
+					<a href="#GIS2"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/GIS/113.jpg');">
+						Constraints and Opportunities Analysis
+					</a>
+					<a href="#GIS3"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/GIS/103.jpg');">
+						Land Use Analysis
+					</a>
+					<a href="#GIS4"
+						style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+						url('../Assets/images/GIS/08.png');
+						background-position:0% 30%;">
+						GIS Automation & Workflow
+					</a>
+				</div>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/08.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Elevation Change</h3>
-				<p12>
-Worked on a challenging 3D model of residential neighborhood with varying street elevation. Used MX Road to correctly model the streetscape to the correct elevation. Rendered in 3ds max with V-Ray, and Photoshop for post processing.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D8----->
-<!-----LIGHTBOX-3D9----->
-<div class="lightcontainer" id="3d9" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 38--39thpage------------------------------------------------------------!>
+<!---------------Section 39--40thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section39">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Thematic Mapping Analysis	</h1_5>
+				<div class="graphic01" id="paperProp">
+					<a
+						style="background-image:url('../Assets/images/GIS/100.jpg');">
+						Topographic Elevation	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/107.jpg');">
+						Built/Vacant	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/109.jpg');">
+						Existing Land Use	<br><br>
+					</a>
+					<!--------------------------------------------------------------------!>
+					<a
+						style="background-image:url('../Assets/images/GIS/101.jpg');">
+						Topographic Slope	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/108.jpg');">
+						Existing Properties	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/110.jpg');">
+						Government Plots	<br><br>
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/09.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Bird's Eye View</h3>
-				<p12>
-Close-up aerial view from a large 3D model, showing the level of detail achieved modeling the whole project.  Each cluster center designed individually.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D9----->
-<!-----LIGHTBOX-3D10----->
-<div class="lightcontainer" id="3d10" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 39--40thpage------------------------------------------------------------!>
+<!---------------Section 40--41thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section40">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Constraints and Opportunities Analysis</h1_5>
+				<div class="graphic01" id="paperProp">
+					<a
+						style="background-image:url('../Assets/images/GIS/03.jpg');">
+						Existing Mosques & Catchment	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/111.jpg');">
+						On-hold	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/113.jpg');">
+						Flood Plain	<br><br>
+					</a>
+					<!--------------------------------------------------------------------!>
+					<a
+						style="background-image:url('../Assets/images/GIS/102.jpg');">
+						Proposed Mosques & Catchment	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/112.jpg');">
+						Existing Utilities	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/114.jpg');">
+						Proposed Canals	<br><br>
+					</a>
+				</div>
+				<br><br>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/10.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Rich in Detail</h3>
-				<p12>
-The whole project, covering an area of about 400 ha, was modeled completely with intricate details so the same model was used for overall site rendering, close-up aerial and street-level view.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D10----->
-<!-----LIGHTBOX-3D11----->
-<div class="lightcontainer" id="3d11" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 40--41thpage------------------------------------------------------------!>
+<!---------------Section 41--42thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section41">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	Land Use Analysis	</h1_5>
+				<div class="graphic01" id="paperProp" style="flex-wrap:balance; margin:0 auto; width:600px;">
+					<a
+						style="background-image:url('../Assets/images/GIS/103.jpg');">
+						Existing & Proposed Land Use	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/104.jpg');">
+						Existing & Proposed Community Facilities	<br><br>
+					</a>
+					<!--------------------------------------------------------------------!>
+					<a
+						style="background-image:url('../Assets/images/GIS/105.jpg');">
+						Land Use Level 1	<br><br>
+					</a>
+					<a
+						style="background-image:url('../Assets/images/GIS/106.jpg');">
+						Land Use Level 2	<br><br>
+					</a>
+				</div>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/11.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Animation-ready</h3>
-				<p12>
-The project also required street-level and aerial fly-through animations.<br><br>
-
-Each character was rigged to simulate physical movement such as walking, sitting, running, or playing.   Other characters and actions were created in Adobe Maxon.  
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D11----->
-<!-----LIGHTBOX-3D12----->
-<div class="lightcontainer" id="3d12" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
+	</div>
+<!---------------END Section 41--42thpage------------------------------------------------------------!>
+<!---------------Section 42--43thpage-----------------------------------------------------------------------!>
+	<div class="section" id="section42">
+		<div class="projlist_1T" style="padding:0;">
+			<div class="graphics">
+				<h1_5>	GIS Automation & Workflow	</h1_5>
+				<div class="graphic01" id="paperProp" 
+					style="width:600px; height:400px; margin:0 auto;">
+					<a
+						style="background-image:url('../Assets/images/GIS/08.png');
+						width:500px; height:350px; background-size:contain; aspect-ratio:unset;">
+						Modelbuilder page from ArcGIS Pro	<br><br>
+					</a>
+				</div>
+			</div>
 		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/12.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>From Any Angle</h3>
-				<p12>
-Since the 3D model is intricate and detailed enough, rendering of views from any angle is possible.  This is the same park as in the previous image, shown from a different angle. 
-				</p12></div></div></div>
+	</div>
+<!---------------END Section 41--42thpage------------------------------------------------------------!>
+
 </div>
-<!-----LIGHTBOX-3D12----->
-<!-----LIGHTBOX-3D13----->
-<div class="lightcontainer" id="3d13" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/13.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Composition</h3>
-				<p12>
-Camera placement, together with the arrangement of landscape elements are carefully considered to draw the eye to the subject of interest.  Lighting and shadows were also taken into consideration for this particular scene.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D13----->
-<!-----LIGHTBOX-3D14----->
-<div class="lightcontainer" id="3d14" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/14.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Teamwork</h3>
-				<p12>
-Proven ability to work with a team to bring together a complete product.  For this project, worked closely with landscape team for the streetscape and combined work with another team doing the building massing.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D14----->
-<!-----LIGHTBOX-3D15----->
-<div class="lightcontainer" id="3d15" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/15.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Collaborative work</h3>
-				<p12>
-Worked with a team of 3D modelers for this particular project.  Tasked to create a detailed building elevation based on client requirements while others are working on simple 3D block model of the whole site.<br><br>
 
-The finished 3D model was inserted to the site model and rendered in 3ds max with V-Ray plugin.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D15----->
-<!-----LIGHTBOX-3D16----->
-<div class="lightcontainer" id="3d16" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/3D/16.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>3D Photo Composite</h3>
-				<p12>
-Ability to perform 3D photo composites that combine site photos with 3D model creating a most photo-realistic representation of proposed projects possible.
+<script type="text/javascript" src="fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
 
-This skill which creates a hybrid composition effectively merges the real and the computer-generated, providing a unique, visually-stunning perspective of urban environment.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-3D16----->
+<script type="text/javascript">
+var myFullpage = new fullpage('#fullpage', {
+    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', '9thpage',
+		'10thpage', '11thpage',
+		'Graphics','G1', 'G1-1', 'G2', 'G2-1', 'G3', 'G3-1', 
+		'x3D', 'xD1', 'xD1-1', 'xD1-2', 'xD1-3', 'xD2', 'xD2-1', 'xD3', 'xD3-1', 'xD3-2', 'xD3-3', 'xD3-4', 'xD4', 'xD4-1',
+		'Reports', 'Planning-R1', 'Guidelines-R1', 'Guidelines-R2', 'Technical-R1',
+		'GIS', 'GIS1','GIS2','GIS3','GIS4'
+		],
+    sectionsColor: ['', '', '', '', '', '', '',''],
+    css3: true,
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips: ['Experiences', 'Featured Projects', 'Design', 'Julfar Heritage Corridor','Confidential Project 01',
+	'Confidential Project 02', 'Confidential Project 03', 'Confidential Project 04', 'RAK Academic City',
+	'Public Realm Studies 01','Public Realm Studies 02',
+	'Graphics',
+	'Illustrated Plans 01','Illustrated Plans 02',
+	'Concept Diagrams 01', 'Concept Diagrams 02', 
+	'Urban Design Graphics 01', 'Urban Design Graphics 02',
+	'3D Modeling and Rendering',
+	'Rendered Visualizations 01', 'Rendered Visualizations 02','Rendered Visualizations 03', 'Rendered Visualizations 04',
+	'Animation and Fly-through 01', 'Animation and Fly-through 02',
+	'Aerial Perspectives 01', 'Aerial Perspectives 02', 'Aerial Perspectives 03', 'Aerial Perspectives 04', 'Aerial Perspectives 05',
+	'Photo Composite Rendering 01', 'Photo Composite Rendering 02',
+	'Reports', 'Planning Report', 'Guidelines & Manuals 01', 'Guidelines & Manuals 02', 'Technical Documentation', 
+	'GIS Analysis', 'Thematic Mapping Analysis', 'Constraints and Opportunities', 'Land Use Analysis', 'GIS Automation & Workflow'
+	],
 
-<!-----LIGHTBOX-R1----->
-<div class="lightcontainer" id="r1" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/01.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Addressing Manual</h3>
-				<p12>
-Authored the Addressing Manual that established the unified addressing system for Ras Al Khaimah.<br><br>
+    // enable internal scrolling
+    scrollOverflow: true,
 
-The Addressing Manual is a valuable and concrete contribution to the enhancement of living and working standards in Ras Al Khaimah.  The project is progressing well and physical signages are being installed.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R1----->
-<!-----LIGHTBOX-R2----->
-<div class="lightcontainer" id="r2" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/02.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Glossary of Terms</h3>
-				<p12>
-Worked in coordination with various disciplines to compile commonly used terminologies from various sections of Ras Al Khaimah Municipality.  Researched and compiled definitions and worked with colleagues to complete the Arabic version of each terminologies.  The Glossary also covers terms that are specific to Ras Al Khaimah, and those used in various documents and manuals.<br><br>
+    afterRender: function () {
 
-Used Adobe InDesign to create the report.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R2----->
-<!-----LIGHTBOX-R3----->
-<div class="lightcontainer" id="r3" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/03.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Neighborhood Planning Guidelines</h3>
-				<p12>
-Researched and developed the first version of the Sustainable Planning and Urban Design Manual.  This set of guidelines is a compendium of best local and international practices.<br><br>
+        const header = document.getElementById("header");
 
-The first book, Neighborhood Planning Guidelines, presents various planning principles for planning an Emirati neighborhood.  It includes examples of do's and dont's from existing situations within Ras Al Khaimah.
+        // detect scroll inside overflowing slides/sections
+        const scrollables = document.querySelectorAll('.fp-overflow');
 
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R3----->
-<!-----LIGHTBOX-R4----->
-<div class="lightcontainer" id="r4" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/04.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Urban Design Guidelines</h3>
-				<p12>
-The second book in the series of Sustainable Planning and Urban Design Manual covers various topics that shapes the urban landscape.<br><br>
+        scrollables.forEach(function (el) {
 
-The book provides examples of existing situations and presents various possible improvement scenarios as outlined on the guidelines.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R4----->
-<!-----LIGHTBOX-R5----->
-<div class="lightcontainer" id="r5" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/05.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Street Design Guidelines</h3>
-				<p12>
-The Street Design Guidelines with a focus on pedestrian experience, are essential tools for creating public spaces that serve the diverse needs and functions of urban life.<br><br>
+            el.addEventListener('scroll', function () {
 
-It is a collection of existing local and international best practices and standards for designing streets that are safe, accessible, and attractive for all users. 
+                if (el.scrollTop > 0) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
 
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R5----->
-<!-----LIGHTBOX-R6----->
-<div class="lightcontainer" id="r6" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/06.png" style="width:100%">
-				<div class="overlay">
-				<h3>Master Plan Reports</h3>
-				<p12>
-Cover of a master plan report created using Adobe InDesign.  
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R6----->
-<!-----LIGHTBOX-R7----->
-<div class="lightcontainer" id="r7" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/07.png" style="width:100%">
-				<div class="overlay">
-				<h3>Master Plan Reports</h3>
-				<p12>
-Prepared master plan report using InDesign for the layout.  Images were created in Adobe Illustrator.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R7----->
-<!-----LIGHTBOX-R8----->
-<div class="lightcontainer" id="r8" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/08.png" style="width:100%">
-				<div class="overlay">
-				<h3>Master Plan Reports</h3>
-				<p12>
-This report was created in InDesign, a powerful software for designing and publishing documents. To ensure a consistent look and feel of the report, standard styles were applied to images, texts and tables. Images were aligned and cropped to fit the layout, texts were formatted with appropriate fonts and colors, and tables were styled with borders and shading. These standard styles make the report more professional and readable.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R8----->
-<!-----LIGHTBOX-R9----->
-<div class="lightcontainer" id="r9" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/09.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Guidelines</h3>
-				<p12>
-One of the pages of Street Design Guidelines created in InDesign.<br><br>
+            });
 
-The process of creating one of the pages of Street Design Guidelines involves using different software tools. First, the images were rendered using a 3D modeling program and then exported to Adobe Illustrator. There, the images were enhanced with texts and annotations to explain the design features and principles. Finally, the images were imported to InDesign, where they were arranged and formatted to fit the page layout and style of the guidelines document.
+        });
 
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R9----->
-<!-----LIGHTBOX-R10----->
-<div class="lightcontainer" id="r10" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/reports/10.png" style="width:100%">
-				<div class="overlay">
-				<h3>Master Plan Reports</h3>
-				<p12>
-This page is an excerpt from the RAK Academic City Master Plan Report, which demonstrates the ability to write and prepare a report in a clear and concise manner. The report covers the vision, objectives and strategies for the development of a world-class academic city in Ras Al Khaimah.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-R10----->
-
-
-
-<!-----LIGHTBOX-GIS1----->
-<div class="lightcontainer" id="gis1" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/GIS/01_1.gif" style="width:100%">
-				<div class="overlay">
-				<h3>Thematic Mapping</h3>
-				<p12>
-Ability to create thematic maps from GIS data.<br><br>
-
-Thematic mapping is a technique that creates maps to show data in a clear and understandable way. It helps to analyze data and can focus on one data feature or combine multiple features to reveal more complicated spatial trends.<br><br>
-
-This example shows thematic maps for topography, slope, flood plain and location of hydrology channels.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-GIS1----->
-<!-----LIGHTBOX-GIS2----->
-<div class="lightcontainer" id="gis2" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/GIS/02_1.gif" style="width:100%">
-				<div class="overlay">
-				<h3>Analysis</h3>
-				<p12>
-Used GIS to create site analysis map that helped identify constraints and opportunities within the site. The maps not only shows existing conditions but also locations of planned facilities that might have ipact on planning.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-GIS2----->
-<!-----LIGHTBOX-GIS3----->
-<div class="lightcontainer" id="gis3" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/GIS/03.jpg" style="width:100%">
-				<div class="overlay">
-				<h3>Service Radius</h3>
-				<p12>
-Adept at utilising GIS capability to determine service radius of community facilities to determine areas that need additional facilities or those that are over-supplied.
-					project details
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-GIS3----->
-<!-----LIGHTBOX-GIS4----->
-<div class="lightcontainer" id="gis4" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/GIS/04.png" style="width:100%">
-				<div class="overlay">
-				<h3>Land Use Maps</h3>
-				<p12>
-Ability to quickly create land use maps and create comparison between the existing and proposed. This skill helps to visualize the current and future scenarios of land development, and to communicate them effectively to stakeholders and decision-makers.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-GIS4----->
-<!-----LIGHTBOX-GIS5----->
-<div class="lightcontainer" id="gis5" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/GIS/05.png" style="width:100%">
-				<div class="overlay">
-				<h3>Resource Inventory</h3>
-				<p12>
-Used GIS capability to quantify and display on a map available plots.
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-GIS5----->
-<!-----LIGHTBOX-GIS6----->
-<div class="lightcontainer" id="gis6" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/GIS/06_1.gif" style="width:100%">
-				<div class="overlay">
-				<h3>Advance Analysis Techniques</h3>
-				<p12>
-Ability to harness advanced GIS spatial analysis techniques such as Hot Spot Analysis.<br><br>
-
-Hot Spot Analysis is used to identify statistically significant spatial clusters of high values (hot spots) and low values (cold spots) of a particular attribute.<br><br>
-
-In this particular example, hot spot analysis is applied to the location of existing trees.  The hot spots show locations of intense clustering.  This analysis is used to justify the location and boundary of parks.
-
-
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-GIS6----->
-<!-----LIGHTBOX-GIS7----->
-<div class="lightcontainer" id="gis7" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/GIS/07_1.gif" style="width:100%">
-				<div class="overlay">
-				<h3>Suitability Map</h3>
-				<p12>
-Used GIS mapping capabilities to determine plots that are free from any constraints and meet certain criteria. 
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-GIS7----->
-<!-----LIGHTBOX-GIS8----->
-<div class="lightcontainer" id="gis8" style="display:none;">
-		<div class="topclose" >
-			<div><a href=#><p onclick="closelightbox()">&#x2715;</p></a></div>
-		</div>
-		<!-----LIGHTBOX main image------>
-		<div class="lightimage">
-			<div class="lightslides" style="display:flex;">
-				<img src="../Assets/images/GIS/08.png" style="width:100%">
-				<div class="overlay">
-				<h3>ModelBuilder</h3>
-				<p12>
-Ability to automate repetitive GIS tasks by using ModelBuilder.<br><br>
-
-ModelBuilder is a visual programming language for building workflows that automate geoprocessing tasks in ArcGIS Pro.<br><br>
-
-The image shows sample workflows that contain a sequence of tools, inputs and outputs.
-
-				</p12></div></div></div>
-</div>
-<!-----LIGHTBOX-GIS8----->
-
-
-
-
-<!-----LIGHTBOX------>
-<!-----script------>
-<script>
-//----------TAB scripts-----------------//
-//---Set first tab as open by default---//
-document.getElementsByClassName('tablinks')[0].click()
-
-function openSkill(evt, skillName)	//---Declare all variables---//
-	{
-		var i, tabcontent, tablinks;
-	
-		//---Get all elements with class="tabcontent" and hide them---//
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) 
-		{
-			tabcontent[i].style.display = "none";
-		}
-		
-		//---Get all elements with class="tablinks" and remove the class "active"---//
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) 
-		{
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-	
-		//---Show the current tab, and add an "active" class to the button that opened the tab---//
-		document.getElementById(skillName).style.display = "flex";
-		evt.currentTarget.className += " active";
-	}
-//----------TAB scripts-----------------//
-//----------slideshow script------------//
-	let slideIndex = 1;
-	showSlides(slideIndex);
-	
-//---Next/previous controls---//
-	function plusSlides(n)
-	{
-		showSlides(slideIndex += n);
-	}
-	
-//---Thumbnail image controls---//
-	function currentSlide(n) 
-	{
-		showSlides(slideIndex = n);
-	}
-	
-	function showSlides(n) 
-	{
-		let i;
-		let slides = document.getElementsByClassName("mySlides");
-		let dots = document.getElementsByClassName("dot");
-	
-		if (n > slides.length)
-			{
-			slideIndex = 1
-			} 
-	
-		if (n < 1) 
-			{
-			slideIndex = slides.length
-			}
-	
-		for (i = 0; i < slides.length; i++)
-			{
-			slides[i].style.display = "none";  
-			}
-		for (i = 0; i < dots.length; i++)
-			{
-			dots[i].className = dots[i].className.replace(" active", "");
-			}
-	
-		slides[slideIndex-1].style.display = "flex";  
-		dots[slideIndex-1].className += " active";
-	}
-//---/------slideshow script------------//
-//----------LIGHTBOX--------------------------//
-
-	//----------close LIGHTBOX--------------------------//
-function closelightbox() 
-	{
-	document.querySelectorAll('.lightcontainer').forEach(div => div.style.display = 'none');
-	}
-
-	//----------close LIGHTBOX--------------------------//
-
-function show_d1() 
-	{
-	document.getElementById("d1").style.display = "flex";
-	}
-
-function show_d2() 
-	{
-	document.getElementById("d2").style.display = "flex";
-	}
-function show_d3() 
-	{
-	document.getElementById("d3").style.display = "flex";
-	}
-function show_d4() 
-	{
-	document.getElementById("d4").style.display = "flex";
-	}
-function show_d5() 
-	{
-	document.getElementById("d5").style.display = "flex";
-	}
-function show_d6() 
-	{
-	document.getElementById("d6").style.display = "flex";
-	}
-function show_d7() 
-	{
-	document.getElementById("d7").style.display = "flex";
-	}
-function show_d8() 
-	{
-	document.getElementById("d8").style.display = "flex";
-	}
-function show_d9() 
-	{
-	document.getElementById("d9").style.display = "flex";
-	}
-function show_d10() 
-	{
-	document.getElementById("d10").style.display = "flex";
-	}
-function show_d11() 
-	{
-	document.getElementById("d11").style.display = "flex";
-	}
-function show_d12() 
-	{
-	document.getElementById("d12").style.display = "flex";
-	}
-function show_d13() 
-	{
-	document.getElementById("d13").style.display = "flex";
-	}
-function show_d14() 
-	{
-	document.getElementById("d14").style.display = "flex";
-	}
-
-function show_G1() 
-	{
-	document.getElementById("g1").style.display = "flex";
-	}
-function show_G2() 
-	{
-	document.getElementById("g2").style.display = "flex";
-	}
-function show_G3() 
-	{
-	document.getElementById("g3").style.display = "flex";
-	}
-function show_G4() 
-	{
-	document.getElementById("g4").style.display = "flex";
-	}
-function show_G5() 
-	{
-	document.getElementById("g5").style.display = "flex";
-	}
-function show_G6() 
-	{
-	document.getElementById("g6").style.display = "flex";
-	}
-function show_G7() 
-	{
-	document.getElementById("g7").style.display = "flex";
-	}
-function show_G8() 
-	{
-	document.getElementById("g8").style.display = "flex";
-	}
-function show_G9() 
-	{
-	document.getElementById("g9").style.display = "flex";
-	}
-function show_G10() 
-	{
-	document.getElementById("g10").style.display = "flex";
-	}
-
-
-function show_3d1() 
-	{
-	document.getElementById("3d1").style.display = "flex";
-	}
-function show_3d2() 
-	{
-	document.getElementById("3d2").style.display = "flex";
-	}
-function show_3d3() 
-	{
-	document.getElementById("3d3").style.display = "flex";
-	}
-function show_3d4() 
-	{
-	document.getElementById("3d4").style.display = "flex";
-	}
-function show_3d5() 
-	{
-	document.getElementById("3d5").style.display = "flex";
-	}
-function show_3d6() 
-	{
-	document.getElementById("3d6").style.display = "flex";
-	}
-function show_3d7() 
-	{
-	document.getElementById("3d7").style.display = "flex";
-	}
-function show_3d8() 
-	{
-	document.getElementById("3d8").style.display = "flex";
-	}
-function show_3d9() 
-	{
-	document.getElementById("3d9").style.display = "flex";
-	}
-function show_3d10() 
-	{
-	document.getElementById("3d10").style.display = "flex";
-	}
-function show_3d11() 
-	{
-	document.getElementById("3d11").style.display = "flex";
-	}
-function show_3d12() 
-	{
-	document.getElementById("3d12").style.display = "flex";
-	}
-function show_3d13() 
-	{
-	document.getElementById("3d13").style.display = "flex";
-	}
-function show_3d14() 
-	{
-	document.getElementById("3d14").style.display = "flex";
-	}
-function show_3d15() 
-	{
-	document.getElementById("3d15").style.display = "flex";
-	}
-function show_3d16() 
-	{
-	document.getElementById("3d16").style.display = "flex";
-	}
-
-function show_R1() 
-	{
-	document.getElementById("r1").style.display = "flex";
-	}
-function show_R2() 
-	{
-	document.getElementById("r2").style.display = "flex";
-	}
-function show_R3() 
-	{
-	document.getElementById("r3").style.display = "flex";
-	}
-function show_R4() 
-	{
-	document.getElementById("r4").style.display = "flex";
-	}
-function show_R5() 
-	{
-	document.getElementById("r5").style.display = "flex";
-	}
-function show_R6() 
-	{
-	document.getElementById("r6").style.display = "flex";
-	}
-function show_R7() 
-	{
-	document.getElementById("r7").style.display = "flex";
-	}
-function show_R8() 
-	{
-	document.getElementById("r8").style.display = "flex";
-	}
-function show_R9() 
-	{
-	document.getElementById("r9").style.display = "flex";
-	}
-function show_R10() 
-	{
-	document.getElementById("r10").style.display = "flex";
-	}
-
-
-function show_GIS1() 
-	{
-	document.getElementById("gis1").style.display = "flex";
-	}
-function show_GIS2() 
-	{
-	document.getElementById("gis2").style.display = "flex";
-	}
-function show_GIS3() 
-	{
-	document.getElementById("gis3").style.display = "flex";
-	}
-function show_GIS4() 
-	{
-	document.getElementById("gis4").style.display = "flex";
-	}
-function show_GIS5() 
-	{
-	document.getElementById("gis5").style.display = "flex";
-	}
-function show_GIS6() 
-	{
-	document.getElementById("gis6").style.display = "flex";
-	}
-function show_GIS7() 
-	{
-	document.getElementById("gis7").style.display = "flex";
-	}
-function show_GIS8() 
-	{
-	document.getElementById("gis8").style.display = "flex";
-	}
-
-
-
+    }
+});
 </script>
-<!-----script------>
+
+
 </body>
 </html>
