@@ -70,6 +70,13 @@ p4	/*--------desciption text---------*/
 	line-height:1.5;
 	}
 
+#hist p4	/*--------desciption text---------*/
+	{
+	font-size:11px;
+	font-family: Verdana, sans-serif;
+	line-height:1.5;
+	}
+
 p12	/*--------desciption text---------*/
 	{
 	font-size:12px;
@@ -87,12 +94,22 @@ p5	/*--------name text---------*/
 	color:#6C757D;
 	}
 
+p6	/*--------name text---------*/
+	{
+	font-size:12px;
+	font-style: italic;
+	font-weight:bold;
+	font-family: Verdana, sans-serif;
+	margin:0;	
+	color:#6C757D;
+	}
+
 h1	/*--------name text---------*/
 	{
 	font-size:80px;
 	font-family: Arial, sans-serif;
 
-	margin:5px 0 0 0;
+	margin:0;
 	color:#343A40;
 	}
 h2	/*--------level 1 text------*/
@@ -119,9 +136,23 @@ h4	/*--------level 3 text------*/
 	margin:10px 0 0px 0;
 	}
 
+#sm	/*--------level 3 text------*/
+	{
+	font-size:12px;
+	font-family: Verdana, sans-serif;
+	color:#212529;
+	margin:10px 0 0px 0;
+	}
+
+
 ul
 	{
 	margin:5px 0 5px 0;
+	}
+
+li
+	{
+	padding-bottom:5px;
 	}
 
 /*---------------style text--------------------------*/
@@ -163,6 +194,9 @@ ul
 	flex-direction:column;
 	width:30%;
 	min-width:250px;
+	/*--------
+		-----*/
+	margin-top:20px;
 	}
 
 .links
@@ -226,6 +260,7 @@ ul
 	width:100%;
 	min-width:250px;
 	margin-top:10px;
+	align-items:center;	
 	}
 
 .linkstext p2
@@ -337,7 +372,7 @@ div#resume:hover #resblock
 	{
 	display:flex;
 	flex-direction:column;
-	padding-bottom:20px;
+	padding-bottom:10px;
 	border-bottom:1px solid #DEE2E6;
 	text-align:justify;
 	}
@@ -383,7 +418,7 @@ div#resume:hover #resblock
 	{
 	display:flex;
 	flex-direction:column;
-	padding-bottom:20px;
+	padding-bottom:10px;
 	border-bottom:1px solid #DEE2E6;
 	text-align:justify;
 	}
@@ -405,6 +440,12 @@ div#resume:hover #resblock
 .profhist>div p5
 	{
 	font-size:12px;
+	color:#495057;
+	}
+
+.profhist>div p6
+	{
+	font-size:11px;
 	color:#495057;
 	}
 
