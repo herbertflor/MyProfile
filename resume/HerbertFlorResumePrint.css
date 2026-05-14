@@ -1,0 +1,1207 @@
+*---------------Color style----------------------------------------------*/
+/*-----https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-----*/
+/*------------------------------------------------------------------------*/
+/*------.heading						----------*/
+/*------	.name						----------*/
+/*------	.links						----------*/
+/*------.middle							----------*/
+/*------	.midleftcol					----------*/
+/*------		.skillsum				----------*/
+/*------		.skillcontainer				----------*/
+/*------			.skills >heading>head2>text	----------*/
+/*------	.midrightcol					----------*/
+/*------		.imageslide				----------*/
+/*------		.accordion				----------*/
+/*------------------------------------------------------------------------*/
+
+
+/*---------------set html height to full page--------*/
+html, body
+	{
+	width: 100%;
+	margin: 0;
+	}
+
+
+/*---------------set html height to full page--------*/
+/*---------------Req---------------------------------*/
+* 
+	{
+	box-sizing: border-box;
+	}
+/*---------------Req---------------------------------*/
+/*---------------Style the links---------------------*/
+a
+	{
+	text-underline-offset:0.3em;
+	text-decoration-style: dotted;
+	}
+/*---------------Style the links---------------------*/
+/*---------------style text--------------------------*/
+p	/*--------name text---------*/
+	{
+	font-size:10px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+	color:white;
+	}
+
+p1	/*--------name text---------*/
+	{
+	font-size:17px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+	color:#343A40;
+	}
+p2	/*--------links text---------*/
+	{
+	font-size:10px;
+	font-family: Verdana, sans-serif;
+	}
+p3	/*--------desciption text---------*/
+	{
+	font-size:13px;
+	font-family: Verdana, sans-serif;
+	color:#343A40;
+	}
+
+p4	/*--------desciption text---------*/
+	{
+	font-size:13px;
+	font-family: Verdana, sans-serif;
+	line-height:1.5;
+	}
+
+p12	/*--------desciption text---------*/
+	{
+	font-size:12px;
+	font-family: Verdana, sans-serif;
+	line-height:1.5;
+	}
+
+p5	/*--------name text---------*/
+	{
+	font-size:13px;
+	font-style: italic;
+	font-weight:bold;
+	font-family: Verdana, sans-serif;
+	margin:0 0 5px 0;	
+	color:#6C757D;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:80px;
+	font-family: Arial, sans-serif;
+
+	margin:5px 0 0 0;
+	color:#343A40;
+	}
+
+h2	/*--------name text---------*/
+	{
+	font-size:20px;
+	font-family: Verdana, sans-serif;
+	letter-spacing: 2px;
+	margin:0 0 5px 0;
+	color:#495057;
+	}
+h3	/*--------name text---------*/
+	{
+	font-size:16px;
+	font-family: Verdana, sans-serif;
+	color:#495057;
+	}
+
+
+
+/*---------------style text--------------------------*/
+
+/*---------------style heading-----------------------*/
+.heading
+	{
+	display:flex;
+	flex-direction:row;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	/*---background-color:#F8F9FA;---*/
+	margin-left:auto;
+	margin-right:auto;
+
+	padding:10px 0 10px 0;
+	
+	border-bottom:1px solid #DEE2E6;
+	}
+/*---------------style heading-----------------------*/
+/*---------------style heading name------------------*/
+.name
+	{
+	display:flex;
+	flex-direction:column;
+	width:70%;
+	min-width:450px;
+	/*---background-color:#F0F0F0;---*/
+	padding:10px;
+	}
+
+/*---------------style heading name------------------*/
+/*---------------style heading links-----------------*/
+.links
+	{
+	display:flex;
+	width:30%;
+	min-width:250px;
+	height:50px;
+	}
+
+.links>div
+	{
+	display:flex;
+	flex:20%;
+	min-width:40px;
+	background-color:#E9ECEF;
+	justify-content:center;
+	text-align:center;
+	align-items:center;
+	margin:0 2px 0 2px;
+	padding:5px;
+	
+
+
+	border:none;
+	transition: 0.2s;
+	}
+
+.links>div:first-child
+	{
+	margin:0 2px 0 0;
+	}
+.links>div:last-child
+	{
+	margin:0 0 0 2px;
+	}
+
+.links>div a
+	{
+	height:50px;
+	width:100%;
+	color:black;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	}
+
+.links>div a:hover
+	{
+	color:white;
+	}
+
+
+.links>div:hover
+	{
+	background-color:#343A40;
+	}
+
+/*---------------dropdown links--*/
+div#resume
+	{
+	display:block;
+	background-color:#343A40;
+	padding:0;
+	height:inherit;
+
+	cursor:context-menu;
+	}
+
+div#resume a
+	{
+	width:100%;
+	color:white;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	height:inherit;
+	}
+
+div#resume a p2
+	{
+	display:block;
+	margin:auto;
+	}
+
+div#resume .dropdownlinks
+	{
+	display:none;
+	position:absolute;
+	z-index:1;
+	}
+
+div#resume .dropdownlinks a
+	{
+	margin:5px 0 5px 0;
+	background-color:#DEE2E6;
+	color:black;
+
+	}
+
+div#resume .dropdownlinks a p2
+	{
+	display:flex;
+	align-items:center;
+	height:30px;
+	width:145px;
+	padding:5px;
+	text-align:left;
+	}
+
+div#resume .dropdownlinks a:hover
+	{
+	color:white;
+	background-color:#343A40;
+	}
+	
+div#resume:hover .dropdownlinks
+	{
+	display: block;
+	}
+
+
+
+/*---------------style heading links-----------------*/
+/*---------------style middle------------------------*/
+.middle
+	{
+	display:flex;
+	flex-direction:row;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	/*---background-color:#E9ECEF;---*/
+	margin-left:auto;
+	margin-right:auto;
+	padding:0 0 10px 0;
+	}
+/*---------------style middle------------------------*/
+/*---------------style middle left column------------*/
+.midleftcol
+	{
+	display:flex;
+	flex-direction:column;
+	width:70%;
+	min-width:450px;
+	padding-right:20px;
+	}
+/*---------------style middle left column------------*/
+/*---------------style middle left skillsum----------*/
+.skillsum
+	{
+	display:flex;
+	flex-direction:column;
+	padding-bottom:30px;
+	border-bottom:1px solid #DEE2E6;
+	text-align:justify;
+	padding-top:10px;
+	}
+/*---------------style middle left Skillsum----------*/
+/*---------------style middle left Skillcontainer----*/
+.skillcontainer
+	{
+	display:flex;
+	flex-direction:column;
+	margin-top:20px;
+	}
+/*---------------style middle left Skillcontainer----*/
+/*---------------style middle left skills------------*/
+.skills
+	{
+	display:flex;
+	flex-direction:column;
+	}
+
+.skills p4
+	{
+	text-align:justify;
+	}
+
+/*---------------style middle left skills------------*/
+/*---------------style middle right column-----------*/
+.midrightcol
+	{
+	display:flex;
+	flex-direction:column;
+	width:30%;
+	min-width:250px;
+	}
+/*---------------style middle right column-----------*/
+/*---------------style middle right imageslide-------*/
+.imageslide	/*---container-----------------------*/
+	{
+	width:100%;
+	background-color:black;	//#E9ECEF;//
+	margin: 0 10px 0 0;
+	position:relative;
+	box-shadow:5px 5px 10px #6C757D;
+	display:none;
+	}
+/*---------------style middle right imageslide-------*/
+/*---------------style middle imageslide slide-------*/
+.mySlides
+	{
+	width:100%;
+	height:100%;
+	display:none;
+	aspect-ratio:16/9;
+	}
+
+.mySlides img
+	{
+	
+	object-fit: cover;
+	}
+/*---------------style middle imageslide slide-------*/
+/*---------------style middle imageslide buttons-----*/
+.prev, .next 
+	{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 8px;
+	color: #F8F9FA;
+	font-weight: bold;
+	font-size: 15px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	}
+
+/* Position the "next button" to the right */
+.next 
+	{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+	}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover 
+	{
+	background-color:#343A40;
+	opacity:0.8;
+	}
+/*---------------style middle imageslide buttons-----*/
+/*---------------style middle imageslide captiontext-*/
+.text
+	{
+	color:black;
+	/*------color:#F8F9FA;	-*/
+	padding:0px;
+	position:absolute;
+	bottom:25px;
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	}
+/*---------------style middle imageslide captiontext-*/      
+/*---------------style middle imageslide dots--------*/  
+.dotrow
+	{
+	text-align:center;
+	}
+.dot
+	{
+	cursor:pointer;
+	height:10px;
+	width:10px;
+	border-radius:100%;
+	background-color:#ADB5BD;
+	display: inline-flex;
+	transition: background-color 0.6s ease;
+	position:relative;
+	bottom:20px;
+	margin:0 5px 0 5px;
+	}
+
+.active, .dot:hover
+	{
+	background-color:#495057;
+	}
+
+/*------fade animation---*/
+.fade	/*------class=fade---*/
+	{
+	animation-name:animfade;
+	animation-duration:1.5s;
+	animation-timing-function: ease-in-out;
+	}
+
+@keyframes animfade
+	{
+	from
+		{
+		opacity:0.4;
+		}
+	to
+		{
+		opacity:1;
+		}
+	}
+	
+
+/*---------------style middle imageslide dots--------*/   
+/*---------------style middle right accordion--------*/
+.accordioncontainer
+	{
+	display:flex;
+	flex-direction:column;
+	/*---margin-top:50px;
+	---*/
+	border-left: 1px solid #DEE2E6;
+	border-right: 1px solid #DEE2E6;
+	height:100%;
+	}
+
+.accordion
+	{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	background-color:#CED4DA;
+	width:100%;
+	height:40px;
+	border-style:none;
+	padding-left:10px;
+	
+	cursor: pointer;
+	transition: 0.4s;
+	}
+
+.accordion h3
+	{
+	color:#212529;
+	}
+
+/* Add a background color to the button if it is clicked on 	---*/
+/* (add the .active class with JS), and when you move the 	---*/
+/* mouse over it (hover) 					---*/
+
+.active, .accordion:hover
+	{
+	background-color:#E9ECEF; 	/*---#6C757D;---*/
+	
+	}
+
+/* Add a symbol to each button to indicate whether the	---*/
+/* collapsible content is open or closed		---*/
+
+.accordion:after 
+	{
+	content: "\002B"; /*---Unicode character for "plus" sign (+)---*/
+	font-size: 15px;
+	color: #6C757D;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+	}
+
+.accordion.active:after 
+	{
+	content: "\2212"; /* ---Unicode character for "minus" sign (-) ---*/
+	color:#CED4DA;
+	}
+
+.panel
+	{
+	display:flex;
+	flex-direction:column;
+	padding-left:10px;
+	background-color:white;	/*---#E9ECEF;--*/
+	max-height: 0;
+	overflow: hidden;
+	transition:max-height 0.2s ease-out;
+	}
+
+
+.panel p3
+	{
+	font-size:12px;
+	margin-left:15px;
+	line-height:1.5;
+	padding-bottom:10px;
+	}
+
+.panel p5
+	{
+	font-style: normal;
+	color:#212529;
+	margin-top:5px;
+	}
+.panel p5 a
+	{
+	color:#212529;
+	}
+
+
+
+
+/*---------------style middle right accordion--------*/
+/*---------------style projlist----------------------*/
+.projlist
+	{
+	display:flex;
+	flex-direction:column;
+	width:90%;
+	max-width:1000px;
+	min-width:750px;
+	height:600px;
+	/*---background-color:#F8F9FA;---*/
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+	}
+/*---------------style projlist----------------------*/
+/*---------------style projlist tabs-----------------*/
+.tabs		/*-----container---------------------*/
+	{
+	display:flex;
+	width:100%;
+	height:70px;
+	flex-direction:row;
+	justify-content:space-between;
+	color:gray;
+	}
+
+.tabs button
+	{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	flex:20%;
+	min-width:80px;
+	height:60px;
+	margin:5px;
+
+	border:none;
+	background-color:#E9ECEF;
+	transition: 0.4s;
+	}
+
+.tabs button.tablinks:first-child
+	{
+	margin:5px 5px 5px 0;
+	}
+.tabs button.tablinks:last-child
+	{
+	margin:5px 0 5px 5px;
+	}
+
+.tabs button:hover
+	{
+	background-color:#343A40;
+	color:white;
+	}
+
+.tabs button.active
+	{
+	background-color:#343A40;
+	color:white;
+	}
+/*---------------style projlist tabs-----------------*/
+/*---------------style projlist projects-------------*/
+.tabcontent	/*-----container---------------------*/
+	{
+	display:none;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	width:100%;
+	background-color:#F0F0F0;
+	}
+
+.tabcontent>div
+	{
+	display:flex;
+	flex:25%;
+	min-width:230px;
+	height:150px;
+	background-color:#F0F0F0;
+	margin:5px;
+	}
+
+.tabcontent>div img
+	{
+	width:100%;
+	object-fit: cover;
+	}
+/*---------------style projlist projects-------------*/
+/*---------------LIGHTBOX----------------------------*/
+.lightcontainer
+	{
+	display:flex;
+	flex-direction:column;
+	width:80%;
+	max-width:800px;
+	background-color:black;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index:2;
+
+	max-height:100%;
+	}
+
+
+/*---------------LIGHTBOX----------------------------*/
+/*---------------LIGHTBOX - Style the x button-------*/
+.topclose
+	{
+	display:flex;
+	justify-content:center;
+	}
+.topclose>div
+	{
+	height:40px;
+	width:90%;
+	}
+
+.topclose>div a
+	{
+	float:right;
+	padding:0;
+	color:white;
+	text-decoration:none;
+	}
+
+.topclose>div p
+	{
+	float:left;
+	font-size:12px;
+	}
+.topclose>div a:hover
+	{
+	/*---white transparent background---*/
+	font-weight:bold;
+	text-shadow:0 0  10px white;
+	}
+
+/*---------------LIGHTBOX - Style the x button-------*/
+/*---------------LIGHTBOX - main image---------------*/
+.lightimage
+	{
+	display:flex;
+	width:90%;
+	align-self:center;
+	aspect-ratio:16/9;
+	background-color:silver;
+	position:relative;
+	margin-bottom:10px;
+	}
+.lightslides
+	{
+	display:none;
+	}
+
+.overlay
+	{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	color:white;
+	position:absolute;
+	bottom:0;
+	background: rgb(0, 0, 0);
+	background:rgba(0, 0, 0, 0.5);
+	transition:.5s;
+	opacity:0;
+	text-align:left;
+	align-items:center;
+	justify-content:center;
+	padding-bottom:10px;
+	}
+
+.overlay h3
+	{
+	color:white;
+	}
+
+.overlay p12
+	{
+	color:white;
+	}
+
+.lightslides:hover .overlay
+	{
+	opacity:1;
+	}
+
+
+/*---------------LIGHTBOX - main image---------------*/
+/*---------------LIGHTBOX - thumbnail----------------*/
+.thumbcontainer
+	{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	
+	max-height:10%;
+	width:90%;
+	align-self:center;
+	margin-bottom:10px;
+	}
+
+.thumbcontainer >div
+	{
+	padding: 5px;
+	aspect-ratio:16/9;
+	height:100%;
+	}
+
+.thumbcontainer >div:first-child
+	{
+	padding:5px 5px 5px 0;
+	}
+
+.thumbcontainer >div:last-child
+	{
+	padding:5px 0 5px 5px;
+	}
+
+.thumbnail
+	{
+	opacity: 0.6;
+	cursor:pointer;
+	}
+
+.active,
+.thumbnail:hover 
+	{
+	opacity: 1;
+	}
+
+
+
+/*---------------LIGHTBOX - thumbnail----------------*/
+
+/*---------------responsive--------------------------*/
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---tablet - landscape, 768px width---*/
+@media only screen and (max-width: 768px)
+{
+html, body
+	{
+	min-width:700px;
+	padding:10px;
+	margin:0;
+	}
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+.heading 
+	{
+	width:700px;
+	max-width:unset;
+	min-width:700px;
+	}
+.middle 
+	{
+	width:700px;
+	max-width:700px;
+	min-width:unset;
+	}
+
+
+
+
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 670px and down) */
+@media only screen and (max-width: 670px) 
+{
+html, body
+	{
+	min-width:640px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:640px;
+	max-width:640px;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:640px;
+	min-width:640px;
+	}
+.midleftcol
+	{
+	width:100%;
+	min-width:640px;
+	margin-bottom:20px;
+	padding-right:0;
+	border-bottom:1px solid #DEE2E6;
+	}
+.midrightcol
+	{
+	width:100%;
+	min-width:640px;
+	height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	height:310px;
+	}
+
+.lightcontainer
+	{
+	width:80%;
+	min-width:525px;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+html, body
+	{
+	min-width:500px;
+	/*--padding:10px;---*/
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:70px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:500px;
+	max-width:500px;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:100%;
+	text-align:center;
+	padding:30px;
+	}
+.links
+	{
+	width:100%;
+	min-width:450px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:100%;
+	max-width:500px;
+	min-width:500px;
+	}
+.midleftcol
+	{
+	width:100%;
+	min-width:500px;
+	margin-bottom:20px;
+	padding-right:0;
+	border-bottom:1px solid #DEE2E6;
+	}
+.midrightcol
+	{
+	width:100%;
+	min-width:500px;
+	height:unset;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	height:310px;
+	}
+
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 550px and below----*/
+@media only screen and (max-width: 550px) 
+{
+.lightcontainer
+	{
+	min-width:100%;
+	}
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 480px - 375px----*/
+@media only screen and (max-width: 480px) 
+{
+html, body
+	{
+	min-width:320px;
+	/*--padding:10px;---*/
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:50px;
+	width:320px;
+	}
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:241px;
+	}
+.name
+	{
+	flex-direction:column;
+	width:320px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	width:320px;
+	}
+.name p4
+	{
+	width:320px;
+	}
+.links
+	{
+	width:100%;
+	min-width:320px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:320px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.midleftcol
+	{
+	width:100%;
+	min-width:320px;
+	margin-bottom:20px;
+	padding-right:0;
+	border-bottom:1px solid #DEE2E6;
+	}
+.midrightcol
+	{
+	width:100%;
+	min-width:320px;
+	}
+.skillsum h2
+	{
+	text-align:left;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:320;
+	height:210px;
+	}
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - portrait, 325px and below----*/
+@media only screen and (max-width: 325px) 
+{
+html, body
+	{
+	min-width:290px;
+	padding:0;
+	margin:0;
+	}
+
+h1	/*--------name text---------*/
+	{
+	font-size:40px;
+	width:290px;
+	}
+h2	
+	{
+	font-size: 15px;
+	}
+h3	
+	{
+	font-size: 13px;
+	}
+p5	
+	{
+	font-size: 12px;
+	}
+
+/*---------------style heading-----------------------*/
+.heading 
+	{
+	flex-direction:column;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.name
+	{
+	flex-direction:column;
+	width:290px;
+	min-width:unset;
+	text-align:center;
+	padding:30px 0 30px 0;
+	}
+.name p1
+	{
+	font-size: 12px;
+	width:290px;
+	}
+.name p4
+	{
+	width:290px;
+	}
+.links
+	{
+	width:100%;
+	min-width:290px;
+	height:30px;
+	}
+
+.links>div
+	{
+	min-width:unset;
+	}
+/*---------------style middle------------------------*/
+.middle
+	{
+	flex-direction:column;
+	width:290px;
+	max-width:unset;
+	min-width:unset;
+	height:unset;
+	}
+.midleftcol
+	{
+	width:100%;
+	min-width:290px;
+	margin-bottom:20px;
+	padding-right:0;
+	border-bottom:1px solid #DEE2E6;
+	}
+.midrightcol
+	{
+	width:100%;
+	min-width:290px;
+	}
+.skillsum h2
+	{
+	text-align:left;
+	}
+.imageslide	/*---container-----------------------*/
+	{
+	width:290;
+	height:210px;
+	}
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---mobile - landscape ---------------*/
+@media only screen	and (max-width: 1024px)
+			and (orientation: landscape)
+{
+.lightcontainer
+	{
+	width:100%;
+	max-width:unset;
+	position: fixed;
+	top: 0;
+	left: unset;
+	transform: unset;
+	z-index:2;
+	height:100vmin;
+	}
+
+.lightimage
+	{
+	width:unset;
+	max-width:90%;
+	max-height:70%;
+	}
+}
