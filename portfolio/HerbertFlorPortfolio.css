@@ -145,10 +145,7 @@ h3	/*--------name text---------*/
 	color:#495057;
 	}
 
-img
-	{
-	loading="lazy";
-	}
+
 /*---------------style text--------------------------*/
 
 /*---------------style heading-----------------------*/
@@ -356,7 +353,7 @@ div#resume:hover #resblock
 	{
 	display:flex;
 	justify-content:center;
-	
+	height:100%;
 	}
 
 .fp-arrow.fp-prev
@@ -398,37 +395,28 @@ div#resume:hover #resblock
 }
 
 
-.projlist
-	{
-	display:flex;
-	flex-wrap:nowrap;
-	flex-direction:column;
-	width:800px;
-	top:0;
-	position:relative;
-
-	margin-top:160px;
-	padding:20px 0 0 0;
-	}
-
+.projlist,
 .projlist_1T
 	{
 	display:flex;
 	flex-wrap:nowrap;
 	flex-direction:column;
-	width:1000px;
+width:calc(90% - 16px);
+max-width:1000px;
 	top:0;
 	position:relative;
 
 	margin-top:160px;
 	padding:20px 0 0 0;
 	}
+
 
 .profile,
 .graphics
 	{
 	display:flex;
 	flex-direction:column;
+	height:90%;
 	}
 
 
@@ -437,7 +425,8 @@ div#resume:hover #resblock
 	{
 	display:flex;
 	flex-direction:column;
-	width:800px;
+width:calc(90% - 16px);
+max-width:1000px;
 	height:auto;
 	top:0;
 	position:relative;
@@ -464,7 +453,7 @@ div#resume:hover #resblock
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	/*---margin:0 auto 10px auto;---*/s
+	/*---margin:0 auto 10px auto;---*/
 	}
 
 .projlistFeatured .right,
@@ -473,7 +462,7 @@ div#resume:hover #resblock
 	display:flex;
 	flex-direction:column;
 	width:70%;
-	padding-left:40px;
+	padding-left:50px;
 	}
 
 
@@ -492,12 +481,39 @@ div#resume:hover #resblock
 .projlistFeatured .imgContainer,
 .proj .imgContainer
 	{
-	width:100%;
+	width:80%;
+	max-width:800px;
 	display:flex;
 	gap:10px;
-	margin:0 auto 10px auto;
+	margin:auto
 	}
 
+.proj .notAlignedContainer
+	{ align-items:unset;	}
+
+.containerRow
+	{ flex-direction:row;	}
+
+.proj .containerMarginAuto
+	{ margin:auto;	}
+
+.proj .container100
+	{
+	width:100%;
+	max-width:unset;
+	}
+
+.proj .container95
+	{
+	width:95%;
+	max-width:unset;
+	}
+
+.proj .container90
+	{
+	width:90%;
+	max-width:unset;
+	}
 
 .projlistFeatured .imgContainer .img3,
 .projlistFeatured .imgContainer .img2
@@ -525,7 +541,7 @@ div#resume:hover #resblock
 .projlistFeatured .img3, .projlistFeatured .img,
 .proj .img3, .proj .img
 	{
-	box-shadow: 0 10px 30px rgba(0,0,0,0.3);;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 	}
 
 .projlistFeatured h1_5,
@@ -565,6 +581,7 @@ div#resume:hover #resblock
 	flex-direction:row;
 	flex-wrap:wrap;
 	gap:10px;
+	margin:auto 0;
 	}
 
 .designSamples a,
@@ -626,6 +643,8 @@ div#resume:hover #resblock
 	flex-direction:row;
 	flex-wrap:wrap;
 	gap:10px;
+	width:80%;
+	margin:auto;
 	}
 
 .reports
@@ -693,6 +712,278 @@ div#resume:hover #resblock
 	height:204px;
 	width:288px;
 	}
+
+/*---------------style grids-------------------------*/
+.gridContainer_1x1,
+.gridContainer_1x2,
+.gridContainer_2x2,
+.gridContainer_3x2,
+.gridContainer_3x3,
+.gridContainer_3x6,
+.gridContainer_4x6
+	{
+	display: grid;
+	gap: 10px; 
+	width: 90%;
+	max-width: 800px;
+	margin:auto;
+	}
+.gridContainer_1x1
+	{
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	}
+
+.gridContainer_1x2
+	{
+	/* 1. Define the structure */
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	/* 2. Tell items to fill row first */
+	grid-auto-flow: column;
+	max-height:350px;
+	}
+
+.gridContainer_2x2
+	{
+	/* 1. Define the structure */
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	/* 2. Tell items to fill row first */
+	grid-auto-flow: row;
+	}
+
+.gridContainer_3x2
+	{
+	/* 1. Define the structure */
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr;
+	/* 2. Tell items to fill columns first */
+	grid-auto-flow: column;
+	}
+
+.proj .container100 .gridContainer_1x1,
+.proj .container100 .gridContainer_1x2,
+.proj .container100 .gridContainer_2x2,
+.proj .container100 .gridContainer_3x2,
+.proj .container100 .gridContainer_4x6
+	{
+	width: unset;
+	max-width: unset;
+	}
+.proj .container90 .gridContainer_1x1,
+.proj .container90 .gridContainer_3x2,
+.proj .container90 .gridContainer_2x2,
+.proj .container90 .gridContainer_4x6
+	{
+	width: unset;
+	max-width: unset;
+	}
+
+
+.proj .container95 .gridContainer_1x1,
+.proj .container95 .gridContainer_3x2,
+.proj .container95 .gridContainer_2x2,
+.proj .container95 .gridContainer_4x6
+	{
+	width: 80%;
+	max-width: unset;
+	}
+
+.proj .container60 .gridContainer_1x1,
+.proj .container60 .gridContainer_3x2,
+.proj .container60 .gridContainer_2x2,
+.proj .container60 .gridContainer_4x6
+	{
+	width: 60%;
+	max-width: unset;
+	}
+
+.gridContainer_3x3
+	{
+	/* 1. Define the structure */
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr auto;
+	/* 2. Tell items to fill columns first */
+	grid-auto-flow: column;
+	}
+
+.gridContainer_3x6
+	{
+	/* 1. Define the 3x3 structure */
+	grid-template-columns: 1fr 1fr auto;	/* Col 3 is double width */
+	grid-template-rows: repeat(6, 1fr);	/* 3 rows of equal height */
+	/* 2. Tell items to fill columns first */
+	grid-auto-flow: column;
+	max-height: 350px;
+	margin:0 auto;
+	max-width:800px;
+	width:80%;
+	}
+
+.gridContainer_4x6
+	{
+	/* 1. Define the structure */
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows:repeat(6, auto);
+	/* 2. Tell items to fill row first */
+	grid-auto-flow: row;
+	}
+
+.grid-row
+	{ grid-auto-flow:row;	}
+
+.gridText .grid-item .img3
+	{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	display:block
+	}
+
+.aspect-16_9 .img3
+	{ aspect-ratio:16/9;	}
+
+.aspect-4_3 .img3
+	{ aspect-ratio:1.4/1;	}
+
+.span2rows
+	{ grid-column:span 2;	}
+
+
+.span01
+	{
+	grid-column:span 2;
+	grid-row:span 6;
+	}
+
+.span02
+	{
+	grid-column:3 / span 2;
+	grid-row:3 / span 2;
+	}
+
+.span03
+	{ grid-row:span 2; }
+
+.span04
+	{
+	grid-row:1 / span 2;
+	grid-column:2 / span 2;
+	}
+
+.gridContainer_3x2 .span2rows .img3
+	{
+	aspect-ratio:32/9;
+	object-position:bottom;
+	}
+
+.gridContainer_3x2 .object_0_100 .img3
+	{ object-position:0 100%;	}
+
+.gridContainer_3x2 .object_0_0 .img3
+	{ object-position:0 0;	}
+
+.gridText .grid-item p
+	{
+	z-index:3;
+	font-family: arial, helvetica;
+	font-size:12px;
+	font-weight:bold;
+	line-height: 1;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 10px;
+	letter-spacing:unset;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(0, 0, 0, 0.7);
+	}
+
+.grid-item
+	{
+	text-align: center;
+	color: black;
+	font-size: 12px;
+	line-height: 1.5;
+	display:flex;
+	position:relative;
+	}
+
+.grid-item80
+	{ height:80%	}
+
+.grid-item-scale85 .img3
+	{
+	width:85%;
+	margin:0 auto;
+	}
+.grid-item img
+	{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	}
+
+.gridContainer_3x6 .grid-item
+	{
+	grid-row: span 2;
+	background:white;
+	border-radius:10px;
+	}
+
+.gridContainer_3x6 #h1
+	{ grid-row: span 4;	}
+
+.gridContainer_3x6 #h2-1,
+.gridContainer_3x6 #h2-2
+	{ grid-row: span 3;	}
+
+.gridContainer_3x6 #h2-1 .img,
+.gridContainer_3x6 #h2-2 .img
+	{ aspect-ratio:1.4/1;	}
+
+.gridContainer_3x6 .img
+	{ object-fit:contain;	}
+
+.grid-item .video
+	{
+	height:100%;
+	max-height:350px;
+	width:auto;
+	display:block;
+	}
+
+/*---------------END style grids---------------------*/
+/*---------------style desc text---------------------*/
+.proj .text-side-35
+	{
+	width:35%;
+	margin: 0 0 0 40px;
+	}
+
+.proj .text-side-25
+	{
+	width:25%;
+	margin: 0 0 0 40px;
+	}
+
+.proj .text-side-20
+	{
+	width:20%;
+	margin: 0 0 0 40px;
+	}
+
+#text
+	{ justify-content:center;	}
+
+
+
+
+
+
+/*---------------END style desc text-----------------*/
 
 /*---------------END style project sample 1----------*/
 /*---------------style side nav buttons--------------*/
@@ -867,138 +1158,7 @@ div#resume:hover #resblock
 	-webkit-transition:2s;
 	}
 
-/*---------------LIGHTBOX----------------------------*/
-.lightcontainer
-	{
-	display:flex;
-	flex-direction:column;
-	width:80%;
-	max-width:900px;	/*--850px---*/
-	background-color:black;
 
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index:2;
-
-	max-height:100%;
-
-	border-radius:10px;
-	}
-
-
-/*---------------LIGHTBOX----------------------------*/
-/*---------------LIGHTBOX - Style the x button-------*/
-.topclose
-	{
-	display:flex;
-	justify-content:center;
-	}
-.topclose>div
-	{
-	height:40px;
-	width:90%;
-	}
-
-.topclose>div a
-	{
-	float:right;
-	padding:0;
-	color:white;
-	text-decoration:none;
-	}
-
-.topclose>div p
-	{
-	float:left;
-	font-size:12px;
-	}
-.topclose>div a:hover
-	{
-	/*---white transparent background---*/
-	font-weight:bold;
-	text-shadow:0 0  10px white;
-	}
-
-/*---------------LIGHTBOX - Style the x button-------*/
-/*---------------LIGHTBOX - main image---------------*/
-.lightimage
-	{
-	display:flex;
-	width:90%;
-	align-self:center;
-	/*-----aspect-ratio:16/9;----*/
-	background-color:black;
-	position:relative;
-	margin-bottom:30px;
-	overflow:hidden;	/*----------*/
-	}
-
-.lightslides
-	{
-	display:none;
-	}
-
-
-.overlay
-	{
-	display:flex;
-	flex-direction:column;
-	width:100%;
-	color:white;
-	position:absolute;
-	bottom:0;
-	background: rgb(0, 0, 0);
-	background:rgba(0, 0, 0, 0.5);
-
-	transition:0.5s;
-	-moz-transition:0.5s;
-	-webkit-transition:0.5s;
-
-	opacity:0;
-	text-align:justify;
-	padding:5px 15px 15px 15px;
-	}
-
-.overlay h3
-	{
-	color:white;
-	text-align:left;
-	}
-
-.lightslides:hover .overlay
-	{
-	opacity:1;
-	}
-
-	/*---style and animation for G10---*/
-.lightslides#lightslideG10
-	{
-	display:flex;
-	overflow:hidden;
-	}
-
-.lightslides#lightslideG10 img
-	{
-	width:400%; 
-	position:relative;
-	right:100%;
-	animation-name:G10;
-	animation-duration:20s;
-	animation-direction: alternate;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	}
-
-@keyframes G10
-	{
-	from	{right:10%;	}
-	to	{right:100%;	}
-	}
-	/*---style and animation for G10---*/
-
-/*---------------LIGHTBOX - main image---------------*/
 
 /*---------------style projlist projects-------------*/
 /*---------------responsive--------------------------*/
@@ -1056,6 +1216,10 @@ h1	/*--------name text---------*/
 	{
 	font-size:70px;
 	}
+
+#fp-nav ul
+	{ display:none;	}
+
 /*---------------style heading-----------------------*/
 .heading 
 	{
@@ -1072,6 +1236,13 @@ h1	/*--------name text---------*/
 	text-align:center;
 	padding:0;
 	}
+hf	{ font-size:70px;	}
+
+#section0 h1_5
+	{ font-size:28px;	}
+
+h1_5	{ font-size:30px;	}
+
 .linkscontainer
 	{
 	display:flex;
@@ -1121,6 +1292,199 @@ h1	/*--------name text---------*/
 	height:unset;
 	margin-top:185px;
 	}
+
+.projlistFeatured,
+.proj
+	{
+	padding-top:30px;
+	margin-top:185px;
+	}
+
+.projlistFeatured p12,
+.proj p12
+	{
+	width:100%;
+	text-align:justify;
+	}
+
+.projlistFeatured .img3,
+.projlistFeatured .img,
+.proj .img3,
+.proj .img
+	{ width:80%;	}
+
+
+.projlistFeatured .imgContainer .img3,
+.projlistFeatured .imgContainer .img2
+	{ width:80%;	}
+
+.projlistFeatured video
+	{
+	width:80%;
+	margin:0 auto;
+	}
+
+.projlistFeatured .imgContainer,
+.proj .imgContainer
+	{
+	flex-wrap:wrap;
+	max-width:unset;
+	justify-content: center;
+	}
+
+/*---------------------------*/
+
+.gridContainer_3x3
+	{
+	/* 1. Define the 3x3 structure */
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	/* 2. Tell items to fill columns first */
+	grid-auto-flow: row;
+	max-width: unset;
+	margin: 0 auto 10px auto;
+	}
+
+.gridContainer_3x2
+	{
+	/* 1. Define the 3x2 structure */
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr 1fr 1fr;
+
+	/* 2. Tell items to fill columns first */
+	grid-auto-flow:row;
+	max-width: unset;
+	margin: 0 auto 10px auto;
+	}
+
+.grid-item
+	{
+	text-align: center;
+	color: black;
+	font-size: 12px;
+	line-height: 1.5;
+	display:flex;
+	}
+
+.gridContainer_3x3 .grid-item img,
+.gridContainer_3x2 .grid-item img
+	{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	}
+
+.gridContainer_3x3 #text
+	{ display:none;	}
+
+
+.gridContainer_3x6
+	{
+
+	/* 1. Define the 3x3 structure */
+	grid-template-columns: 1fr 1fr;	/* Col 3 is double width */
+	grid-template-rows: repeat(5, 1fr);	/* 3 rows of equal height */
+
+	max-height: unset;
+	}
+
+.gridContainer_3x6 .grid-item
+	{ grid-row: span 1;	}
+
+.gridContainer_3x6 #h1
+	{ grid-row: span 2;	}
+
+.gridContainer_3x6 #h2
+	{ grid-row: unset;	}
+
+.gridContainer_3x6 #h1 .img
+	{ width:100%;	}
+
+.gridContainer_3x6 #h2-1,
+.gridContainer_3x6 #h2-2
+	{ grid-row: unset;	}
+
+.gridContainer_3x6 #h2-1
+	{
+	grid-column: 1 / span 2; 
+	grid-row:4 / span 2;
+	}
+
+.gridContainer_3x6 #h2-2
+	{
+	grid-column: 1 / span 2; 
+	grid-row:6 / span 2;
+	}
+
+
+
+.gridContainer_3x6 #h2 .img
+	{ aspect-ratio:unset;	}
+
+.gridContainer_3x6 .img
+	{ object-fit:cover;	}
+
+.gridContainer_3x6 #hx .img,
+.gridContainer_3x6 #h2-1 img,
+.gridContainer_3x6 #h2-2 .img
+	{ width:100%;	}
+
+
+
+/*---------------------------*/
+
+#leftRightColumn
+	{
+	flex-direction:column-reverse;
+	}
+
+#leftRightColumn2img
+	{
+	flex-direction:row;
+	}
+
+#leftRightColumn .right
+	{
+	width:100%;
+	padding:unset;
+	}
+
+#leftRightColumn .right img
+	{ width:100%;	}
+
+#leftRightColumn .left
+	{
+	width:100%;
+	padding:unset;
+	display:flex;
+	flex-direction:row;
+	}
+
+#leftRightColumn .left img
+	{ width:calc(50% - 5px);	}
+
+#leftRightColumn2img .left img
+	{
+	width:100%;
+	height:100%;
+	}
+
+#leftRightColumn2img .right
+	{ 
+	width:60%;
+	padding:unset;
+	}
+
+
+
+
+
+
+
+
+
+
+/*---------------------------*/
 .tabs		/*-----container---------------------*/
 	{
 	
