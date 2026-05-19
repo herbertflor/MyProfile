@@ -1,0 +1,70 @@
+/* Force A4 Landscape when printing */
+@page 
+{
+	size: A4 landscape;
+	margin: 10mm; /* adjust as needed */
+}
+
+/* General print reset */
+@media print 
+{
+.linkscontainer,
+.fp-arrow.fp-prev,
+.fp-arrow.fp-next ,
+.fp-prev,
+.fp-next,
+#fp-nav ul li
+	{ display:none;	}
+
+
+  html, body {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* Disable fullPage transforms */
+  #fullpage,
+  .fullpage-wrapper {
+    transform: none !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  /* Show all sections normally */
+  .section,
+  .slide {
+    height: auto !important;
+    min-height: 100vh;
+    page-break-after: always;
+    overflow: visible !important;
+  }
+
+  /* Remove fixed positioning */
+  .fp-section,
+  .fp-slide,
+  .fp-tableCell {
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* Hide navigation dots/arrows */
+  #fp-nav,
+  .fp-slidesNav,
+  .fp-controlArrow {
+    display: none !important;
+  }
+
+  /* Prevent clipping */
+  .fp-overflow,
+  .fp-scrollable {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+
+
+
+}
+
+
+ 
